@@ -1,43 +1,46 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
-import { blogs } from "@/data/blogs";
-import heroImage from "@/assets/hero-schematic.jpg";
-import biomechanicsImage from "@/assets/blog-biomechanics.jpg";
-import computerVisionImage from "@/assets/blog-computer-vision.jpg";
-import dataEngineeringImage from "@/assets/blog-data-engineering.jpg";
+import { getFeaturedBlogs } from "@/lib/blogs";
+import heroImage from "@/assets/home.jpg";
+import thinkingAlikeImage from "@/assets/thinking-alike/2.jpg";
+import tendonAdaptationsImage from "@/assets/tendon-adaptations/1.jpg";
 
 const Index = () => {
   const imageMap: Record<string, string> = {
-    "blog-biomechanics": biomechanicsImage,
-    "blog-computer-vision": computerVisionImage,
-    "blog-data-engineering": dataEngineeringImage,
+    "blog-thinking-alike": thinkingAlikeImage,
+    "blog-tendon-adaptations": tendonAdaptationsImage,
   };
 
-  const featuredBlogs = blogs.slice(0, 3);
+  const featuredBlogs = getFeaturedBlogs();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-8">
         {/* Hero Section */}
-        <section className="relative bg-background border-b border-border">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+          <section className="relative bg-background border-b border-border">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-8 lg:pb-12 pt-16 lg:pt-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                  Engineering at the Intersection of Data & Sport
+                  Engineering Tomorrow
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Applied quantitative engineer at Driveline Baseball. Minor league player for the Washington Nationals. 
-                  Exploring biomechanics, machine learning, and the physics of performance.
+                  Applied quantitative engineer at Driveline Baseball. Minor league pitcher for the Washington Nationals.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">                  
+                  Biomechanics, computer vision, and anything I find interesting.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">                  
+                  Currently learning about:
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm">
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">Physics</span>
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">Data Science</span>
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">Biomechanics</span>
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">ML/CV</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Motor Learning</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Neuroscience</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Algorithmic Trading</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Energy Flow</span>
                 </div>
               </div>
               
@@ -45,15 +48,9 @@ const Index = () => {
                 <div className="aspect-video border border-border overflow-hidden bg-card">
                   <img 
                     src={heroImage} 
-                    alt="Biomechanics schematic"
+                    alt="Home Hero Image"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 border border-border bg-background/80 backdrop-blur-sm flex items-center justify-center">
-                  <p className="font-mono text-xs text-center px-4">
-                    F = ma<br/>
-                    <span className="text-muted-foreground">The foundation</span>
-                  </p>
                 </div>
               </div>
             </div>
@@ -61,15 +58,15 @@ const Index = () => {
         </section>
 
         {/* Featured Blog Posts */}
-        <section className="bg-background py-16 lg:py-24">
+        <section className="bg-background pt-8 lg:pt-12 pb-16 lg:pb-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-end justify-between mb-12">
               <div>
                 <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-2">
-                  Recent Writing
+                  Highlights
                 </h2>
                 <p className="text-muted-foreground">
-                  Thoughts on engineering, data science, and sports performance
+                  My best projects and writing
                 </p>
               </div>
             </div>

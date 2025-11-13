@@ -7,16 +7,12 @@ const Projects = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-8">
         <section className="bg-background py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Projects
             </h1>
-            <p className="text-lg text-muted-foreground mb-12">
-              Selected work in biomechanics, machine learning, and sports technology.
-            </p>
-
             <div className="space-y-12">
               {/* Patent */}
               <div className="border border-border bg-card p-8">

@@ -97,3 +97,10 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Center all images inside Markdown (Tailwind Typography `.prose`) */
+.prose img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

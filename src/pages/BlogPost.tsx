@@ -1,21 +1,15 @@
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { blogs } from "@/data/blogs";
+import { getBlogById } from "@/lib/blogs";
 import { ArrowLeft } from "lucide-react";
-import biomechanicsImage from "@/assets/blog-biomechanics.jpg";
-import computerVisionImage from "@/assets/blog-computer-vision.jpg";
-import dataEngineeringImage from "@/assets/blog-data-engineering.jpg";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const BlogPost = () => {
   const { id } = useParams();
-  const blog = blogs.find((b) => b.id === id);
-
-  const imageMap: Record<string, string> = {
-    "blog-biomechanics": biomechanicsImage,
-    "blog-computer-vision": computerVisionImage,
-    "blog-data-engineering": dataEngineeringImage,
-  };
+  const blog = id ? getBlogById(id) : undefined;
 
   if (!blog) {
     return (
@@ -50,34 +44,25 @@ const BlogPost = () => {
             </Link>
 
             <div className="mb-8">
+              <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                {blog.title}
+              </h1>
+
               <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
                 <time>{blog.date}</time>
                 <span>•</span>
                 <span>{blog.readTime} read</span>
               </div>
-              
-              <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                {blog.title}
-              </h1>
-              
-              <p className="text-xl text-muted-foreground">
-                {blog.summary}
-              </p>
+
             </div>
 
-            <div className="aspect-video mb-12 border border-border overflow-hidden bg-muted">
-              <img 
-                src={imageMap[blog.image]} 
-                alt={blog.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <div 
-                className="text-foreground leading-relaxed space-y-6"
-                dangerouslySetInnerHTML={{ __html: blog.content.replace(/\n/g, '<br />') }}
-              />
+            <div className="prose prose-lg prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-a:text-accent prose-code:text-foreground max-w-none">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+            >
+              {blog.content}
+            </ReactMarkdown>
             </div>
           </div>
         </article>

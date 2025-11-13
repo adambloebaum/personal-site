@@ -1,10 +1,11 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
+import { MdMail } from "react-icons/md";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Github, href: "https://github.com", label: "GitHub" },
+    { icon: SiX, href: "https://x.com/bl0ebaum", label: "X" },
+    { icon: SiLinkedin, href: "https://www.linkedin.com/in/adambloebaum/", label: "LinkedIn" },
+    { icon: SiGithub, href: "https://github.com/adambloebaum", label: "GitHub" },
   ];
 
   return (

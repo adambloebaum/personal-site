@@ -35,7 +35,7 @@ const About = () => {
                     Washington Nationals
                   </span>
                   , giving me a unique perspective as both a builder and a user
-                  of the tools we create to enhance performance.
+                  of the tools I create.
                 </p>
 
                 <p>

@@ -15,6 +15,7 @@ export interface Blog {
   readTime: string;
   image: string;
   featured: boolean;
+  tags: string[];
 }
 
 // Load all markdown files from the blogs directory
@@ -40,6 +41,7 @@ export const blogs: Blog[] = Object.entries(blogFiles).map(([filepath, content])
     readTime: data.readTime || '',
     image: data.image || '',
     featured: data.featured || false,
+    tags: data.tags || [],
   };
 }).sort((a, b) => {
   // Sort by date, newest first

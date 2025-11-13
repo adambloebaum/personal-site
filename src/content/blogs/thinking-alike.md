@@ -1,10 +1,11 @@
 ---
 title: "Thinking Alike"
-summary: "Highlighting the similarities between how humans and machine learning models think."
+summary: "Exploring the similarities between human thinking and machine learning models."
 date: "2025-10-10"
 readTime: "5 min"
 image: "blog-thinking-alike"
 featured: true
+tags: ["Machine Learning", "Neuroscience", "Philosophy"]
 ---
 
 We often think of machine learning models as clinical, mathematical artifacts that ingest data and return an output. But if you look closer, you come to realize that

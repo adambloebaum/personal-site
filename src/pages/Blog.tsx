@@ -34,6 +34,7 @@ const Blog = () => {
                   date={blog.date}
                   readTime={blog.readTime}
                   image={imageMap[blog.image]}
+                  tags={blog.tags}
                 />
               ))}
             </div>

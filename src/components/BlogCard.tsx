@@ -8,9 +8,10 @@ interface BlogCardProps {
   date: string;
   image: string;
   readTime: string;
+  tags: string[];
 }
 
-const BlogCard = ({ id, title, summary, date, image, readTime }: BlogCardProps) => {
+const BlogCard = ({ id, title, summary, date, image, readTime, tags }: BlogCardProps) => {
   return (
     <Link 
       to={`/blog/${id}`}
@@ -38,7 +39,15 @@ const BlogCard = ({ id, title, summary, date, image, readTime }: BlogCardProps) 
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
           {summary}
         </p>
-        
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag) => (
+            <span key={tag} className="px-2 py-1 text-xs bg-muted text-foreground rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+
         <div className="flex items-center text-sm font-medium text-accent group-hover:gap-2 transition-all">
           Read more <ArrowRight size={16} className="ml-1" />
         </div>

@@ -1,18 +1,32 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
+import WorkCard from "@/components/WorkCard";
 import { getFeaturedBlogs } from "@/lib/blogs";
+import { getFeaturedWorks } from "@/lib/works";
 import heroImage from "@/assets/home.jpg";
 import thinkingAlikeImage from "@/assets/thinking-alike/2.jpg";
 import tendonAdaptationsImage from "@/assets/tendon-adaptations/1.jpg";
+import batTrackingPatentImage from "@/assets/bat-tracking-patent/1.jpg";
 
 const Index = () => {
-  const imageMap: Record<string, string> = {
+  const blogImageMap: Record<string, string> = {
     "blog-thinking-alike": thinkingAlikeImage,
     "blog-tendon-adaptations": tendonAdaptationsImage,
   };
 
+  // Add your work images here following the same pattern
+  const workImageMap: Record<string, string> = {
+    "bat-tracking-patent": batTrackingPatentImage,
+  };
+
   const featuredBlogs = getFeaturedBlogs();
+  const featuredWorks = getFeaturedWorks();
+
+  // Combine blogs and works, sorted by date
+  const allFeatured = [...featuredBlogs, ...featuredWorks].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -72,17 +86,40 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredBlogs.map((blog) => (
-                <BlogCard
-                  key={blog.id}
-                  id={blog.id}
-                  title={blog.title}
-                  summary={blog.summary}
-                  date={blog.date}
-                  readTime={blog.readTime}
-                  image={imageMap[blog.image]}
-                />
-              ))}
+              {allFeatured.map((item) => {
+                // Check if it's a blog post (has readTime property)
+                if ('readTime' in item) {
+                  return (
+                    <BlogCard
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      summary={item.summary}
+                      date={item.date}
+                      readTime={item.readTime}
+                      image={blogImageMap[item.image]}
+                      tags={item.tags}
+                    />
+                  );
+                } else {
+                  // It's a work item
+                  return (
+                    <WorkCard
+                      key={item.id}
+                      id={item.id}
+                      title={item.title}
+                      summary={item.summary}
+                      date={item.date}
+                      type={item.type}
+                      tags={item.tags}
+                      url={item.url}
+                      pdfUrl={item.pdfUrl}
+                      logo={item.logo}
+                      image={workImageMap[item.image] || ''}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
         </section>

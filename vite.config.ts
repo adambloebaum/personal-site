@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
 
-  base: "/personal-site/",
+  base: "/",
   
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

@@ -45,7 +45,7 @@ const Index = () => {
                   Applied quantitative engineer at Driveline Baseball. Minor league pitcher for the Washington Nationals.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">                  
-                  Biomechanics, computer vision, and anything I find interesting.
+                  Science, technology, training, and anything I find interesting.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">                  
                   Currently learning about:

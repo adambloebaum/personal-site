@@ -1,0 +1,9 @@
+- quantitative motor learning
+- guide to developing cv models
+- markered vs markerless motion capture
+- perspective in point problem
+- tj rehab
+- biomechemistry of caffiene
+- racing line of hitting
+- swing power &  moi vs bat speed
+- algorithmic event detection

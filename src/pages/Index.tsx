@@ -4,20 +4,16 @@ import BlogCard from "@/components/BlogCard";
 import WorkCard from "@/components/WorkCard";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { getFeaturedWorks } from "@/lib/works";
-import heroImage from "@/assets/home.jpg";
-import thinkingAlikeImage from "@/assets/thinking-alike/2.jpg";
-import tendonAdaptationsImage from "@/assets/tendon-adaptations/1.jpg";
-import batTrackingPatentImage from "@/assets/bat-tracking-patent/1.jpg";
 
 const Index = () => {
   const blogImageMap: Record<string, string> = {
-    "blog-thinking-alike": thinkingAlikeImage,
-    "blog-tendon-adaptations": tendonAdaptationsImage,
+    "blog-thinking-alike": "/images/thinking-alike/2.jpg",
+    "blog-tendon-adaptations": "/images/tendon-adaptations/1.jpg",
   };
 
   // Add your work images here following the same pattern
   const workImageMap: Record<string, string> = {
-    "bat-tracking-patent": batTrackingPatentImage,
+    "bat-tracking-patent": "/images/bat-tracking-patent/1.jpg",
   };
 
   const featuredBlogs = getFeaturedBlogs();
@@ -60,8 +56,8 @@ const Index = () => {
               
               <div className="relative">
                 <div className="aspect-video border border-border overflow-hidden bg-card">
-                  <img 
-                    src={heroImage} 
+                  <img
+                    src="/images/home.jpg"
                     alt="Home Hero Image"
                     className="w-full h-full object-cover"
                   />

@@ -2,12 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WorkCard from "@/components/WorkCard";
 import { works } from "@/lib/works";
-import batTrackingPatentImage from "@/assets/bat-tracking-patent/1.jpg";
 
 const Works = () => {
   // Add your work images here following the same pattern as blogs
   const workImageMap: Record<string, string> = {
-    "bat-tracking-patent": batTrackingPatentImage,
+    "bat-tracking-patent": "/images/bat-tracking-patent/1.jpg",
   };
 
   return (

@@ -27,7 +27,7 @@ Beneath perception lies the structure that transforms sensation into meaning. Fo
 neurons forming pathways that mold our thoughts and memories. For machine learning models, it's a designed pattern of **layers** and **nodes** that determines how information moves
 and transforms.
 
-![The architecture of a ML model](/src/assets/thinking-alike/1.jpg)
+![The architecture of a ML model](/images/thinking-alike/1.jpg)
 
 Every connection between nodes has a **weight**, just as every belief has a strength. These weights, or **parameters**, are adjusted as the model learns, emphasizing patterns that
 matter and discounting those that don't. Over time, these weights form the model's "understanding" of its world. Much like us, that understanding is not innate but learned
@@ -38,7 +38,7 @@ through countless experiences.
 Learning is not possible without feedback. Each time we act, our minds register a response that grades the outcome. In machine learning, this mechanism is represented by
 the **loss function** — a numerical measure of how wrong a model's output is.
 
-![Loss minimization within an optimization space](/src/assets/thinking-alike/2.jpg)
+![Loss minimization within an optimization space](/images/thinking-alike/2.jpg)
 
 The **optimizer** allows models to reflect and adapt. Computationally equivalent to how humans learn, it takes feedback from the loss function and adjusts the model's weights
 to minimize error. Humans optimize too — we refine our habits, adjust our beliefs, and slowly become better versions of ourselves through correction and reflection.
@@ -57,7 +57,7 @@ No model, nor human, is without flaws. Some adapt to their inputs too well — m
 overlearn from specific experiences and misapply them in new contexts. Culture shock, for instance, is a kind of overfitting — our expectations, tuned to one environment,
 fail to generalize to another.
 
-![Appropriate and over-fitting of available data](/src/assets/thinking-alike/3.jpg)
+![Appropriate and over-fitting of available data](/images/thinking-alike/3.jpg)
 
 Models need **regularization** — constraints that help them generalize beyond what they've been exposed to. Humans need something similar, whether it's humility, introspection,
 or openness to new ideas. Without it, both models and people become too rigid in their experiences to offer value outside of them.
@@ -76,7 +76,7 @@ fluently we can apply what we know in a new context.
 Learning never truly ends — for models or for humans. In production, a model must be monitored, retrained, and updated as new data is collected. The environment it was
 built to represent keeps changing, and if the model stands still, it drifts away from relevance.
 
-![The learning loop](/src/assets/thinking-alike/4.jpg)
+![The learning loop](/images/thinking-alike/4.jpg)
 
 The same is true for us. We learn through continual reflection, application, and feedback. Our understanding must be retrained by new experiences; our assumptions must
 be challenged by fresh perspectives. A model that isn't retrained grows obsolete. A person who stops learning becomes disconnected.

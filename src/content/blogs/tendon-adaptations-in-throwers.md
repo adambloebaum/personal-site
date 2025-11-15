@@ -10,7 +10,7 @@ tags: ["Physics", "Biology", "Throwing"]
 
 It’s hard to find a more dynamic and physically demanding task in sports than throwing. Whether it be a baseball, javelin, or other implements, high-output throwing tests the boundaries of what the human anatomy is capable of. Throwing is a beautifully orchestrated series of contractions and relaxations across 3D space, analogous to a symphony. The CNS conducts, bones keep the rhythm of percussion, muscles play the brass, and tendons weave the strings. Everyone notices the thunder of the timpani, and it’s impossible to miss the blaring trumpets, but the strings weave those bursts into one seamless chord and let every note ring true.
 
-![Wilhelm Furtwangler Conducts Philharmonia, Royal Albert Hall, 1947 [1]](/src/assets/tendon-adaptations/1.jpg)
+![Wilhelm Furtwangler Conducts Philharmonia, Royal Albert Hall, 1947 [1]](/images/tendon-adaptations/1.jpg)
 
 Tendons are dense, fibrous connective tissues that attach muscles to bones. When muscles contract, tendons pull on bones, producing movement at the joints. Tendons play an important role in throwing, transferring large forces between muscle and bone at high speeds and stabilizing joints throughout the throw. Despite their importance, they are frequently overlooked in holistic throwing performance and injury prevention strategies. The repetitive, high stresses placed on tendons can lead to elbow and shoulder injuries when they are not well-adapted to handle the imposed demands of throwing.
 
@@ -22,13 +22,13 @@ Beyond structural adaptations, neurological factors significantly influence tend
 
 A handful of tendons and ligamentous structures play pivotal roles in supporting the high-speed forces characteristic of the throwing motion. Although this blog focuses on tendon adaptation, the ulnar collateral ligament (UCL) warrants mention because it is a primary stabilizer of the medial elbow. Like tendons, ligaments share many fundamental structural and mechanical properties, enabling them to adapt to progressive loading in broadly similar ways. However, they also exhibit unique structural orientations and functional demands that we won’t go into depth on, emphasizing joint stability rather than force transmission. Despite these differences, the overarching principles of mechanical stress and biological remodeling apply to both tissue types.
 
-![Anatomical drawings of the bones, muscles and tendons of the arm and hands [2]](/src/assets/tendon-adaptations/2.jpg)
+![Anatomical drawings of the bones, muscles and tendons of the arm and hands [2]](/images/tendon-adaptations/2.jpg)
 
 ### Biomechanical Demands
 
 Throwing involves complex interactions among torque, tension, and compression in the throwing arm, resulting in rapid changes in angular velocity and momentum. A primary component of this is valgus torque at the elbow, which places tensile loads on the medial joint structures — particularly the UCL — and compressive forces on the lateral side. Simultaneously, distraction forces pull the humerus away from the scapula, increasing the demands imposed on the rotator cuff and surrounding musculature to maintain proper alignment. The arm also builds up substantial angular momentum during the driveline phase, resulting in extremely high internal rotation torque at the shoulder joint. After ball release, an abrupt deceleration imposes large eccentric loads, requiring the rotator cuff, scapular stabilizers, and other structures to dissipate these forces effectively.
 
-![Slo-motion Javelin Side](/src/assets/tendon-adaptations/3.gif)
+![Slo-motion Javelin Side](/images/tendon-adaptations/3.gif)
 
 ## Structural Mechanical Properties of Tendons
 
@@ -36,21 +36,21 @@ Throwing involves complex interactions among torque, tension, and compression in
 
 Tendons are complex composite structures primarily composed of collagen, elastin, and proteoglycans. Collagen — particularly Type I — serves as the primary load-bearing element, enabling the tissue to withstand the high forces generated during dynamic movements. Elastin provides the capacity to return to its original shape after stretching, preserving structural integrity through repeated cycles of movement. Proteoglycans help regulate hydration and distribute loads throughout the tendon matrix, enhancing both resilience and flexibility. Beyond these molecular components, tendons exhibit a hierarchical organization: collagen fibrils bundle into fascicles, which are then grouped within larger sheaths and surrounded by the paratenon. This multilayered arrangement equips tendons with exceptional tensile strength and the ability to adapt over time.
 
-![Anatomy of a Tendon [3]](/src/assets/tendon-adaptations/4.jpg)
+![Anatomy of a Tendon [3]](/images/tendon-adaptations/4.jpg)
 
 ### Viscoelastic Behavior and Its Importance
 
 A unique quality of tendon mechanics is its viscoelasticity, meaning it exhibits both elastic (spring-like) and viscous (time-dependent) behaviors. In purely elastic materials, stress (σ) scales directly with strain (ϵ) via Hooke’s Law:
 
-![Hooke's Law](/src/assets/tendon-adaptations/5.jpg)
+![Hooke's Law](/images/tendon-adaptations/5.jpg)
 
 where E (Young’s modulus) indicates stiffness or resistance to deformation. Conversely, purely viscous materials follow Newton’s Law of Viscosity:
 
-![Newton's Law of Viscosity](/src/assets/tendon-adaptations/6.jpg)
+![Newton's Law of Viscosity](/images/tendon-adaptations/6.jpg)
 
 where η represents viscosity. Viscoelastic materials — like tendons — combine these properties, allowing them to store and release energy (elastic response) while also deforming gradually under sustained load (viscous response). As the tendon is stretched, it momentarily resists elongation like a spring, yet over time it can creep or relax, reflecting its viscous component.
 
-![Stress-Strain Curve of a Tendon [4]](/src/assets/tendon-adaptations/7.jpg)
+![Stress-Strain Curve of a Tendon [4]](/images/tendon-adaptations/7.jpg)
 
 ### Thickness, Stiffness, and Compliance
 
@@ -80,7 +80,7 @@ While collagen reorganization and structural remodeling significantly influence 
 
 With repeated high-intensity stimuli — such as plyometric exercises or overcoming isometric holds — the CNS improves its capacity to rapidly recruit and synchronize motor units. This synchronized recruitment intensifies muscular contractions at the MTJ, enhancing the tendon’s elastic response and increasing the efficiency of energy storage and release over time.
 
-![Slo-motion achilles jump rope](/src/assets/tendon-adaptations/8.gif)
+![Slo-motion achilles jump rope](/images/tendon-adaptations/8.gif)
 
 ### Proprioceptive Feedback and Reflexive Control
 
@@ -103,7 +103,7 @@ Here’s the science⬇️
 
 Repeated exposure to appropriate stimuli refines neuromuscular patterns, optimizing the timing, magnitude, and duration of muscle activation at the MTJ. As the CNS “learns” and consolidates these recruitment patterns, the mechanical efficiency of the MTJ significantly improves, complementing structural collagen adaptations. Neurological adaptations thus collaborate with structural changes to enhance tendon stiffness, ultimately promoting superior elastic energy storage and release during throwing activities.
 
-![Slo-motion javelin release](/src/assets/tendon-adaptations/9.gif)
+![Slo-motion javelin release](/images/tendon-adaptations/9.gif)
 
 ## Cellular and Molecular Mechanisms
 
@@ -113,7 +113,7 @@ At the cellular and molecular levels, tendon adaptation is primarily driven by f
 
 These findings align with previous evidence showing that mechanical load triggers the production of IGF-I, which promotes fibroblast contraction and collagen synthesis. Collectively, the increased activity of collagen, MMP, and TIMP genes highlights the coordinated processes of inflammation, repair, and remodeling that occur following mechanical loading.
 
-![Gene expression of collagens, MMPs, and TIMPs for phase loaded tendons [5]](/src/assets/tendon-adaptations/10.jpg)
+![Gene expression of collagens, MMPs, and TIMPs for phase loaded tendons [5]](/images/tendon-adaptations/10.jpg)
 
 Throughout these stages, maintaining the balance between collagen synthesis and degradation is extremely important. Matrix metalloproteinases (MMPs) remove older or damaged collagen, creating space for new, stronger fibers. However, fibroblast contraction must be tightly regulated — excessive contraction can cause scarring, while insufficient contraction delays healing and compromises tissue quality. Collectively, these cellular activities ensure tendon adaptation occurs in a healthy, progressive manner, ultimately enhancing tendon strength and resilience.
 
@@ -133,7 +133,7 @@ Accompanying these dimensional changes are enhancements in mechanical properties
 
 Conversely, disuse or immobilization can lead to negative adaptations. Prolonged inactivity can induce a net catabolic state within the tendon, characterized by decreased collagen synthesis and accelerated degradation. These changes lead to reduced tendon thickness, diminished stiffness, and potential disorganization of collagen fibrils, ultimately impairing the tissue’s load-bearing capacity. Additionally, prolonged absence of mechanical stimuli may adversely affect vascularization, nutrient transport, and cellular activity, increasing the risk of injury upon the resumption of activity.
 
-![Healthy vs Abnormal Collagen Alignment [6]](/src/assets//tendon-adaptations/11.jpg)
+![Healthy vs Abnormal Collagen Alignment [6]](/images/tendon-adaptations/11.jpg)
 
 ## Impulse and Loading Dynamics
 
@@ -141,11 +141,11 @@ Conversely, disuse or immobilization can lead to negative adaptations. Prolonged
 
 Impulse refers to the change in momentum, which is the product of force and time elapsed or “duration” (J=Δp=F⋅Δt). As a result, the same impulse can be achieved through different combinations of these two variables. For instance, a large amount of force exerted over a short duration can yield the same overall impulse as a smaller force applied for a longer duration.
 
-![Equal Impulses at Different Force-Duration Combinations](/src/assets/tendon-adaptations/12.jpg)
+![Equal Impulses at Different Force-Duration Combinations](/images/tendon-adaptations/12.jpg)
 
 However, the force-time curve — which illustrates how quickly force develops and how long it is sustained — can look drastically different in each scenario.
 
-![Multiple Force–Time Curves with Varying Peak and Duration](/src/assets/tendon-adaptations/13.jpg)
+![Multiple Force–Time Curves with Varying Peak and Duration](/images/tendon-adaptations/13.jpg)
 
 ### Force-Time Profiles Applied to Tendons
 
@@ -159,7 +159,7 @@ If you want to learn more about impulse, read Brice Crider’s [Impulse: The Kin
 
 Both the magnitude of force and the duration of loading significantly influence tendon adaptations. High peak forces applied within short intervals highlight the tendon’s viscoelastic characteristics, promoting increased stiffness and neuromuscular adaptations crucial for rapid loading and efficient force transmission. In contrast, lower forces applied over longer durations help establish a more robust structural foundation, encouraging tendon thickening and enhancing overall resilience. Together, short-duration loading concentrates high force into a narrow time frame — intensifying the tendon’s demand for elasticity — while prolonged loading phases offer a gradual stimulus that facilitates tissue remodeling and collagen realignment.
 
-![ER Kettleball ISO](/src/assets/tendon-adaptations/14.jpg)
+![ER Kettleball ISO](/images/tendon-adaptations/14.jpg)
 
 ### Manipulating Frequency and Volume
 
@@ -177,7 +177,7 @@ Neither method is inherently superior; but by fine-tuning these variables — fo
 
 Heavier implements (e.g., overload weighted balls, javelins, footballs) require athletes to generate force over slightly longer durations. Although release velocities are lower compared to lighter implements, the greater mass necessitates substantial force production and thus demands larger impulses to change the implement’s momentum. From a tendon perspective, this prolonged loading promotes structural adaptations, such as increased thickness and enhanced collagen cross-linking, resulting in a robust tendon capable of withstanding repetitive overhead stress without compromising tissue integrity.
 
-![Overload-underload implements](/src/assets/tendon-adaptations/15.jpg)
+![Overload-underload implements](/images/tendon-adaptations/15.jpg)
 
 ### Underload Implements: Enhancing Elasticity and Stiffness
 
@@ -189,13 +189,13 @@ Lighter implements (e.g., underload weighted baseballs, tennis balls) produce hi
 
 Underload implements capitalize on the tendon’s viscoelastic properties by transmitting force rapidly while inducing comparatively less fatigue than overload implements at equivalent intensities. This reduced fatigue allows athletes to perform high-intensity throwing sessions more frequently. Such an approach is particularly valuable in the late offseason or during in-season training, when maintaining or increasing throwing output is crucial without accumulating unnecessary fatigue. In contrast, overload implements involve prolonged loading durations and, consequently, greater fatigue. Thus, they are better suited to the early offseason, when maximizing absolute output is less critical, and the focus is on enhancing tendon thickness and establishing a robust structural foundation without exposing the tendon to the extreme peak forces associated with lighter implements. This strategy is especially beneficial during return-to-throw or on-ramp programs, as athletes coming off periods without throwing stimulus often have atrophied tendons and reduced MTJ efficiency.
 
-![Slo-motion mocap](/src/assets/tendon-adaptations/16.gif)
+![Slo-motion mocap](/images/tendon-adaptations/16.gif)
 
 ### Accomodating Different Training Ages
 
 For less advanced throwers, a mixed-implement approach using both heavy and light implements is generally sufficient. Due to their lower training age and limited adaptations, they benefit from a comprehensive stimulus, promoting simultaneous increases in tendon thickness and stiffness. Varying force magnitude and loading duration within sessions creates diverse loading profiles, preventing overemphasis on any single force-time pattern. In contrast, elite throwers with extensive training history and highly adapted tendons may require a more polarized approach to induce further adaptations in their already advanced qualities. Beginning with an overload-focused strategy and gradually transitioning toward underload training provides dedicated periods at each end of the spectrum, effectively stimulating targeted improvements in tendon properties.
 
-![Youth Training Floor](/src/assets/tendon-adaptations/17.jpg)
+![Youth Training Floor](/images/tendon-adaptations/17.jpg)
 
 ### Periodizing Adaptations By Changing Variables
 
@@ -211,7 +211,7 @@ Submaximal effort training differs from maximal effort training in terms of impu
 
 Isometric exercises, particularly overcoming isometrics, heavily recruit motor units simultaneously, fostering neurological adaptations that enhance overall MTU response. The maximal voluntary contractions characteristic of these exercises strengthen CNS pathways, refining neuromuscular control and improving tendon efficiency at the MTJ.
 
-![An example of forearm isometric training](/src/assets/tendon-adaptations/18.jpg)
+![An example of forearm isometric training](/images/tendon-adaptations/18.jpg)
 
 Plyometric training also strongly activates proprioceptors, improving muscle spindle and Golgi tendon organ responsiveness. Over repeated cycles, this proprioceptive refinement sharpens reflexive muscle activations, supporting rapid and precise stiffness adjustments crucial for dynamic tendon performance.
 

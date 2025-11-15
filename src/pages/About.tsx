@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import aboutMeImage from "@/assets/about-me.jpg";
 
 const About = () => {
   return (
@@ -58,7 +57,7 @@ const About = () => {
               {/* Image Section */}
               <div className="flex-1 flex justify-center lg:justify-end">
                 <img
-                  src={aboutMeImage}
+                  src="/images/about-me.jpg"
                   alt="About Me"
                   className="shadow-lg max-w-full xlg:max-w-md object-cover"
                 />

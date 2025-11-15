@@ -2,13 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import { blogs } from "@/lib/blogs";
-import thinkingAlikeImage from "@/assets/thinking-alike/2.jpg";
-import tendonAdaptationsImage from "@/assets/tendon-adaptations/1.jpg";
 
 const Blog = () => {
   const imageMap: Record<string, string> = {
-    "blog-thinking-alike": thinkingAlikeImage,
-    "blog-tendon-adaptations": tendonAdaptationsImage,
+    "blog-thinking-alike": "/images/thinking-alike/2.jpg",
+    "blog-tendon-adaptations": "/images/tendon-adaptations/1.jpg",
   };
 
   return (

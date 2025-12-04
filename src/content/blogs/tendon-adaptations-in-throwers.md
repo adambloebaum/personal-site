@@ -4,6 +4,7 @@ summary: "What tendons are, their response to simulus, and how throwers can use 
 date: "2025-05-01"
 readTime: "17 min"
 image: "blog-tendon-adaptations"
+ogImage: "tendon-adaptations/1.jpg"
 featured: true
 tags: ["Physics", "Biology", "Throwing"]
 ---

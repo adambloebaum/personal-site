@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
-import { MdMail } from "react-icons/md";
 
 const Contact = () => {
   const contactLinks = [
@@ -22,13 +21,7 @@ const Contact = () => {
       label: "GitHub",
       handle: "adambloebaum",
       href: "https://github.com/adambloebaum",
-    },
-    {
-      icon: MdMail,
-      label: "Email",
-      handle: "adam.bloebaum@drivelinebaseball.com",
-      href: "mailto:adam.bloebaum@drivelinebaseball.com",
-    },
+    }
   ];
 
   return (
@@ -41,7 +34,7 @@ const Contact = () => {
             <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Contact
             </h1>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex flex-col gap-6 max-w-md">
               {contactLinks.map((link) => {
                 const Icon = link.icon;
                 return (

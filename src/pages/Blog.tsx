@@ -7,6 +7,7 @@ const Blog = () => {
   const imageMap: Record<string, string> = {
     "blog-thinking-alike": "/images/thinking-alike/2.jpg",
     "blog-tendon-adaptations": "/images/tendon-adaptations/1.jpg",
+    "blog-energy-flow": "/images/energy-flow/1.jpg",
   };
 
   return (

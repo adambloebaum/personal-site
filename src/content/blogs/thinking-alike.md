@@ -4,7 +4,8 @@ summary: "Exploring the similarities between human thinking and machine learning
 date: "2025-10-10"
 readTime: "5 min"
 image: "blog-thinking-alike"
-featured: true
+ogImage: "thinking-alike/2.jpg"
+featured: False
 tags: ["Machine Learning", "Neuroscience", "Philosophy"]
 ---
 

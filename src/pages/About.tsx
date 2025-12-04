@@ -16,7 +16,7 @@ const About = () => {
 
             {/* Split text + image */}
             <div className="flex flex-col lg:flex-row items-start gap-12">
-              {/* Text Section */}
+              {/* Text Section - with inline images on mobile */}
               <div className="flex-1 space-y-6 prose prose-lg max-w-none text-foreground leading-relaxed">
                 <p>
                   I work as an Applied Quantitative Engineer at{" "}
@@ -28,6 +28,15 @@ const About = () => {
                   deliverables that help push player development forward.
                 </p>
 
+                {/* Image 1 - mobile only */}
+                <div className="lg:hidden flex justify-center py-4">
+                  <img
+                    src="/images/about-me.jpg"
+                    alt="About Me"
+                    className="shadow-lg max-w-full object-cover"
+                  />
+                </div>
+
                 <p>
                   I'm also a minor league pitcher for the{" "}
                   <span className="font-medium text-foreground">
@@ -36,6 +45,15 @@ const About = () => {
                   , giving me a unique perspective as both a builder and a user
                   of the tools I create.
                 </p>
+
+                {/* Image 2 - mobile only */}
+                <div className="lg:hidden flex justify-center py-4">
+                  <img
+                    src="/images/about-me2.jpg"
+                    alt="About Me"
+                    className="shadow-lg max-w-full object-cover"
+                  />
+                </div>
 
                 <p>
                   I completed my undergraduate work in Physics and Data Science
@@ -54,10 +72,15 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Image Section */}
-              <div className="flex-1 flex justify-center lg:justify-end">
+              {/* Image Section - desktop only, stacked */}
+              <div className="hidden lg:flex flex-1 flex-col gap-6 justify-start items-end">
                 <img
                   src="/images/about-me.jpg"
+                  alt="About Me"
+                  className="shadow-lg max-w-full xlg:max-w-md object-cover"
+                />
+                <img
+                  src="/images/about-me2.jpg"
                   alt="About Me"
                   className="shadow-lg max-w-full xlg:max-w-md object-cover"
                 />

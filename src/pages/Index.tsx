@@ -7,11 +7,10 @@ import { getFeaturedWorks } from "@/lib/works";
 
 const Index = () => {
   const blogImageMap: Record<string, string> = {
-    "blog-thinking-alike": "/images/thinking-alike/2.jpg",
     "blog-tendon-adaptations": "/images/tendon-adaptations/1.jpg",
+    "blog-energy-flow": "/images/energy-flow/1.jpg",
   };
 
-  // Add your work images here following the same pattern
   const workImageMap: Record<string, string> = {
     "bat-tracking-patent": "/images/bat-tracking-patent/1.jpg",
   };
@@ -76,7 +75,7 @@ const Index = () => {
                   Highlights
                 </h2>
                 <p className="text-muted-foreground">
-                  My best projects and writing
+                  My best work
                 </p>
               </div>
             </div>

@@ -39,29 +39,17 @@ $$
 P = M \omega
 $$
 
-Power is measured in watts (W), where 1 W = 1 J/S. The distinction between power and energy is essential: power is instantaneous and can be positive or negative at any moment, while energy is the time integral of power, and therefore accumulates only over an interval:
+Power is measured in watts (W), where 1 W = 1 J/S. The distinction between power and energy is essential: power is **instantaneous** and can be positive or negative at any moment, while energy is the time integral of power, and therefore accumulates only over an interval:
 
 $$
 E = \int_{t_0}^{t_1} P(t), dt
 $$
 
-This is why we can report peak power at a joint, but not “instantaneous energy.” Energy only exists over time.
-
-## Why Energy and Power Matter in Throwing
-
-Throwing a baseball requires imparting mechanical energy to the ball to change its position. For the ball to leave the hand with high translational kinetic energy
-
-$$
-E_{\text{ball}} = \frac{1}{2} m v^{2}
-$$
-
-the pitcher’s body must first generate and then transfer mechanical energy through the kinetic chain so that the distal segments (forearm, hand, ball) receive enough to be displaced at high speeds. More energy transferred to the hand-ball system corresponds to higher ball velocity. Efficient energy transfer also reduces the amount of local positive work that muscles at individual joints must perform, lowering mechanical stress.
-
-Understanding where energy is generated, where it is absorbed, and how much is passed from one segment to the next is central to using biomechanics in player development.
+This is why we can report peak power at a joint, but not “instantaneous energy.” **Energy only exists over time**.
 
 ## Joint Moments and Torques
 
-A moment (or torque) is the rotational analog of force. For a force ${F}$ acting at a perpendicular distance (r) from a joint axis,
+A moment (or torque) is the rotational analog of force. For a force ${F}$ acting at a perpendicular distance (r) from a joint axis:
 
 $$
 M = r F_{\perp}
@@ -75,7 +63,7 @@ $$
 
 where (I) is segment moment of inertia and $\alpha$ is angular acceleration.
 
-Moments arise because muscles pull on bones at distances away from the joint center. When a pitcher rotates the upper arm or forearm, the muscles generate joint moments, which then contribute to joint power.
+Moments arise because muscles pull on bones at distances away from the joint center. When the upper arm or forearm moves rotationally, the muscles generate joint moments, which then contribute to joint power.
 
 ## Inverse Dynamcis: How Joint Moments Are Calculated in a Lab
 
@@ -93,7 +81,7 @@ $$
 \sum M = I \alpha + {r}_{\text{COM}} \times (m{a})
 $$
 
-From motion-capture data (positions, velocities, accelerations), these equations produce internal joint forces and moments at each time step of the motion. These joint moments and angular velocities then allow joint power to be computed.
+From motion-capture data (captured positions to derived velocities and accelerations), these equations produce internal joint forces and moments at each time step of the motion. These joint moments and angular velocities then allow joint power to be computed.
 
 ## Joint Force Power (JFP) and Segment Torque Power (STP)
 
@@ -143,7 +131,7 @@ This applies to both proximal and distal STP components, allowing us to characte
 
 ## Energy Transfer Through a Joint
 
-The more important question in pitching biomechanics is not how much power each joint generates, but how much energy transfers from one segment to the next. This requires separating generation from transfer. Power partitioning theory gives us a way to do this.
+The more important question in pitching biomechanics is not how much power each joint generates, but **how much energy transfers from one segment to the next**. This requires separating generation from transfer. Power partitioning theory gives us a way to do this.
 
 Consider the proximal and distal STP components at a joint:
 
@@ -160,7 +148,7 @@ $$
 \operatorname{sign}(P_{\text{prox}}) = \operatorname{sign}(P_{\text{dist}}),
 $$
 
-then both segments are experiencing power in the same direction (both generating or both absorbing). In this case, the joint is not transferring energy; the musculature is doing active work.
+then both segments are experiencing power in the same direction (both generating or both absorbing). In this case, the joint is *not* transferring energy; the musculature is doing active work.
 
 ### Case 2: Opposite Signs
 
@@ -222,6 +210,8 @@ Efficient energy transfer:
 - increases consistency of movement
 - allows higher velocities with less muscular effort
 
+Understanding where energy is generated, where it is absorbed, and how much is passed from one segment to the next is central to using biomechanics in player development.
+
 ## From Power to Energy
 
 Although we compute power instantaneously, energy must always be computed by integrating that power over time:
@@ -257,8 +247,6 @@ $$
 \eta = 100 \times \frac{E_{\text{elbow}}}{E_{\text{shoulder}}}
 $$
 
-A user-friendly interpretation is to report energy flow as a percentage, expressed as “efficiency” (e.g., “94% of energy arriving at the shoulder made it to the elbow”) rather than reporting a “–6% loss.”
-
 ## Data Source and Population
 
 I looked at 17,942 throws from athletes who participated in motion-capture assessments at Driveline Baseball. Only pitches with a regulation baseball, in the athlete's normal pitching motion, at game-intent, thrown over 70 mph were used in the dataset.
@@ -279,23 +267,23 @@ I looked at 17,942 throws from athletes who participated in motion-capture asses
 
 ### Energy Transfer Metrics
 
-Joint-level energetics were calculated from inverse dynamics, quantifying energy transfer, generation, and absorption at the shoulder and elbow joints during the throwing motion. The analysis window was defined from foot plant (FP) to ball release (BR), capturing the arm-centric phase of the pitch.
+Joint-level energetics were calculated using inverse dynamics, quantifying energy transfer, generation, and absorption at the shoulder and elbow joints during the throwing motion. The analysis window was defined from foot plant (FP) to ball release (BR), capturing the arm-centric phase of the pitch.
 
 Transfer metrics included:
 
-- Peak energy transfer (W): Maximum instantaneous power transferred across each joint from FP-BR
-- Total energy transfer (J): Time-integrated energy transferred across each joint from FP-BR
-- Net transfer metrics: The difference between elbow and shoulder energy values, representing the energy "gained" or "lost" between joints
+- **Peak energy transfer (W)**: Maximum instantaneous power transferred across each joint from FP-BR
+- **Total energy transfer (J)**: Time-integrated energy transferred across each joint from FP-BR
+- **Net transfer metrics**: The difference between elbow and shoulder energy values, representing the energy "gained" or "lost" between joints
 
 Generation and absorption metrics quantified energy added to (generation) or removed from (absorption) the kinematic chain at each joint from FP-BR.
 
 ### Valgus Torque Metrics
 
-Elbow valgus torque was calculated from inverse dynamics as the internal moment resisting valgus stress. Key metrics included:
+Elbow valgus torque was calculated from inverse dynamics as the internal varus moment resisting valgus stress. Key metrics included:
 
-- Peak valgus torque (Nm): Maximum valgus moment during FP-BR
-- Valgus torque area under the curve (AUC, Nm·s): Time-integrated valgus loading during FP-BR, calculated using trapezoidal integration
-- Maximum valgus loading rate (Nm/s): Peak rate of change in valgus torque, calculated using gradient methods
+- **Peak valgus torque (Nm)**: Maximum elbow varus moment during FP-BR
+- **Valgus torque area under the curve (AUC, Nm·s)**: Time-integrated valgus loading during FP-BR, calculated using trapezoidal integration
+- **Maximum valgus loading rate (Nm/s)**: Peak rate of change in valgus torque, calculated using gradient methods
 
 ### Temporal Metrics
 
@@ -304,10 +292,6 @@ Event timing was extracted to quantify coordination patterns:
 - Time between peak shoulder and elbow energy transfer
 - Time from peak elbow energy transfer to peak valgus torque
 - Time from peak shoulder energy transfer to peak valgus torque
-
-### Kinematic Metrics
-
-Additional biomechanical variables included maximum shoulder internal rotation velocity, maximum shoulder external rotation angle, and maximum elbow extension velocity during the pitching motion.
 
 ### Anthropometric Normalization
 
@@ -342,25 +326,13 @@ To account for confounding relationships, partial correlations were calculated b
 
 PCA was performed on standardized energy metrics (shoulder and elbow peak transfer, total transfer, generation, absorption, and net transfer values) to identify underlying patterns of variance. The first three principal components were retained for interpretation, and component loadings were visualized to understand variable contributions.
 
-### Ridge Regression
-
-Ridge regression was applied to examine multicollinearity effects among energy predictors of pitch velocity. Coefficient paths were plotted across regularization parameters (α = 0, 0.1, 1, 10, 100) to demonstrate coefficient shrinkage, with α = 0 approximating ordinary least squares.
-
-### Variance Inflation Factors (VIF)
-
-VIFs were calculated for all energy metrics to quantify multicollinearity severity, with VIF > 5 indicating moderate and VIF > 10 indicating high multicollinearity.
-
 ### Residual Analysis
 
 Residual plots were generated to explore relationships independent of confounding variables. Residuals from univariate regressions were plotted against one another to identify unique variance contributions (e.g., residual valgus torque vs. residual elbow transfer, both after removing pitch velocity effects).
 
-### Density Estimation
-
-Bivariate kernel density estimation (Gaussian kernel) was used to visualize joint distributions of key variable pairs. Convex hulls were overlaid to delineate data boundaries. Envelope curves representing 5th and 95th percentiles within velocity bins were computed using LOESS smoothing to identify minimum and maximum performance boundaries.
-
 ## Data Management
 
-All analyses were performed in Python 3.x using pandas (data manipulation), NumPy (numerical operations), SciPy (statistical functions), scikit-learn (machine learning methods), statsmodels (advanced statistics), and Matplotlib/Seaborn (visualization). Data were cached locally after initial database extraction to ensure reproducibility and computational efficiency.
+All analyses were performed in Python 3.x using pandas, NumPy, SciPy, scikit-learn, statsmodels, and Matplotlib/Seaborn. Data were cached locally after initial database extraction to ensure reproducibility and computational efficiency.
 
 ## Results
 
@@ -397,9 +369,9 @@ Measures of generation and absorption within joints (shoulder/elbow generation o
   <img src="/images/energy-flow/10.png" alt="img2" style="width: 50%;" />
 </div>
 
-**Conclusion**: delivering more total and peak energy through the chain is the primary mechanical correlator of throwing velocity. There is no evidence that more generation, better absorption/generation balance, or precise joint peak power timing is a driver of velocity.
+**Conclusion**: transfering more total energy through the throwing arm is the primary mechanical correlator of throwing velocity. There is no evidence that more generation, better absorption/generation balance, or precise joint peak power timing is a driver of velocity.
 
-**#2: Elbow total transfer is almost entirely determined by shoulder transfer**
+**#2: Elbow energy transfer is almost entirely determined by shoulder energy transfer**
 
 Shoulder total transfer → elbow total transfer: r² = **0.956**. Shoulder peak transfer also strongly predicts elbow transfer (r² = **0.787**).
 
@@ -414,7 +386,7 @@ Partial r² shows elbow total transfer still links to shoulder peak transfer aft
   <img src="/images/energy-flow/13.png" alt="img1" style="width: 100%;" />
 </div>
 
-**Conclusion**: the shoulder sets the energy ceiling; the elbow largely transfers what the shoulder sends.
+**Conclusion**: the shoulder and elbow are effectively mechanically-coupled, and what the shoulder transfers will be transferred by the elbow.
 
 **#3: Valgus torque scales with transfer magnitude, especially elbow peak transfer**
 
@@ -432,7 +404,7 @@ Pitch speed explains some torque variance (r² = **0.503**), but transfer magnit
   <img src="/images/energy-flow/17.png" alt="img2" style="width: 50%;" />
 </div>
 
-**Conclusion**: higher energy flows to the elbow reliably increase joint loading. Thus elbow injury risk (if driven by valgus torque) is mechanistically tied to energy throughput.
+**Conclusion**: more energy transferred through the elbow reliably increases joint loading. Thus elbow injury risk (if driven by valgus torque) is mechanistically tied to energy throughput.
 
 **#4: Anthropometry matters: lever length changes mechanical cost**
 
@@ -449,7 +421,7 @@ Peak valgus torque vs (elbow_total_transfer / forearm_length): r² ≈ 0.570.
   <img src="/images/energy-flow/20.png" alt="img1" style="width: 50%;" />
 </div>
 
-**Conclusion**: arm length affects torque magnitudes and the apparent “cost” of transfer. Normalization helps separate anatomical from technique effects.
+**Conclusion**: arm length affects torque magnitudes and the apparent “cost” of transfer. Normalization helps separate anatomical from movement effects.
 
 **#5: Timing and efficiency ratios provide little explanatory power**
 
@@ -462,28 +434,19 @@ Timing metrics have very small r²s across the board. Efficiency ratios (transfe
 
 **Conclusion**: Sequencing precision and simple efficiency percentages do not explain which pitchers throw harder or suffer more torque.
 
-**#6: Partial correlations / residuals show little independent predictive signal after accounting for coupling**
-
-Once shoulder transfer is accounted for, elbow transfer has minimal additional predictive power for speed. Anthropometrics (mass) explain moderate partial variance in torque (partial r² = **0.303**).
-
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/23.png" alt="img1" style="width: 50%;" />
-  <img src="/images/energy-flow/24.png" alt="img2" style="width: 50%;" />
-</div>
-
 ## Discussion
 
-The findings of this study highlight a central principle of throwing mechanics: the primary role of the throwing arm is not to generate energy, but to transfer energy that has already been produced proximally. Across all analyses, the shoulder and elbow behaved as a mechanically coupled system in which the elbow served primarily as a conduit rather than an engine. Joint power partitioning showed that local energy generation or absorption at the elbow and the shoulder had little to no relationship with pitch velocity. In contrast, the magnitude of transferred energy, particularly from the shoulder, was strongly predictive of ball velocity.
+The findings of this study highlight a central principle of throwing mechanics: the primary role of the throwing arm is **not** to generate energy, but to transfer energy that has **already been produced** proximally. Across all analyses, the shoulder and elbow behaved as a mechanically coupled system in which the elbow served primarily as a **conduit** rather than an engine. Joint power partitioning showed that local energy generation or absorption at the elbow and the shoulder had little to no relationship with pitch velocity. In contrast, the magnitude of transferred energy, particularly from the shoulder, was strongly predictive of ball velocity.
 
-This reinforces the concept that the throwing arm’s primary job is to maintain structural integrity under high loads rather than contribute meaningful energetic output. Its job, from a velocity standpoint, is to remain connected to the torso and allow the energy produced by proximal segments to be delivered distally with minimal interruption. In other words, the arm must stay attached and stay compliant. The strong linear coupling between shoulder and elbow energetics supports this interpretation: pitchers who generate more energy proximally simply pass more of it distally, with the elbow acting largely as a passive transmitter.
+This reinforces the concept that the throwing arm musculature's primary job is to maintain structural integrity under high loads rather than contribute meaningful energetic output. Its job, from a velocity standpoint, is to remain connected to the torso and allow the energy produced by proximal segments to be delivered distally with minimal interruption. In other words, the arm must stay attached and stay compliant. The strong mechanical coupling between shoulder and elbow energetics supports this interpretation: pitchers who generate more energy proximally simply pass more of it distally, with the elbow acting largely as a **passive transmitter** with little to no resistance.
 
-One of the most interesting findings was the lack of statistical value in commonly cited qualitative concepts such as “sequencing”, “efficiency”, or the timing of energy transfer between segments. Metrics related to timing, peak timing offsets, and transfer efficiency explained little variance in performance or loading even after controlling for the magnitude of energy transfer. This challenges long-held assumptions about the importance of precise arm-segment sequencing during the throwing motion and suggests that proximal energy magnitude, not distal timing nuance, is the dominant factor. 
+One of the most interesting findings was the lack of statistical value in commonly cited qualitative concepts such as “sequencing”, “efficiency”, or the timing of energy transfer between segments. Metrics related to timing, peak timing offsets, and transfer efficiency explained little variance in performance or loading even after controlling for the magnitude of energy transfer. This challenges long-held assumptions about the importance of precise arm-segment sequencing during the throwing motion and suggests that proximal energy magnitude, not distal timing nuance, is the dominant factor.
 
-With respect to injury risk: elbow varus moment (valgus torque) ,a primary mechanical correlate of elbow injury, showed a robust positive relationship with both peak and total elbow energy transfer. This is expected: more energy flowing through the joint generally requires more internal force to resist it. However, the relationship was not perfectly predictive. A moderate portion of variance in valgus torque remained unexplained by energy transfer alone. This residual variance is very useful and meaningful. It implies that some athletes are able to transmit large amounts of energy at comparatively lower joint cost, while others require disproportionately high torque for the same energetic throughput.
+With respect to injury risk: elbow varus moment (valgus torque), a primary mechanical correlate of elbow injury, showed a robust positive relationship with both peak and total elbow energy transfer. This is expected: more energy flowing through the joint generally requires more internal force to resist it. However, the relationship was not perfectly predictive. A moderate portion of variance in valgus torque remained unexplained by energy transfer alone. This residual variance is very useful and meaningful. It implies that some athletes are able to transmit large amounts of energy at **comparatively lower joint cost**, while others require disproportionately high torque for the same energetic throughput.
 
-This "energy-to-torque tradeoff" may provide a promising framework for understanding mechanical injury risk. Pitchers who sit in a quadrant characterized by high energy transfer but relatively low torque may represent more cost-effective movement solutions and have found ways to accept, orient, or distribute load more effectively. Conversely, athletes who show elevated torque relative to their energy transfer may represent higher-risk mechanical profiles. Identifying these features could have significant implications for training and injury prevention.
+This "energy-to-torque tradeoff" may provide a promising framework for understanding mechanical injury risk. Pitchers who sit in a quadrant characterized by high energy transfer but relatively low torque may represent more **cost-effective movement solutions** and have found ways to accept, orient, or distribute load more effectively. Conversely, athletes who show elevated torque relative to their energy transfer may represent **higher-risk mechanical profiles**. Identifying these features could have significant implications for training and injury prevention.
 
-Future work should attempt to model this residual (the portion of valgus torque not explained by energy transfer) using joint angles, joint positions, timing features, full joint center signals, or other biomechanical variables. If these features can be identified and trained without diminishing energy transfer (and thus without reducing velocity), they may form the basis for low-cost, high-output mechanical adaptations, a key target for reducing elbow injury risk in high-level throwers.
+Future work should attempt to model this residual (the portion of valgus torque not explained by energy transfer) using joint angles, joint positions, timing features, full joint center signals, or other biomechanical variables. If these features can be identified and trained without diminishing energy transfer (and thus without reducing velocity), they may form the basis for **low-cost, high-output mechanical adaptations**, a key target for reducing elbow injury risk in high-level throwers.
 
 Overall, these findings reinforce the longstanding qualitative coaching idea that "muscling up" is counterproductive. Attempting to generate force locally in the arm not only fails to increase velocity but may interfere with the arm's primary function as a passive conductor of energy. The forearm flexor-pronator musculature and its associated tendons function most effectively when allowed to utilize rapid stretch-shortening cycles, where passive elastic energy storage and recoil contribute to force production. When these tissues are held in sustained contraction throughout the throwing motion, this elastic advantage is compromised, forcing the muscle-tendon unit to rely on active contractile work rather than passive energy transfer.
 

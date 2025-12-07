@@ -104,3 +104,16 @@ All colors MUST be HSL.
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Force long URLs and words to wrap in prose content */
+.prose {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.prose a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}

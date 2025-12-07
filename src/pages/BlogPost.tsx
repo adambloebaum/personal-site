@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -13,6 +14,10 @@ import "katex/dist/katex.min.css";
 const BlogPost = () => {
   const { id } = useParams();
   const blog = id ? getBlogById(id) : undefined;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!blog) {
     return (

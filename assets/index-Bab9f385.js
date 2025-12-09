@@ -414,22 +414,19 @@ Pitch speed explains some torque variance (r² = **0.503**), but transfer magnit
 \r
 **Conclusion**: more energy transferred through the elbow reliably increases joint loading. Thus elbow injury risk (if driven by valgus torque) is mechanistically tied to energy throughput.\r
 \r
-**#4: Anthropometry matters: lever length changes mechanical cost**\r
+**#4: Anthropometry plays a small role: lever length changes mechanical cost to some degree**\r
 \r
-Normalizing torque and transfer by forearm/upper-arm length preserves strong relationships: e.g., peak valgus torque / forearm_length vs elbow total transfer: r² = **0.632**; elbow total transfer / forearm_length vs pitch speed: r² = **0.616**.\r
+Normalizing torque and energy transfer by forearm length produces a small but still meaningful drop in predictive power while preserving strong relationships. For example:\r
+- Peak valgus torque / forearm length vs elbow total transfer: r² = **0.632**\r
+- Peak valgus torque vs elbow total transfer / forearm length: r² = **0.570**\r
+Both remain close to the raw relationship (r² = 0.660), reflecting only a modest change in explained variance (-0.09)\r
 \r
 <div style="display: flex; gap: 10px;">\r
   <img src="/images/energy-flow/18.png" alt="img1" style="width: 50%;" />\r
-  <img src="/images/energy-flow/19.png" alt="img2" style="width: 50%;" />\r
+  <img src="/images/energy-flow/20.png" alt="img2" style="width: 50%;" />\r
 </div>\r
 \r
-Peak valgus torque vs (elbow_total_transfer / forearm_length): r² ≈ 0.570.\r
-\r
-<div style="display: flex; gap: 10px;">\r
-  <img src="/images/energy-flow/20.png" alt="img1" style="width: 50%;" />\r
-</div>\r
-\r
-**Conclusion**: arm length affects torque magnitudes and the apparent “cost” of transfer. Normalization helps separate anatomical from movement effects.\r
+**Conclusion**: forearm length influences valgus torque by manipulating the lever length, but total energy transfer is still the primary driver\r
 \r
 **#5: Timing and efficiency ratios provide little explanatory power**\r
 \r

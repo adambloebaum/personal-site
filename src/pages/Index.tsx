@@ -48,8 +48,8 @@ const Index = () => {
                 <div className="flex flex-wrap gap-3 text-sm">
                   <span className="px-3 py-1 bg-muted text-foreground rounded">Motor Learning</span>
                   <span className="px-3 py-1 bg-muted text-foreground rounded">Neuroscience</span>
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">Algorithmic Trading</span>
-                  <span className="px-3 py-1 bg-muted text-foreground rounded">Energy Flow</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Computer Hardware</span>
+                  <span className="px-3 py-1 bg-muted text-foreground rounded">Energetics</span>
                 </div>
               </div>
               

@@ -56,7 +56,7 @@ const Index = () => {
               <div className="relative">
                 <div className="aspect-video border border-border overflow-hidden bg-card">
                   <img
-                    src="/images/home.jpg"
+                    src="/images/home.JPEG"
                     alt="Home Hero Image"
                     className="w-full h-full object-cover"
                   />

@@ -65,7 +65,7 @@ where (I) is segment moment of inertia and $\alpha$ is angular acceleration.
 
 Moments arise because muscles pull on bones at distances away from the joint center. When the upper arm or forearm moves rotationally, the muscles generate joint moments, which then contribute to joint power.
 
-## Inverse Dynamcis: How Joint Moments Are Calculated in a Lab
+## Inverse Dynamics: How Joint Moments Are Calculated in a Lab
 
 In biomechanics, joint moments are obtained through inverse dynamics, a computational procedure that determines internal forces and moments from observed motion. Using segment masses, inertias, center-of-mass (COM) positions, and measured ground reaction forces, Newton–Euler equations for each body segment are solved in reverse:
 

@@ -5,7 +5,7 @@ interface WorkCardProps {
   title: string;
   summary: string;
   date: string;
-  type: 'external-blog' | 'patent' | 'publication';
+  type: 'external-blog' | 'patent' | 'publication' | 'project';
   tags: string[];
   url?: string;
   pdfUrl?: string;
@@ -15,7 +15,7 @@ interface WorkCardProps {
 
 const WorkCard = ({ title, summary, date, type, tags, url, pdfUrl, logo, image }: WorkCardProps) => {
   const handleClick = () => {
-    if (type === 'external-blog' && url) {
+    if ((type === 'external-blog' || type === 'project') && url) {
       window.open(url, '_blank', 'noopener,noreferrer');
     } else if ((type === 'patent' || type === 'publication') && pdfUrl) {
       window.open(pdfUrl, '_blank', 'noopener,noreferrer');
@@ -23,7 +23,7 @@ const WorkCard = ({ title, summary, date, type, tags, url, pdfUrl, logo, image }
   };
 
   const getIcon = () => {
-    if (type === 'external-blog') {
+    if (type === 'external-blog' || type === 'project') {
       return <ExternalLink size={20} className="text-white" />;
     }
     return <FileText size={20} className="text-white" />;

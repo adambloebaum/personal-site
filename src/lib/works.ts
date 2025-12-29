@@ -12,10 +12,10 @@ export interface Work {
   summary: string;
   content: string;
   date: string;
-  type: 'external-blog' | 'patent' | 'publication';
+  type: 'external-blog' | 'patent' | 'publication' | 'project';
   tags: string[];
   featured: boolean;
-  url?: string; // For external blogs
+  url?: string; // For external blogs/projects
   pdfUrl?: string; // For patents/publications
   logo?: string; // Company logo or icon
   image: string; // Cover image for the work

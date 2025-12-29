@@ -7,6 +7,7 @@ const Works = () => {
   // Add your work images here following the same pattern as blogs
   const workImageMap: Record<string, string> = {
     "bat-tracking-patent": "/images/bat-tracking-patent/1.jpg",
+    "slate-browser": "/images/slate-browser/1.png"
   };
 
   return (

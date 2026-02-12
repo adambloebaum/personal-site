@@ -19,6 +19,32 @@
     <meta name="twitter:title" content="Adam Bloebaum" />
     <meta name="twitter:description" content="Adam Bloebaum's Personal Website" />
     <meta name="twitter:image" content="https://www.adambloebaum.com/images/home.JPEG" />
+
+    <script>
+      (function () {
+        const root = document.documentElement;
+        root.classList.add("fonts-loading");
+
+        const timeout = window.setTimeout(() => {
+          root.classList.remove("fonts-loading");
+        }, 2000);
+
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready
+            .then(() => {
+              window.clearTimeout(timeout);
+              root.classList.remove("fonts-loading");
+            })
+            .catch(() => {
+              window.clearTimeout(timeout);
+              root.classList.remove("fonts-loading");
+            });
+        } else {
+          window.clearTimeout(timeout);
+          root.classList.remove("fonts-loading");
+        }
+      })();
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

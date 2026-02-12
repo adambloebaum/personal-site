@@ -101,6 +101,11 @@ All colors MUST be HSL.
   }
 }
 
+/* Prevent a flash of the fallback font while webfonts load */
+html.fonts-loading body {
+  visibility: hidden;
+}
+
 /* Center all images inside Markdown (Tailwind Typography `.prose`) */
 .prose img {
   display: block;

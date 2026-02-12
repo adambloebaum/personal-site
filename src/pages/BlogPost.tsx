@@ -52,7 +52,7 @@ const BlogPost = () => {
             </Link>
 
             <div className="mb-8">
-              <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {blog.title}
               </h1>
 
@@ -82,3 +82,4 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
+

@@ -53,8 +53,8 @@ export default {
         metal: "hsl(var(--metal))",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ["Merriweather", "Georgia", "serif"],
+        sans: ["Iosevka Etoile", "system-ui", "sans-serif"],
+        serif: ["Iosevka Etoile", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "Courier New", "monospace"],
       },
       borderRadius: {

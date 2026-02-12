@@ -32,7 +32,7 @@ const BlogCard = ({ id, title, summary, date, image, readTime, tags }: BlogCardP
           <span>{readTime} read</span>
         </div>
         
-        <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+        <h3 className="font-sans text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
           {title}
         </h3>
         
@@ -57,3 +57,4 @@ const BlogCard = ({ id, title, summary, date, image, readTime, tags }: BlogCardP
 };
 
 export default BlogCard;
+

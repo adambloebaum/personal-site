@@ -18,7 +18,7 @@ const Blog = () => {
         <section className="bg-background py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="mb-12">
-              <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Blog
               </h1>
             </div>
@@ -47,3 +47,4 @@ const Blog = () => {
 };
 
 export default Blog;
+

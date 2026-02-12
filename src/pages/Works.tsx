@@ -18,7 +18,7 @@ const Works = () => {
         <section className="bg-background py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="mb-12">
-              <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Works
               </h1>
             </div>
@@ -50,3 +50,4 @@ const Works = () => {
 };
 
 export default Works;
+

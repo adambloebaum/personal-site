@@ -33,7 +33,7 @@ const Index = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-8 lg:pb-12 pt-16 lg:pt-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="font-sans text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                   Engineering Tomorrow
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -43,7 +43,7 @@ const Index = () => {
                   Science, technology, training, and anything I find interesting.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">                  
-                  Currently learning about:
+                  I'm currently learning about:
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm">
                   <span className="px-3 py-1 bg-muted text-foreground rounded">Motor Learning</span>
@@ -71,7 +71,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-end justify-between mb-12">
               <div>
-                <h2 className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-2">
+                <h2 className="font-sans text-3xl lg:text-4xl font-bold text-foreground mb-2">
                   Highlights
                 </h2>
                 <p className="text-muted-foreground">
@@ -126,3 +126,4 @@ const Index = () => {
 };
 
 export default Index;
+

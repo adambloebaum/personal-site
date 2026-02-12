@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.adambloebaum.com';
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const BLOGS_DIR = path.resolve(__dirname, '../src/content/blogs');
+const HOME_IMAGE = `${SITE_URL}/images/home.JPEG`;
 
 // Read the base index.html
 const indexHtml = fs.readFileSync(path.join(DIST_DIR, 'index.html'), 'utf-8');
@@ -26,7 +27,7 @@ blogFiles.forEach(filename => {
 
   const title = data.title || 'Blog Post';
   const description = data.summary || '';
-  const image = data.ogImage ? `${SITE_URL}/images/${data.ogImage}` : `${SITE_URL}/images/home.jpg`;
+  const image = data.ogImage ? `${SITE_URL}/images/${data.ogImage}` : HOME_IMAGE;
   const url = `${SITE_URL}/blog/${id}`;
 
   // Create the meta tags for this blog
@@ -57,6 +58,7 @@ blogFiles.forEach(filename => {
     .replace(/<meta property="og:type"[^>]*>/, '')
     .replace(/<meta property="og:url"[^>]*>/, '')
     .replace(/<meta property="og:image"[^>]*>/, '')
+    .replace(/<meta property="og:site_name"[^>]*>/, '')
     // Replace Twitter tags
     .replace(/<meta name="twitter:card"[^>]*>/, '')
     .replace(/<meta name="twitter:title"[^>]*>/, '')
@@ -74,6 +76,8 @@ blogFiles.forEach(filename => {
   console.log(`  Generated: /blog/${id}/index.html`);
 });
 
+generateBlogIndex();
+
 console.log('\nOG pages generated successfully!');
 
 function escapeHtml(text) {
@@ -82,4 +86,45 @@ function escapeHtml(text) {
     .replace(/"/g, '&quot;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+function generateBlogIndex() {
+  const title = 'Blog | Adam Bloebaum';
+  const description = 'Blog posts by Adam Bloebaum.';
+  const url = `${SITE_URL}/blog`;
+
+  const ogTags = `
+    <meta property="og:title" content="${escapeHtml(title)}" />
+    <meta property="og:description" content="${escapeHtml(description)}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${url}" />
+    <meta property="og:image" content="${HOME_IMAGE}" />
+    <meta property="og:site_name" content="Adam Bloebaum" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeHtml(title)}" />
+    <meta name="twitter:description" content="${escapeHtml(description)}" />
+    <meta name="twitter:image" content="${HOME_IMAGE}" />
+
+    <meta name="description" content="${escapeHtml(description)}" />`;
+
+  let blogIndexHtml = indexHtml
+    .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
+    .replace(/<meta name="description"[^>]*>/, '')
+    .replace(/<meta property="og:title"[^>]*>/, '')
+    .replace(/<meta property="og:description"[^>]*>/, '')
+    .replace(/<meta property="og:type"[^>]*>/, '')
+    .replace(/<meta property="og:url"[^>]*>/, '')
+    .replace(/<meta property="og:image"[^>]*>/, '')
+    .replace(/<meta property="og:site_name"[^>]*>/, '')
+    .replace(/<meta name="twitter:card"[^>]*>/, '')
+    .replace(/<meta name="twitter:title"[^>]*>/, '')
+    .replace(/<meta name="twitter:description"[^>]*>/, '')
+    .replace(/<meta name="twitter:image"[^>]*>/, '')
+    .replace('<head>', `<head>${ogTags}`);
+
+  const blogIndexDir = path.join(DIST_DIR, 'blog');
+  fs.mkdirSync(blogIndexDir, { recursive: true });
+  fs.writeFileSync(path.join(blogIndexDir, 'index.html'), blogIndexHtml);
+  console.log('  Generated: /blog/index.html');
 }

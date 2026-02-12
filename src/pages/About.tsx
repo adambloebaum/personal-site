@@ -10,7 +10,7 @@ const About = () => {
         <section className="bg-background py-16 lg:py-24">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             {/* Title spans full width */}
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center lg:text-left">
+            <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center lg:text-left">
               About Me
             </h1>
 
@@ -24,8 +24,8 @@ const About = () => {
                     Driveline Baseball
                   </span>
                   , developing predictive biomechanics models, creating computer
-                  vision tools, building robust data pipelines, and creating
-                  deliverables that help push player development forward.
+                  vision tools, building robust data pipelines, and crafting
+                  products that help push player development forward.
                 </p>
 
                 {/* Image 1 - mobile only */}
@@ -96,3 +96,4 @@ const About = () => {
 };
 
 export default About;
+

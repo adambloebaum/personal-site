@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo */}
           <NavLink 
             to="/" 
-            className="font-serif text-xl font-bold text-foreground hover:text-accent transition-colors"
+            className="font-sans text-xl font-bold text-foreground hover:text-accent transition-colors"
           >
             Adam Bloebaum
           </NavLink>
@@ -73,3 +73,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

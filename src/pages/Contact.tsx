@@ -31,7 +31,7 @@ const Contact = () => {
       <main className="flex-1 pt-8">
         <section className="bg-background py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-4">
               Contact
             </h1>
             <div className="flex flex-col gap-6 max-w-md">
@@ -50,7 +50,7 @@ const Contact = () => {
                         <Icon className="text-foreground group-hover:text-accent transition-colors" size={24} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-serif text-xl font-bold text-foreground mb-1 group-hover:text-accent transition-colors">
+                        <h3 className="font-sans text-xl font-bold text-foreground mb-1 group-hover:text-accent transition-colors">
                           {link.label}
                         </h3>
                         <p className="text-sm font-mono text-muted-foreground mb-2">
@@ -72,3 +72,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

@@ -9,6 +9,7 @@ const Index = () => {
   const blogImageMap: Record<string, string> = {
     "blog-tendon-adaptations": "/images/tendon-adaptations/1.jpg",
     "blog-energy-flow": "/images/energy-flow/1.jpg",
+    "blog-quantitative-motor-learning": "/images/quantitative-motor-learning/1.jpg",
   };
 
   const workImageMap: Record<string, string> = {

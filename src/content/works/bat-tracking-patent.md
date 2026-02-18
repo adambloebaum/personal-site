@@ -4,7 +4,7 @@ summary: "A novel, patented computer vision and machine learning system to aid h
 date: "2025-10-16"
 type: "patent"
 tags: ["Computer Vision", "Machine Learning", "Data Engineering"]
-featured: true
+featured: False
 pdfUrl: "/pdfs/20250322660.pdf"
 logo: ""
 image: "bat-tracking-patent"

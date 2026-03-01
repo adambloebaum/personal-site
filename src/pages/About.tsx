@@ -4,7 +4,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-[100svh] flex flex-col relative">
       <AnimatedBackground variant="matrix" />
 
       <div

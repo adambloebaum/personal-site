@@ -5,7 +5,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-[100svh] flex flex-col">
       <Navigation />
 
       <main className="flex-1">
@@ -22,7 +22,7 @@ const Index = () => {
           />
 
           {/* Hero */}
-          <section className="relative z-10 min-h-screen flex items-start">
+          <section className="relative z-10 min-h-[100svh] flex items-start">
             <div className="max-w-3xl mx-auto px-6 lg:px-8 pt-36 lg:pt-44">
               <div className="opacity-0 animate-fade-up">
                 <h1 className="gradient-text text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-center">

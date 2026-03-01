@@ -24,12 +24,18 @@ function useCanvas(
     const resize = () => {
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
-      dims.current.w = rect.width;
-      dims.current.h = rect.height;
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
+      const width = Math.round(rect.width);
+      const height = Math.round(rect.height);
+      if (!width || !height) return;
+      if (width === Math.round(dims.current.w) && height === Math.round(dims.current.h)) {
+        return;
+      }
+      dims.current.w = width;
+      dims.current.h = height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      init?.(rect.width, rect.height);
+      init?.(width, height);
     };
 
     resize();

@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.adambloebaum.com';
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const BLOGS_DIR = path.resolve(__dirname, '../src/content/blogs');
-const OG_IMAGE = `${SITE_URL}/favicon.ico`;
+const OG_IMAGE = `${SITE_URL}/favicon.png`;
 const OG_BODY_STYLE = 'background-color: #000; color: #fff;';
 
 // Read the base index.html

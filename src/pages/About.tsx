@@ -1,13 +1,24 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <AnimatedBackground variant="matrix" />
+
+      <div
+        className="absolute inset-0 pointer-events-none z-[1]"
+        style={{
+          background:
+            "linear-gradient(to bottom, hsl(0 0% 4% / 0.6) 0%, hsl(0 0% 4% / 0.4) 20%, hsl(0 0% 4% / 0.5) 60%, hsl(0 0% 4% / 0.7) 100%)",
+        }}
+      />
+
       <Navigation />
 
-      <main className="flex-1 pt-8">
-        <section className="bg-background py-16 lg:py-24">
+      <main className="relative z-10 flex-1 pt-8">
+        <section className="py-16 lg:py-24">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             {/* Title spans full width */}
             <h1 className="font-sans text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center lg:text-left">
@@ -96,4 +107,3 @@ const About = () => {
 };
 
 export default About;
-

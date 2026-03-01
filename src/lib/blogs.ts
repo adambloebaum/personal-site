@@ -13,9 +13,8 @@ export interface Blog {
   content: string;
   date: string;
   readTime: string;
-  image: string;
+  ogImage: string;
   featured: boolean;
-  tags: string[];
 }
 
 // Load all markdown files from the blogs directory
@@ -39,9 +38,8 @@ export const blogs: Blog[] = Object.entries(blogFiles).map(([filepath, content])
     content: markdown,
     date: data.date || '',
     readTime: data.readTime || '',
-    image: data.image || '',
+    ogImage: data.ogImage || '',
     featured: data.featured || false,
-    tags: data.tags || [],
   };
 }).sort((a, b) => {
   // Sort by date, newest first

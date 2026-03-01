@@ -1,12 +1,10 @@
 ---
 title: "Energy Flow Dynamics in Pitching"
-summary: "Examining how shoulder and elbow energy impacts velocity and relates to valgus torque."
+summary: "Examining how shoulder and elbow energetics impact velocity and relates to valgus torque."
 date: "2025-12-01"
 readTime: "15 min"
-image: "blog-energy-flow"
 ogImage: "energy-flow/1.jpg"
 featured: true
-tags: ["Biomechanics", "Physics", "Energy Flow", "Throwing"]
 ---
 
 Understanding joint mechanics in human movement requires knowledge of power, energy, work, and their transmission through the body. Pitching depends on both how much mechanical energy the body produces and how efficiently that energy flows through the kinetic chain from the ground to the throwing hand and finally the baseball. Below is everything you need to know to understand joint mechanics, inverse dynamics, the power-partitioning theory used to separate generation, absorption, and transfer, and why it all matters for developing elite throwers.

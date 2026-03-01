@@ -1,93 +1,60 @@
-@import "@fontsource/iosevka-etoile/latin.css";
-@import "@fontsource/iosevka-etoile/latin-italic.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Raw Materials Design System - Paper, Ink, Wood, Metal */
-    --background: 40 8% 97%;
-    --foreground: 0 0% 12%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 12%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
 
-    /* Ink - Deep charcoal for primary actions */
-    --primary: 0 0% 12%;
-    --primary-foreground: 40 8% 97%;
+    --primary: 160 55% 45%;
+    --primary-foreground: 0 0% 4%;
 
-    /* Wood - Warm secondary tones */
-    --secondary: 30 12% 85%;
-    --secondary-foreground: 0 0% 12%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 65%;
 
-    /* Metal - Cool gray accents */
-    --muted: 210 8% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 25 45% 45%;
-    --accent-foreground: 40 8% 97%;
+    --accent: 160 55% 45%;
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 0 0% 12%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 160 55% 45%;
 
-    --radius: 0.25rem;
-
-    /* Custom material tokens */
-    --paper: 40 8% 97%;
-    --ink: 0 0% 12%;
-    --wood: 30 25% 60%;
-    --metal: 210 8% 65%;
-    
-    /* Transitions */
-    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 12%;
-    --foreground: 40 8% 97%;
-
-    --card: 0 0% 15%;
-    --card-foreground: 40 8% 97%;
-
-    --popover: 0 0% 15%;
-    --popover-foreground: 40 8% 97%;
-
-    --primary: 40 8% 97%;
-    --primary-foreground: 0 0% 12%;
-
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 40 8% 97%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 25 45% 55%;
-    --accent-foreground: 0 0% 12%;
-
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 160 55% 45%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 160 55% 45%;
+    --accent-foreground: 0 0% 4%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 40 8% 97%;
-
-    --paper: 0 0% 12%;
-    --ink: 40 8% 97%;
-    --wood: 30 25% 50%;
-    --metal: 210 8% 45%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 160 55% 45%;
   }
 }
 
@@ -97,23 +64,57 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
-/* Prevent a flash of the fallback font while webfonts load */
+/* ---- FOUF prevention ---- */
 html.fonts-loading body {
   visibility: hidden;
 }
 
-/* Center all images inside Markdown (Tailwind Typography `.prose`) */
+/* ---- Entrance animations ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ---- Dot grid texture ---- */
+.dot-grid {
+  background-image: radial-gradient(circle, hsl(160 55% 45% / 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ---- Gradient text ---- */
+.gradient-text {
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 50%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Prose (blog content) ---- */
 .prose img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Force long URLs and words to wrap in prose content */
 .prose {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -124,4 +125,34 @@ html.fonts-loading body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+/* Remove bold styling — render as normal weight white text */
+.prose strong {
+  font-weight: inherit;
+  color: hsl(var(--foreground));
+}
+
+/* KaTeX equations — force white */
+.prose .katex,
+.prose .katex-display {
+  color: hsl(var(--foreground));
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 18%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 25%);
 }

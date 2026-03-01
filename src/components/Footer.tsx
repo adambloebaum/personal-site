@@ -1,5 +1,4 @@
 import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
-import { MdMail } from "react-icons/md";
 
 const Footer = () => {
   const socialLinks = [
@@ -9,14 +8,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Adam Bloebaum. All rights reserved.
+    <footer className="relative z-10 border-t border-border/50">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} Adam Bloebaum
           </p>
-          
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -28,7 +26,7 @@ const Footer = () => {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={link.label}
                 >
-                  <Icon size={20} />
+                  <Icon size={16} />
                 </a>
               );
             })}

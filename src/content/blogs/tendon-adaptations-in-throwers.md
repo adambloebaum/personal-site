@@ -3,10 +3,8 @@ title: "Tendon Adaptations in Throwers: Mechanisms and Applications"
 summary: "What tendons are, their response to simulus, and how throwers can use that to their advantage."
 date: "2025-05-01"
 readTime: "17 min"
-image: "blog-tendon-adaptations"
 ogImage: "tendon-adaptations/1.jpg"
 featured: true
-tags: ["Physics", "Biology", "Throwing"]
 ---
 
 It’s hard to find a more dynamic and physically demanding task in sports than throwing. Whether it be a baseball, javelin, or other implements, high-output throwing tests the boundaries of what the human anatomy is capable of. Throwing is a beautifully orchestrated series of contractions and relaxations across 3D space, analogous to a symphony. The CNS conducts, bones keep the rhythm of percussion, muscles play the brass, and tendons weave the strings. Everyone notices the thunder of the timpani, and it’s impossible to miss the blaring trumpets, but the strings weave those bursts into one seamless chord and let every note ring true.
@@ -43,11 +41,15 @@ Tendons are complex composite structures primarily composed of collagen, elastin
 
 A unique quality of tendon mechanics is its viscoelasticity, meaning it exhibits both elastic (spring-like) and viscous (time-dependent) behaviors. In purely elastic materials, stress (σ) scales directly with strain (ϵ) via Hooke’s Law:
 
-![Hooke's Law](/images/tendon-adaptations/5.jpg)
+$$
+F = -k \cdot x
+$$
 
 where E (Young’s modulus) indicates stiffness or resistance to deformation. Conversely, purely viscous materials follow Newton’s Law of Viscosity:
 
-![Newton's Law of Viscosity](/images/tendon-adaptations/6.jpg)
+$$
+\tau = \mu \cdot \frac{du}{dy}
+$$
 
 where η represents viscosity. Viscoelastic materials — like tendons — combine these properties, allowing them to store and release energy (elastic response) while also deforming gradually under sustained load (viscous response). As the tendon is stretched, it momentarily resists elongation like a spring, yet over time it can creep or relax, reflecting its viscous component.
 

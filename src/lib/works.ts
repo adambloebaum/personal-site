@@ -13,7 +13,6 @@ export interface Work {
   content: string;
   date: string;
   type: 'external-blog' | 'patent' | 'publication' | 'project';
-  tags: string[];
   featured: boolean;
   url?: string; // For external blogs/projects
   pdfUrl?: string; // For patents/publications
@@ -42,7 +41,6 @@ export const works: Work[] = Object.entries(workFiles).map(([filepath, content])
     content: markdown,
     date: data.date || '',
     type: data.type || 'publication',
-    tags: data.tags || [],
     featured: data.featured || false,
     url: data.url || '',
     pdfUrl: data.pdfUrl || '',

@@ -64,7 +64,7 @@ const BlogPost = () => {
 
             </div>
 
-            <div className="prose prose-lg prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-a:text-accent prose-code:text-foreground max-w-none">
+            <div className="prose prose-lg prose-invert prose-a:text-accent max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeRaw, rehypeKatex]}

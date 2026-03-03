@@ -31,12 +31,8 @@ const Index = () => {
               </div>
 
               <div className="opacity-0 animate-fade-up delay-1 mt-6">
-                <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-xl mx-auto">
-                  Applied quantitative engineer at Driveline Baseball. 
-                  <br className="hidden sm:block" />
-                  Minor league pitcher for the Washington Nationals. 
-                  <br className="hidden sm:block" />
-                  Always learning.
+                <p className="text-lg md:text-xl text-muted-foreground tracking-wide text-center max-w-xl mx-auto">
+                  Driveline R&D <span className="mx-2 text-primary/30">|</span> MiLB Pitcher
                 </p>
               </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Slate: An Ultra-Minimal Chromium-Based Web Browser"
+title: "Slate: Ultra-Minimal Chromium-Based Web Browser"
 summary: "A sleek, distraction-free web browser focused on speed, clarity, and modern web fundamentals."
 date: "2025-12-28"
 type: "project"

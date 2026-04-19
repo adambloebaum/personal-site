@@ -14,7 +14,6 @@ export interface Blog {
   date: string;
   readTime: string;
   ogImage: string;
-  featured: boolean;
 }
 
 // Load all markdown files from the blogs directory
@@ -39,7 +38,6 @@ export const blogs: Blog[] = Object.entries(blogFiles).map(([filepath, content])
     date: data.date || '',
     readTime: data.readTime || '',
     ogImage: data.ogImage || '',
-    featured: data.featured || false,
   };
 }).sort((a, b) => {
   // Sort by date, newest first
@@ -49,9 +47,4 @@ export const blogs: Blog[] = Object.entries(blogFiles).map(([filepath, content])
 // Helper to get a single blog by ID
 export const getBlogById = (id: string): Blog | undefined => {
   return blogs.find(blog => blog.id === id);
-};
-
-// Helper to get featured blogs
-export const getFeaturedBlogs = (): Blog[] => {
-  return blogs.filter(blog => blog.featured);
 };

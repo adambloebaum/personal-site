@@ -4,7 +4,6 @@ summary: "Examining how shoulder and elbow energetics impact velocity and relate
 date: "2025-12-01"
 readTime: "15 min"
 ogImage: "energy-flow/1.jpg"
-featured: true
 ---
 
 Understanding joint mechanics in human movement requires knowledge of power, energy, work, and their transmission through the body. Pitching depends on both how much mechanical energy the body produces and how efficiently that energy flows through the kinetic chain from the ground to the throwing hand and finally the baseball. Below is everything you need to know to understand joint mechanics, inverse dynamics, the power-partitioning theory used to separate generation, absorption, and transfer, and why it all matters for developing elite throwers.

@@ -4,7 +4,6 @@ summary: "What tendons are, their response to simulus, and how throwers can use 
 date: "2025-05-01"
 readTime: "17 min"
 ogImage: "tendon-adaptations/1.jpg"
-featured: true
 ---
 
 It’s hard to find a more dynamic and physically demanding task in sports than throwing. Whether it be a baseball, javelin, or other implements, high-output throwing tests the boundaries of what the human anatomy is capable of. Throwing is a beautifully orchestrated series of contractions and relaxations across 3D space, analogous to a symphony. The CNS conducts, bones keep the rhythm of percussion, muscles play the brass, and tendons weave the strings. Everyone notices the thunder of the timpani, and it’s impossible to miss the blaring trumpets, but the strings weave those bursts into one seamless chord and let every note ring true.

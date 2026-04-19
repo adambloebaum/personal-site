@@ -67,12 +67,12 @@ const About = () => {
                 </div>
 
                 <p>
-                  I completed my undergraduate work in Physics and Data Science
+                  I completed my undergraduate work in physics and data science
                   at the{" "}
                   <span className="font-medium text-foreground">
                     University of Washington
                   </span>
-                  , specializing in Biological Physics. While there, I developed
+                  , specializing in biophysics. While there, I developed
                   a strong math and science foundation and found interest in
                   machine learning.
                 </p>

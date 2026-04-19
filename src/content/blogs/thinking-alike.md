@@ -4,7 +4,6 @@ summary: "Exploring the similarities between human thinking and machine learning
 date: "2025-10-10"
 readTime: "5 min"
 ogImage: "thinking-alike/2.jpg"
-featured: False
 ---
 
 We often think of machine learning models as clinical, mathematical artifacts that ingest data and return an output. But if you look closer, you come to realize that

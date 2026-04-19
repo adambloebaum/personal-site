@@ -13,11 +13,8 @@ export interface Work {
   content: string;
   date: string;
   type: 'external-blog' | 'patent' | 'publication' | 'project';
-  featured: boolean;
   url?: string; // For external blogs/projects
   pdfUrl?: string; // For patents/publications
-  logo?: string; // Company logo or icon
-  image: string; // Cover image for the work
 }
 
 // Load all markdown files from the works directory
@@ -41,11 +38,8 @@ export const works: Work[] = Object.entries(workFiles).map(([filepath, content])
     content: markdown,
     date: data.date || '',
     type: data.type || 'publication',
-    featured: data.featured || false,
     url: data.url || '',
     pdfUrl: data.pdfUrl || '',
-    logo: data.logo || '',
-    image: data.image || '',
   };
 }).sort((a, b) => {
   // Sort by date, newest first
@@ -55,9 +49,4 @@ export const works: Work[] = Object.entries(workFiles).map(([filepath, content])
 // Helper to get a single work by ID
 export const getWorkById = (id: string): Work | undefined => {
   return works.find(work => work.id === id);
-};
-
-// Helper to get featured works
-export const getFeaturedWorks = (): Work[] => {
-  return works.filter(work => work.featured);
 };

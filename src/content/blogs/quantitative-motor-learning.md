@@ -4,7 +4,6 @@ summary: "A quantitative framing of motor learning using control and optimizatio
 date: "2026-02-17"
 readTime: "20 min"
 ogImage: "quantitative-motor-learning/1.jpg"
-featured: true
 ---
 
 Motor learning is how the nervous system acquires, refines, and retains the ability to produce movement. It's what allows a child to ride a bike for the first time, or an athlete to go from great to world-class. While this process is not purely deterministic, it is also far from random. Motor learning is supported by identifiable biological mechanisms, many of which can be represented quantitatively.

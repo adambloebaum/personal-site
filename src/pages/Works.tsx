@@ -33,7 +33,7 @@ const Works = () => {
                 const href =
                   work.type === "external-blog" || work.type === "project"
                     ? work.url
-                    : work.pdfUrl;
+                    : work.url || work.pdfUrl;
                 const Icon =
                   work.type === "external-blog" || work.type === "project"
                     ? ExternalLink
@@ -51,10 +51,10 @@ const Works = () => {
                       {work.date}
                     </time>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300 truncate">
+                      <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                         {work.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground truncate mt-1">
+                      <p className="text-sm text-muted-foreground mt-1">
                         {work.summary}
                       </p>
                       <div className="sm:hidden flex items-center gap-2 text-xs font-mono text-muted-foreground mt-2">

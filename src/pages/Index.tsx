@@ -3,6 +3,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
+const heroCta =
+  "px-5 py-2.5 text-sm font-mono rounded-md border border-white/15 text-foreground/75 " +
+  "hover:border-primary/50 hover:bg-primary/10 hover:text-primary transition-colors duration-200";
+
 const Index = () => {
   return (
     <div className="min-h-[100svh] flex flex-col">
@@ -22,26 +26,30 @@ const Index = () => {
           />
 
           {/* Hero */}
-          <section className="relative z-10 min-h-[100svh] flex items-start">
-            <div className="max-w-3xl mx-auto px-6 lg:px-8 pt-36 lg:pt-44">
+          <section className="relative z-10 min-h-[100svh] flex items-center justify-center">
+            <div className="max-w-3xl mx-auto px-6 lg:px-8 pb-16">
               <div className="opacity-0 animate-fade-up">
-                <h1 className="gradient-text text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-center">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-[-0.03em] text-foreground text-center">
                   Adam Bloebaum
                 </h1>
               </div>
 
+              {/* Equal-weight outer columns pin the divider to the true center,
+                  so it lines up with the gap between the buttons below. */}
               <div className="opacity-0 animate-fade-up delay-1 mt-6">
-                <p className="text-lg md:text-xl text-muted-foreground tracking-wide text-center max-w-xl mx-auto">
-                  Driveline R&D <span className="mx-2 text-primary/30">|</span> MiLB Pitcher
+                <p className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-baseline gap-x-3 text-lg md:text-xl text-muted-foreground tracking-wide">
+                  <span className="text-right">Driveline R&D</span>
+                  <span className="text-white/20">|</span>
+                  <span className="text-left">MiLB Pitcher</span>
                 </p>
               </div>
 
-              <div className="opacity-0 animate-fade-up delay-2 mt-8 text-center">
-                <Link
-                  to="/blog"
-                  className="inline-block px-6 py-2.5 text-sm font-mono rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                >
-                  Read my blog
+              <div className="opacity-0 animate-fade-up delay-2 mt-10 flex flex-wrap items-center justify-center gap-3">
+                <Link to="/works" className={heroCta}>
+                  My work
+                </Link>
+                <Link to="/blog" className={heroCta}>
+                  My blog
                 </Link>
               </div>
             </div>

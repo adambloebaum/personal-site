@@ -1,8 +1,14 @@
-import { ExternalLink, FileText } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { works } from "@/lib/works";
+
+const typeLabels: Record<string, string> = {
+  "external-blog": "Blog",
+  publication: "Paper",
+  patent: "Patent",
+  project: "Project",
+};
 
 const Works = () => {
   return (
@@ -34,10 +40,6 @@ const Works = () => {
                   work.type === "external-blog" || work.type === "project"
                     ? work.url
                     : work.url || work.pdfUrl;
-                const Icon =
-                  work.type === "external-blog" || work.type === "project"
-                    ? ExternalLink
-                    : FileText;
 
                 return (
                   <a
@@ -45,13 +47,13 @@ const Works = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-6 py-5 px-4 -mx-4 rounded-lg hover:bg-white/[0.03] transition-colors duration-200"
+                    className="group flex items-start gap-6 py-5 px-4 -mx-4 rounded-md hover:bg-white/[0.03] transition-colors duration-150"
                   >
-                    <time className="hidden sm:block text-xs font-mono text-muted-foreground w-24 flex-shrink-0">
+                    <time className="hidden sm:block text-xs font-mono text-muted-foreground w-24 flex-shrink-0 pt-1">
                       {work.date}
                     </time>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-150">
                         {work.title}
                       </h3>
                       <p className="text-sm text-muted-foreground mt-1">
@@ -61,10 +63,9 @@ const Works = () => {
                         <time>{work.date}</time>
                       </div>
                     </div>
-                    <Icon
-                      size={16}
-                      className="text-muted-foreground group-hover:text-primary transition-colors duration-300 flex-shrink-0"
-                    />
+                    <span className="hidden sm:block text-[10px] font-mono uppercase tracking-[0.12em] text-muted-foreground/70 w-16 text-right flex-shrink-0 pt-1.5">
+                      {typeLabels[work.type]}
+                    </span>
                   </a>
                 );
               })}

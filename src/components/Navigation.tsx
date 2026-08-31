@@ -31,7 +31,7 @@ const Navigation = () => {
                 to={link.to}
                 end={link.to === "/"}
                 className="px-3 py-1.5 text-xs font-mono rounded text-muted-foreground hover:text-foreground/80 transition-colors border border-transparent"
-                activeClassName="bg-[rgba(55,185,145,0.15)] text-[rgb(90,220,175)] border-[rgba(55,185,145,0.3)]"
+                activeClassName="bg-primary/10 text-primary border-primary/25"
               >
                 {link.label}
               </NavLink>
@@ -56,7 +56,7 @@ const Navigation = () => {
                 end={link.to === "/"}
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors rounded border border-transparent"
-                activeClassName="bg-[rgba(55,185,145,0.15)] text-[rgb(90,220,175)] border-[rgba(55,185,145,0.3)]"
+                activeClassName="bg-primary/10 text-primary border-primary/25"
               >
                 {link.label}
               </NavLink>

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -34,16 +33,16 @@ const Blog = () => {
                 <Link
                   key={blog.id}
                   to={`/blog/${blog.id}`}
-                  className="group flex items-center gap-6 py-5 px-4 -mx-4 rounded-lg hover:bg-white/[0.03] transition-colors duration-200"
+                  className="group flex items-start gap-6 py-5 px-4 -mx-4 rounded-md hover:bg-white/[0.03] transition-colors duration-150"
                 >
-                  <time className="hidden sm:block text-xs font-mono text-muted-foreground w-24 flex-shrink-0">
+                  <time className="hidden sm:block text-xs font-mono text-muted-foreground w-24 flex-shrink-0 pt-1">
                     {blog.date}
                   </time>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300 truncate">
+                    <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-150">
                       {blog.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground truncate mt-1">
+                    <p className="text-sm text-muted-foreground mt-1 line-clamp-1">
                       {blog.summary}
                     </p>
                     <div className="sm:hidden flex items-center gap-2 text-xs font-mono text-muted-foreground mt-2">
@@ -52,10 +51,9 @@ const Blog = () => {
                       <span>{blog.readTime}</span>
                     </div>
                   </div>
-                  <ArrowUpRight
-                    size={16}
-                    className="text-muted-foreground group-hover:text-primary transition-colors duration-300 flex-shrink-0"
-                  />
+                  <span className="hidden sm:block text-xs font-mono text-muted-foreground/70 flex-shrink-0 pt-1">
+                    {blog.readTime}
+                  </span>
                 </Link>
               ))}
             </div>

@@ -44,7 +44,7 @@ const About = () => {
                   <img
                     src="/images/about-me.jpg"
                     alt="About Me"
-                    className="shadow-lg max-w-full object-cover"
+                    className="border border-white/10 rounded-md max-w-full object-cover"
                   />
                 </div>
 
@@ -62,7 +62,7 @@ const About = () => {
                   <img
                     src="/images/about-me2.jpg"
                     alt="About Me"
-                    className="shadow-lg max-w-full object-cover"
+                    className="border border-white/10 rounded-md max-w-full object-cover"
                   />
                 </div>
 
@@ -88,12 +88,12 @@ const About = () => {
                 <img
                   src="/images/about-me.jpg"
                   alt="About Me"
-                  className="shadow-lg max-w-full xlg:max-w-md object-cover"
+                  className="border border-white/10 rounded-md max-w-full xlg:max-w-md object-cover"
                 />
                 <img
                   src="/images/about-me2.jpg"
                   alt="About Me"
-                  className="shadow-lg max-w-full xlg:max-w-md object-cover"
+                  className="border border-white/10 rounded-md max-w-full xlg:max-w-md object-cover"
                 />
               </div>
             </div>

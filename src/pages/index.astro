@@ -17,15 +17,15 @@ const posts = await getPosts();
   <section class="lead">
     <dl class="status">
       <div><dt>Currently</dt><dd>Applied quantitative engineer, Driveline Baseball</dd></div>
-      <div><dt>Building</dt><dd>Biomechanics models, computer vision tools, data pipelines</dd></div>
-      <div><dt>Also</dt><dd>Pitcher, Washington Nationals system</dd></div>
-      <div><dt>Studying</dt><dd>MS Analytics, Georgia Tech</dd></div>
-      <div><dt>Trained in</dt><dd>BS Physics, University of Washington</dd></div>
+      <div><dt>Also</dt><dd>Pitcher, Washington Nationals MiLB</dd></div>
+      <div><dt>Working on</dt><dd>Biomechanics modeling, computer vision, and the data systems behind them</dd></div>
+      <div><dt>Learning about</dt><dd>High-performance computing, GPUs, reinforcement learning</dd></div>
+      <div><dt>Education</dt><dd>MS Analytics, Georgia Tech<br />BS Physics, University of Washington</dd></div>
     </dl>
     <a class="plate feature" href={`/works/${lead.id}`}>
       <div class="figure"><Fragment set:html={figureOf(lead.id)} /></div>
       <div class="body">
-        <span class="label">Newest / Plate {lead.plate} / {kinds[lead.data.type].one} / {lead.data.date.getUTCFullYear()}</span>
+        <span class="label">Newest / #{+lead.plate} / {kinds[lead.data.type].one} / {lead.data.date.getUTCFullYear()}</span>
         <h3>{lead.data.short}</h3>
         <div class="label">{lead.data.sample.join(' / ')}</div>
       </div>

@@ -5,7 +5,7 @@ const d = work.data;
 ---
 <a class="plate" href={`/works/${work.id}`}>
   <div class={`swatch hatch-${d.type}`}>
-    <span class="tag">Plate {work.plate} / {kinds[d.type as keyof typeof kinds].one} / {d.date.getUTCFullYear()}</span>
+    <span class="tag">#{+work.plate} / {kinds[d.type as keyof typeof kinds].one} / {d.date.getUTCFullYear()}</span>
   </div>
   <div class="body">
     <h3>{d.short}</h3>

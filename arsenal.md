@@ -139,9 +139,8 @@ sitemap, 404.html. No public email on Contact, by choice.
 
 Redesign: built on the `redesign` branch (Astro, Atlas design), not yet merged.
 Still open before or after merge
-- [ ] each work page: your role, the key figure, and "why a club should care" (front matter fields `role`, `figure`, `figureCaption`, `why`)
-- [ ] home hero figure is a schematic; replace with a real trace
-- [ ] energy-flow plots are recolored copies; regenerate from data with figures/atlas.mplstyle (the PCA plot still uses its original colors)
+- [ ] each work page: optional key figure (front matter fields `figure`, `figureCaption`)
+- energy-flow plots are recolored copies of the originals and stay that way: the Nov 2025 extract and code are gone and the database has since been backfilled, so the post's 17,942-throw sample cannot be rebuilt
 
 After v1 ships
 - [ ] Notes (short posts), Bookshelf page, one interactive explainer, one-page CV

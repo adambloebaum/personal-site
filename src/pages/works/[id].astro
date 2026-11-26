@@ -25,7 +25,6 @@ const cta = { publication: 'Read the preprint', patent: 'Read the application', 
       {d.sample.length > 0 && <div><dt>Sample</dt><dd>{d.sample.join(', ')}</dd></div>}
       {d.method && <div><dt>Method</dt><dd>{d.method}</dd></div>}
       <div><dt>Published</dt><dd>{d.venue}, {fullDate(d.date)}</dd></div>
-      {d.role && <div><dt>My role</dt><dd>{d.role}</dd></div>}
     </dl>
   </section>
   {d.figure && (
@@ -36,6 +35,5 @@ const cta = { publication: 'Read the preprint', patent: 'Read the application', 
   )}
   <section class="two">
     <div><h2>The finding</h2><p>{d.summary}</p></div>
-    {d.why && <div><h2>Why a club should care</h2><p>{d.why}</p></div>}
   </section>
 </Base>

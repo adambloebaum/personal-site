@@ -3,23 +3,28 @@ import Base from '../layouts/Base.astro';
 import Plate from '../components/Plate.astro';
 import PostList from '../components/PostList.astro';
 import { getWorks, getPosts } from '../lib/site';
+import hero from '../assets/hero.svg?raw';
 
 const research = (await getWorks()).filter((w) => w.data.type === 'publication').slice(0, 3);
 const posts = await getPosts();
 ---
 <Base>
   <h1 class="sr-only">Adam Bloebaum</h1>
+  <figure class="hero">
+    <Fragment set:html={hero} />
+    <figcaption class="label">Power transferred across the elbow, one line per pitcher, slowest to fastest. Data: <a href="https://github.com/drivelineresearch/openbiomechanics">OpenBiomechanics Project</a></figcaption>
+  </figure>
 
   <dl class="facts">
     <div><dt>Engineer</dt><dd>Driveline Baseball</dd></div>
     <div><dt>Pitcher</dt><dd>Washington Nationals, MiLB</dd></div>
     <div><dt>BS Physics</dt><dd>Univ. of Washington</dd></div>
-    <div><dt>MS Analytics, in progress</dt><dd>Georgia Tech</dd></div>
+    <div><dt>MS Analytics</dt><dd>Georgia Tech</dd></div>
   </dl>
 
   <div class="section-head"><h2>Selected research</h2><a class="label" href="/works">All work</a></div>
   <div class="plates">{research.map((w) => <Plate work={w} />)}</div>
 
-  <div class="section-head"><h2>Writing</h2><a class="label" href="/rss.xml">RSS</a></div>
+  <div class="section-head"><h2>Writing</h2></div>
   <PostList posts={posts} />
 </Base>

@@ -24,4 +24,15 @@ const d = post.data;
     </nav>
     <article class="prose"><Content /></article>
   </div>
+  <script>
+    // mark the section being read in the contents rail
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+    const heads = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))!);
+    const mark = () => {
+      const at = heads.findLastIndex((h) => h.getBoundingClientRect().top < 120);
+      links.forEach((a, i) => a.classList.toggle('on', i === at));
+    };
+    addEventListener('scroll', mark, { passive: true });
+    mark();
+  </script>
 </Base>

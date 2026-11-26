@@ -28,22 +28,30 @@ ax = fig.add_subplot(111, projection="3d", computed_zorder=False)
 ax.plot_surface(X, Y, Z, cmap=paper, linewidth=0.2, edgecolor="#1f2a30",
                 antialiased=True, rstride=3, cstride=3, alpha=0.96, shade=True)
 
-# A descent path curving into the deeper basin.
-t = np.linspace(0, 1, 60)
-px = -2.1 + 3.1 * t
-py = 2.0 - 0.8 * np.sin(2.4 * t) - 0.8 * t
 def surf(x, y):
     return (0.6 * np.sin(1.1 * x) * np.cos(1.1 * y)
             + 0.9 * np.exp(-((x + 1.4) ** 2 + (y + 1.1) ** 2) / 1.1)
             - 1.3 * np.exp(-((x - 1.0) ** 2 + (y - 1.2) ** 2) / 1.4)
             + 0.12 * (x ** 2 + y ** 2))
+
+# Actual gradient descent on the surface, so the path ends at the bottom of the basin.
+pos = np.array([-2.4, 2.2]); path = [pos.copy()]
+for _ in range(400):
+    e = 1e-4
+    grad = np.array([surf(pos[0] + e, pos[1]) - surf(pos[0] - e, pos[1]),
+                     surf(pos[0], pos[1] + e) - surf(pos[0], pos[1] - e)]) / (2 * e)
+    pos = pos - 0.05 * grad
+    path.append(pos.copy())
+px, py = np.array(path).T
+lowest = np.unravel_index(Z.argmin(), Z.shape)
+assert np.hypot(px[-1] - X[lowest], py[-1] - Y[lowest]) < 0.1, "descent did not reach the global minimum"
 pz = surf(px, py) + 0.08
 ax.plot(px, py, pz, color="#a4472b", linewidth=3, zorder=10)
 ax.scatter(px[0], py[0], pz[0], color="#1f2a30", s=45, zorder=11)
 ax.scatter(px[-1], py[-1], pz[-1], color="#a4472b", s=55, zorder=11, edgecolor="#1f2a30", linewidth=1)
 
 ax.set_axis_off()
-ax.view_init(elev=38, azim=-58)
+ax.view_init(elev=52, azim=-70)
 ax.set_box_aspect((1, 1, 0.55))
 fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
 fig.savefig(out / "2.png", dpi=190)

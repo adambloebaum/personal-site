@@ -5,7 +5,7 @@ const posts = await getPosts();
 ---
 <Base title="Writing" description="Essays by Adam Bloebaum on biomechanics, motor learning, and training.">
   <div class="index-head"><h1 class="page-title">Writing</h1></div>
-  <div class="section-head" style="margin-top:40px"><h2>Essays</h2><a class="label" href="/rss.xml">RSS</a></div>
+  <div class="section-head" style="margin-top:40px"><h2>Essays</h2></div>
   <div class="rows">
     {posts.map((p, i) => (
       <a href={`/blog/${p.id}`}>

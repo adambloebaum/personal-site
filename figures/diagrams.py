@@ -8,7 +8,7 @@ LAB = "font-family='Barlow Condensed, sans-serif'"
 SER = "font-family='Newsreader, Georgia, serif'"
 
 def save(name, w, h, body):
-    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" '
            f'font-family="Barlow Condensed, sans-serif">{body}</svg>')
     p = root / "public/images" / name
     p.write_text(svg)
@@ -68,19 +68,19 @@ cx, cy, R = 300, 200, 120
 seg = [("REFLECTION", TEAL), ("LEARNING", OCHRE), ("APPLICATION", RUST), ("FEEDBACK", INK)]
 body = ""
 for i, (name, col) in enumerate(seg):
-    a0 = -90 + i * 90 + 6; a1 = -90 + (i + 1) * 90 - 6
+    a0 = -90 + i * 90 + 5; a1 = -90 + (i + 1) * 90 - 17
     r0, r1 = math.radians(a0), math.radians(a1)
     x0, y0 = cx + R * math.cos(r0), cy + R * math.sin(r0)
     x1, y1 = cx + R * math.cos(r1), cy + R * math.sin(r1)
     body += f'<path d="M{x0:.1f} {y0:.1f} A{R} {R} 0 0 1 {x1:.1f} {y1:.1f}" fill="none" stroke="{col}" stroke-width="18"/>'
-    # arrowhead at end
+    # arrowhead at the end of the band: base across it (radial), tip along the direction of travel
     ah = math.radians(a1)
     tx, ty = cx + R * math.cos(ah), cy + R * math.sin(ah)
-    tang = ah + math.pi / 2
-    body += (f'<path d="M{tx+10*math.cos(tang):.1f} {ty+10*math.sin(tang):.1f} '
-             f'L{tx+13*math.cos(ah):.1f} {ty+13*math.sin(ah):.1f} '
-             f'L{tx-10*math.cos(tang):.1f} {ty-10*math.sin(tang):.1f}" fill="{col}"/>')
-    am = math.radians((a0 + a1) / 2); lr = R + 30
+    rx, ry = math.cos(ah), math.sin(ah)
+    fx, fy = -math.sin(ah), math.cos(ah)
+    body += (f'<path d="M{tx+20*rx:.1f} {ty+20*ry:.1f} L{tx+26*fx:.1f} {ty+26*fy:.1f} '
+             f'L{tx-20*rx:.1f} {ty-20*ry:.1f} Z" fill="{col}"/>')
+    am = math.radians(-45 + i * 90); lr = R + 30
     lx, ly = cx + lr * math.cos(am), cy + lr * math.sin(am)
     anchor = "start" if math.cos(am) > 0 else "end"
     body += f'<text x="{lx:.0f}" y="{ly+5:.0f}" text-anchor="{anchor}" font-size="16" letter-spacing="1.2" fill="{INK}">{name}</text>'
@@ -102,14 +102,14 @@ for i, (name, col) in enumerate(blocks):
 save("quantitative-motor-learning/2.svg", 3 * bw + 2 * gap, 170, body)
 
 # ---- qml/4 : Newell's constraints triangle ----
-A, B, C = (230, 44), (70, 330), (390, 330)
+A, B, C = (290, 44), (90, 384), (490, 384)
 tri = f'<path d="M{A[0]} {A[1]} L{B[0]} {B[1]} L{C[0]} {C[1]} Z" fill="none" stroke="{INK}" stroke-width="2.5"/>'
-mid = (230, 235)
-arrow = (f'<line x1="{mid[0]}" y1="{mid[1]-60}" x2="{mid[0]}" y2="{mid[1]+28}" stroke="{RUST}" stroke-width="2.5"/>'
-         f'<path d="M{mid[0]-7} {mid[1]+22} l7 12 l7 -12 z" fill="{RUST}"/>')
+# label sits low in the triangle, where it is wide enough to clear both sides
+arrow = (f'<line x1="290" y1="290" x2="290" y2="338" stroke="{RUST}" stroke-width="2.5"/>'
+         f'<path d="M283 336 l7 12 l7 -12 z" fill="{RUST}"/>')
 verts = (f'<circle cx="{A[0]}" cy="{A[1]}" r="6" fill="{TEAL}"/><text x="{A[0]}" y="{A[1]-16}" text-anchor="middle" font-size="18" letter-spacing="1.5" fill="{INK}">ORGANISM</text>'
-         f'<circle cx="{B[0]}" cy="{B[1]}" r="6" fill="{OCHRE}"/><text x="{B[0]-4}" y="{B[1]+28}" text-anchor="middle" font-size="18" letter-spacing="1.5" fill="{INK}">ENVIRONMENT</text>'
-         f'<circle cx="{C[0]}" cy="{C[1]}" r="6" fill="{RUST}"/><text x="{C[0]+4}" y="{C[1]+28}" text-anchor="middle" font-size="18" letter-spacing="1.5" fill="{INK}">TASK</text>')
-center = (f'<text x="{mid[0]}" y="{mid[1]-78}" text-anchor="middle" font-size="16" letter-spacing="1" fill="{INK3}">COORDINATION</text>'
-          f'<text x="{mid[0]}" y="{mid[1]-60}" text-anchor="middle" font-size="16" letter-spacing="1" fill="{INK3}">AND CONTROL</text>')
-save("quantitative-motor-learning/4.svg", 460, 372, tri + arrow + verts + center)
+         f'<circle cx="{B[0]}" cy="{B[1]}" r="6" fill="{OCHRE}"/><text x="{B[0]}" y="{B[1]+28}" text-anchor="middle" font-size="18" letter-spacing="1.5" fill="{INK}">ENVIRONMENT</text>'
+         f'<circle cx="{C[0]}" cy="{C[1]}" r="6" fill="{RUST}"/><text x="{C[0]}" y="{C[1]+28}" text-anchor="middle" font-size="18" letter-spacing="1.5" fill="{INK}">TASK</text>')
+center = (f'<text x="290" y="254" text-anchor="middle" font-size="16" letter-spacing="1" fill="{INK3}">COORDINATION</text>'
+          f'<text x="290" y="274" text-anchor="middle" font-size="16" letter-spacing="1" fill="{INK3}">AND CONTROL</text>')
+save("quantitative-motor-learning/4.svg", 580, 430, tri + arrow + verts + center)

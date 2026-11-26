@@ -1,0 +1,46 @@
+# Matplotlib style matching the site's paper palette.
+# Backgrounds stay white: the site blends images onto the paper with
+# mix-blend-mode: multiply. Register figures/fonts, then
+# plt.style.use("figures/atlas.mplstyle").
+figure.facecolor: FFFFFF
+axes.facecolor: FFFFFF
+savefig.facecolor: FFFFFF
+figure.dpi: 150
+savefig.dpi: 200
+savefig.bbox: tight
+savefig.pad_inches: 0.25
+
+font.family: Barlow Condensed Medium
+font.size: 15
+text.color: 1F2A30
+
+axes.edgecolor: 1F2A30
+axes.linewidth: 1.0
+axes.spines.top: False
+axes.spines.right: False
+axes.labelcolor: 3B4649
+axes.labelsize: 15
+axes.labelpad: 8
+axes.titlesize: 15
+axes.titlelocation: left
+axes.titlepad: 12
+axes.axisbelow: True
+axes.grid: True
+axes.prop_cycle: cycler(color=["2F6F73", "A4472B", "B8862B", "1F2A30", "6A8F6B", "7A5C8A"])
+
+grid.color: 1F2A30
+grid.alpha: 0.14
+grid.linewidth: 0.8
+
+xtick.color: 3B4649
+ytick.color: 3B4649
+xtick.labelsize: 14
+ytick.labelsize: 14
+xtick.major.size: 4
+ytick.major.size: 4
+
+lines.linewidth: 2.2
+lines.solid_capstyle: round
+scatter.edgecolors: none
+legend.frameon: False
+legend.fontsize: 12

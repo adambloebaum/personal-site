@@ -137,12 +137,11 @@ cards, font blanking removed, GIFs converted to MP4, plots and photos resized,
 contrast raised, unused scaffold and dependencies removed, lint clean, RSS,
 sitemap, 404.html. No public email on Contact, by choice.
 
-Redesign (one pass, move to Astro at the same time)
-- [ ] home page: one-sentence thesis, three selected works, latest writing
-- [ ] a page per work: claim, key figure, sample, your role, why a club should care, outbound link
-- [ ] editorial type system: serif text face, numbered figures, sidenote references, table of contents on long posts
-- [ ] replace the five canvas backgrounds with one motif drawn from your own data
-- [ ] Works grouped as Research / Patents / Software
+Redesign: built on the `redesign` branch (Astro, Atlas design), not yet merged.
+Still open before or after merge
+- [ ] each work page: your role, the key figure, and "why a club should care" (front matter fields `role`, `figure`, `figureCaption`, `why`)
+- [ ] home hero figure is a schematic; replace with a real trace
+- [ ] energy-flow plots are recolored copies; regenerate from data with figures/atlas.mplstyle (the PCA plot still uses its original colors)
 
 After v1 ships
 - [ ] Notes (short posts), Bookshelf page, one interactive explainer, one-page CV

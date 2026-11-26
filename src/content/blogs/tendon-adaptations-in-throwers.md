@@ -143,11 +143,11 @@ Conversely, disuse or immobilization can lead to negative adaptations. Prolonged
 
 Impulse refers to the change in momentum, which is the product of force and time elapsed or “duration” (J=Δp=F⋅Δt). As a result, the same impulse can be achieved through different combinations of these two variables. For instance, a large amount of force exerted over a short duration can yield the same overall impulse as a smaller force applied for a longer duration.
 
-![Equal Impulses at Different Force-Duration Combinations](/images/tendon-adaptations/12.jpg)
+![Equal Impulses at Different Force-Duration Combinations](/images/tendon-adaptations/12.png)
 
 However, the force-time curve — which illustrates how quickly force develops and how long it is sustained — can look drastically different in each scenario.
 
-![Multiple Force–Time Curves with Varying Peak and Duration](/images/tendon-adaptations/13.jpg)
+![Multiple Force–Time Curves with Varying Peak and Duration](/images/tendon-adaptations/13.png)
 
 ### Force-Time Profiles Applied to Tendons
 

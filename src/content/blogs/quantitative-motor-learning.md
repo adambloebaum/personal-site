@@ -12,7 +12,7 @@ Viewing motor learning from a quantitative perspective removes a large portion o
 
 To present this effectively, we'll split motor learning into three phases: Exploration, Consolidation, and Automaticity. During exploration, the brain is searching a massive solution space with uncalibrated sensors and no predictive ability. During consolidation, it has found a rough solution and is now optimizing it to refine timing, reduce waste, and compress sequences. During automaticity, the solution is known, and the nervous system is finding ways to execute it faster, cheaper, and more reliably.
 
-![](/images/quantitative-motor-learning/2.jpg)
+![](/images/quantitative-motor-learning/2.svg)
 
 An important note before we go further: these phases exist on a continuous spectrum. There are no hard boundaries where one ends and the next begins. The three-phase framework is a useful simplification for organizing the principles, not a claim for discrete motor learning stages.
 
@@ -49,7 +49,7 @@ The second set of constraints arises from the task itself. The specific goal, th
 
 The third set of constraints is environmental, representing the global context in which the movement occurs. These are the external factors that exist independently of the individual or the specific task, such as the playing surface, ambient lighting, weather conditions, or even the social pressure of a crowd. Whether it is the friction of a track or the temperature of a gym, the environment provides the "stage" for action, requiring the mover to constantly adapt their technique to suit the world around them.
 
-![](/images/quantitative-motor-learning/4.jpg)
+![](/images/quantitative-motor-learning/4.svg)
 
 Within these constraints, the nervous system doesn't compute a movement from scratch every time. Instead, it tends to settle into stable, preferred coordination patterns known as attractor states. These are movement solutions that the system naturally gravitates toward. This happens not because they were explicitly programmed, but because they represent dynamically stable configurations given the individual's constraints and the task demands. With practice, these attractors deepen and the movement becomes more stable, more repeatable, and harder to disrupt. We'll return to attractor stability in Phase 2 (coordination dynamics) and again in Phase 3 when skills become robust under pressure and interference.
 

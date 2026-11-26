@@ -20,7 +20,7 @@
     --secondary-foreground: 0 0% 65%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 42%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 160 55% 45%;
     --accent-foreground: 0 0% 4%;
@@ -47,7 +47,7 @@
     --secondary: 0 0% 9%;
     --secondary-foreground: 0 0% 65%;
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 42%;
+    --muted-foreground: 0 0% 60%;
     --accent: 160 55% 45%;
     --accent-foreground: 0 0% 4%;
     --destructive: 0 70% 50%;
@@ -66,11 +66,6 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-}
-
-/* ---- FOUF prevention ---- */
-html.fonts-loading body {
-  visibility: hidden;
 }
 
 /* ---- Entrance animations ---- */
@@ -95,7 +90,13 @@ html.fonts-loading body {
 .delay-4 { animation-delay: 0.4s; }
 
 /* ---- Prose (blog content) ---- */
-.prose img {
+.prose img,
+.prose video {
+  max-width: 100%;
+}
+
+.prose img,
+.prose video {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -111,12 +112,6 @@ html.fonts-loading body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
-}
-
-/* Remove bold styling — render as normal weight white text */
-.prose strong {
-  font-weight: inherit;
-  color: hsl(var(--foreground));
 }
 
 /* KaTeX equations — force white */

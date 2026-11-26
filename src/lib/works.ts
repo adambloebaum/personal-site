@@ -2,9 +2,7 @@ import matter from 'gray-matter';
 import { Buffer } from 'buffer';
 
 // Polyfill Buffer for gray-matter
-if (typeof window !== 'undefined') {
-  (window as any).Buffer = Buffer;
-}
+globalThis.Buffer = Buffer;
 
 export interface Work {
   id: string;

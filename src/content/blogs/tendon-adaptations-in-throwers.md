@@ -1,6 +1,6 @@
 ---
 title: "Tendon Adaptations in Throwers: Mechanisms and Applications"
-summary: "What tendons are, their response to simulus, and how throwers can use that to their advantage."
+summary: "What tendons are, their response to stimulus, and how throwers can use that to their advantage."
 date: "2025-05-01"
 readTime: "17 min"
 ogImage: "tendon-adaptations/1.jpg"
@@ -26,11 +26,11 @@ A handful of tendons and ligamentous structures play pivotal roles in supporting
 
 Throwing involves complex interactions among torque, tension, and compression in the throwing arm, resulting in rapid changes in angular velocity and momentum. A primary component of this is valgus torque at the elbow, which places tensile loads on the medial joint structures — particularly the UCL — and compressive forces on the lateral side. Simultaneously, distraction forces pull the humerus away from the scapula, increasing the demands imposed on the rotator cuff and surrounding musculature to maintain proper alignment. The arm also builds up substantial angular momentum during the driveline phase, resulting in extremely high internal rotation torque at the shoulder joint. After ball release, an abrupt deceleration imposes large eccentric loads, requiring the rotator cuff, scapular stabilizers, and other structures to dissipate these forces effectively.
 
-![Slo-motion Javelin Side](/images/tendon-adaptations/3.gif)
+<video src="/images/tendon-adaptations/3.mp4" autoplay loop muted playsinline aria-label="Slo-motion Javelin Side"></video>
 
 ## Structural Mechanical Properties of Tendons
 
-### Composition and Hierarchial Organization
+### Composition and Hierarchical Organization
 
 Tendons are complex composite structures primarily composed of collagen, elastin, and proteoglycans. Collagen — particularly Type I — serves as the primary load-bearing element, enabling the tissue to withstand the high forces generated during dynamic movements. Elastin provides the capacity to return to its original shape after stretching, preserving structural integrity through repeated cycles of movement. Proteoglycans help regulate hydration and distribute loads throughout the tendon matrix, enhancing both resilience and flexibility. Beyond these molecular components, tendons exhibit a hierarchical organization: collagen fibrils bundle into fascicles, which are then grouped within larger sheaths and surrounded by the paratenon. This multilayered arrangement equips tendons with exceptional tensile strength and the ability to adapt over time.
 
@@ -41,13 +41,13 @@ Tendons are complex composite structures primarily composed of collagen, elastin
 A unique quality of tendon mechanics is its viscoelasticity, meaning it exhibits both elastic (spring-like) and viscous (time-dependent) behaviors. In purely elastic materials, stress (σ) scales directly with strain (ϵ) via Hooke’s Law:
 
 $$
-F = -k \cdot x
+\sigma = E \cdot \epsilon
 $$
 
 where E (Young’s modulus) indicates stiffness or resistance to deformation. Conversely, purely viscous materials follow Newton’s Law of Viscosity:
 
 $$
-\tau = \mu \cdot \frac{du}{dy}
+\tau = \eta \cdot \frac{du}{dy}
 $$
 
 where η represents viscosity. Viscoelastic materials — like tendons — combine these properties, allowing them to store and release energy (elastic response) while also deforming gradually under sustained load (viscous response). As the tendon is stretched, it momentarily resists elongation like a spring, yet over time it can creep or relax, reflecting its viscous component.
@@ -82,7 +82,7 @@ While collagen reorganization and structural remodeling significantly influence 
 
 With repeated high-intensity stimuli — such as plyometric exercises or overcoming isometric holds — the CNS improves its capacity to rapidly recruit and synchronize motor units. This synchronized recruitment intensifies muscular contractions at the MTJ, enhancing the tendon’s elastic response and increasing the efficiency of energy storage and release over time.
 
-![Slo-motion achilles jump rope](/images/tendon-adaptations/8.gif)
+<video src="/images/tendon-adaptations/8.mp4" autoplay loop muted playsinline aria-label="Slo-motion achilles jump rope"></video>
 
 ### Proprioceptive Feedback and Reflexive Control
 
@@ -105,7 +105,7 @@ Here’s the science⬇️
 
 Repeated exposure to appropriate stimuli refines neuromuscular patterns, optimizing the timing, magnitude, and duration of muscle activation at the MTJ. As the CNS “learns” and consolidates these recruitment patterns, the mechanical efficiency of the MTJ significantly improves, complementing structural collagen adaptations. Neurological adaptations thus collaborate with structural changes to enhance tendon stiffness, ultimately promoting superior elastic energy storage and release during throwing activities.
 
-![Slo-motion javelin release](/images/tendon-adaptations/9.gif)
+<video src="/images/tendon-adaptations/9.mp4" autoplay loop muted playsinline aria-label="Slo-motion javelin release"></video>
 
 ## Cellular and Molecular Mechanisms
 
@@ -135,7 +135,7 @@ Accompanying these dimensional changes are enhancements in mechanical properties
 
 Conversely, disuse or immobilization can lead to negative adaptations. Prolonged inactivity can induce a net catabolic state within the tendon, characterized by decreased collagen synthesis and accelerated degradation. These changes lead to reduced tendon thickness, diminished stiffness, and potential disorganization of collagen fibrils, ultimately impairing the tissue’s load-bearing capacity. Additionally, prolonged absence of mechanical stimuli may adversely affect vascularization, nutrient transport, and cellular activity, increasing the risk of injury upon the resumption of activity.
 
-![Healthy vs Abnormal Collagen Alignment [6]](/images/tendon-adaptations/11.jpg)
+![Healthy vs abnormal collagen fibril alignment, shown here in aortic tissue [6]](/images/tendon-adaptations/11.jpg)
 
 ## Impulse and Loading Dynamics
 
@@ -191,7 +191,7 @@ Lighter implements (e.g., underload weighted baseballs, tennis balls) produce hi
 
 Underload implements capitalize on the tendon’s viscoelastic properties by transmitting force rapidly while inducing comparatively less fatigue than overload implements at equivalent intensities. This reduced fatigue allows athletes to perform high-intensity throwing sessions more frequently. Such an approach is particularly valuable in the late offseason or during in-season training, when maintaining or increasing throwing output is crucial without accumulating unnecessary fatigue. In contrast, overload implements involve prolonged loading durations and, consequently, greater fatigue. Thus, they are better suited to the early offseason, when maximizing absolute output is less critical, and the focus is on enhancing tendon thickness and establishing a robust structural foundation without exposing the tendon to the extreme peak forces associated with lighter implements. This strategy is especially beneficial during return-to-throw or on-ramp programs, as athletes coming off periods without throwing stimulus often have atrophied tendons and reduced MTJ efficiency.
 
-![Slo-motion mocap](/images/tendon-adaptations/16.gif)
+<video src="/images/tendon-adaptations/16.mp4" autoplay loop muted playsinline aria-label="Slo-motion mocap"></video>
 
 ### Accomodating Different Training Ages
 
@@ -231,7 +231,7 @@ Too many people clean the brass and polish the percussion but neglect the precis
 
 ## References
 
-[1] Philharmonia. (n.d.) Wilhelm Furtwangler Conducts Philharmonia, Royal Albert Hall, 1947 [Image]. Philharmonia. Retrived from https://philharmonia.co.uk/who-we-are/our-history/
+[1] Philharmonia. (n.d.) Wilhelm Furtwangler Conducts Philharmonia, Royal Albert Hall, 1947 [Image]. Philharmonia. Retrieved from https://philharmonia.co.uk/who-we-are/our-history/
 
 [2] Royal Academy of Arts. (n.d.). A sheet of anatomical drawings of the bones, muscles, and tendons of the arm [Image]. Royal Academy of Arts. Retrieved from https://www.royalacademy.org.uk/art-artists/work-of-art/a-sheet-of-anatomical-drawings-of-the-bones-muscles-and-tendons-of-the-arm
 
@@ -239,6 +239,6 @@ Too many people clean the brass and polish the percussion but neglect the precis
 
 [4] Physio-Pedia. (n.d.). Tendon stress strain curve [Image]. Physio-Pedia. Retrieved from https://www.physio-pedia.com/File:Tendon-Stress-Strain-Curve.png
 
-[5] Benjamin, M., & Ralphs, J. R. (1998). Fibrocartilage in tendons and ligaments — An adaptation to compressive load. Journal of Anatomy, 193(4), 481–494. https://pubmed.ncbi.nlm.nih.gov/22227881/
+[5] Andarawis-Puri, N., Sereysky, J. B., Sun, H. B., Jepsen, K. J., & Flatow, E. L. (2012). Molecular response of the patellar tendon to fatigue loading explained in the context of the initial induced damage and number of fatigue loading cycles. Journal of Orthopaedic Research, 30(8), 1327–1334. https://pubmed.ncbi.nlm.nih.gov/22227881/
 
-[6] Jones, B., Tonniges, J. R., Debski, A., Albert, B., Yeung, D. A., Gadde, N., Mahajan, A., Sharma, N., Calomeni, E. P., Go, M. R., Hans, C. P., & Agarwal, G. (2020). Morphological and biomechanical effects of elastin degradation in the aortic wall. Journal of Biomechanics, 112, 110042. https://www.sciencedirect.com/science/article/abs/pii/S1742706120302191
+[6] Jones, B., Tonniges, J. R., Debski, A., Albert, B., Yeung, D. A., Gadde, N., Mahajan, A., Sharma, N., Calomeni, E. P., Go, M. R., Hans, C. P., & Agarwal, G. (2020). Collagen fibril abnormalities in human and mice abdominal aortic aneurysm. Acta Biomaterialia, 110, 129–140. https://doi.org/10.1016/j.actbio.2020.04.022

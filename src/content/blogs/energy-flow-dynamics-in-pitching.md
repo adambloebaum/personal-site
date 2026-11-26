@@ -39,14 +39,14 @@ $$
 Power is measured in watts (W), where 1 W = 1 J/S. The distinction between power and energy is essential: power is **instantaneous** and can be positive or negative at any moment, while energy is the time integral of power, and therefore accumulates only over an interval:
 
 $$
-E = \int_{t_0}^{t_1} P(t), dt
+E = \int_{t_0}^{t_1} P(t) \, dt
 $$
 
 This is why we can report peak power at a joint, but not “instantaneous energy.” **Energy only exists over time**.
 
 ## Joint Moments and Torques
 
-A moment (or torque) is the rotational analog of force. For a force ${F}$ acting at a perpendicular distance (r) from a joint axis:
+A moment (or torque) is the rotational analog of force. For a force ${F}$ acting at a perpendicular distance $r$ from a joint axis:
 
 $$
 M = r F_{\perp}
@@ -58,7 +58,7 @@ $$
 M = I \alpha
 $$
 
-where (I) is segment moment of inertia and $\alpha$ is angular acceleration.
+where $I$ is segment moment of inertia and $\alpha$ is angular acceleration.
 
 Moments arise because muscles pull on bones at distances away from the joint center. When the upper arm or forearm moves rotationally, the muscles generate joint moments, which then contribute to joint power.
 
@@ -112,13 +112,13 @@ These measurements allow us to determine how much energy a joint’s musculature
 
 ## Positive and Negative Power: Generation and Absorption
 
-If (P > 0), the musculature is generating energy:
+If $P > 0$, the musculature is generating energy:
 
 $$
 \text{Positive power } \Rightarrow \text{energy generation}
 $$
 
-If (P < 0), the musculature is absorbing energy:
+If $P < 0$, the musculature is absorbing energy:
 
 $$
 \text{Negative power } \Rightarrow \text{energy absorption}
@@ -214,7 +214,7 @@ Understanding where energy is generated, where it is absorbed, and how much is p
 Although we compute power instantaneously, energy must always be computed by integrating that power over time:
 
 $$
-E_{\text{total}}(t_0 \rightarrow t_1) = \int_{t_0}^{t_1} P(t) , dt
+E_{\text{total}}(t_0 \rightarrow t_1) = \int_{t_0}^{t_1} P(t) \, dt
 $$
 
 Therefore:
@@ -225,11 +225,11 @@ Therefore:
 For example:
 
 $$
-E_{\text{shoulder transfer}} = \int P_{\text{shoulder, transfer}}(t), dt
+E_{\text{shoulder transfer}} = \int P_{\text{shoulder, transfer}}(t) \, dt
 $$
 
 $$
-E_{\text{elbow transfer}} = \int P_{\text{elbow, transfer}}(t), dt
+E_{\text{elbow transfer}} = \int P_{\text{elbow, transfer}}(t) \, dt
 $$
 
 A net energy flow metric can be calculated as:
@@ -245,6 +245,8 @@ $$
 $$
 
 ## Data Source and Population
+
+*This post was the starting point for a later preprint on a larger sample: [Energy Flow Through the Throwing Arm](https://sportrxiv.org/index.php/server/preprint/view/871).*
 
 I looked at 17,942 throws from athletes who participated in motion-capture assessments at Driveline Baseball. Only pitches with a regulation baseball, in the athlete's normal pitching motion, at game-intent, thrown over 70 mph were used in the dataset.
 
@@ -448,6 +450,8 @@ As throwing volume accumulates and these tissues fatigue, overly-contracted musc
 
 ## Supporting Materials
 
-Richards, D. E. (2001). *Basic engineering science: A systems, accounting, and modeling approach*. Rose-Hulman Institute of Technology. [https://eng.libretexts.org/Bookshelves/Introductory_Engineering/Basic_Engineering_Science_-_A_Systems_Accounting_and_Modeling_Approach_(Richards)/07%3A_Conservation_of_Energy/7.01%3A_Mechanics_and_the_Mechanical_Energy_Balance#:~:text=The%20time%20rate%20at%20which,F%7D%5C%29%20on%20the](https://eng.libretexts.org/Bookshelves/Introductory_Engineering/Basic_Engineering_Science_-_A_Systems_Accounting_and_Modeling_Approach_(Richards)/07%3A_Conservation_of_Energy/7.01%3A_Mechanics_and_the_Mechanical_Energy_Balance?utm_source=chatgpt.com#:~:text=The%20time%20rate%20at%20which,F%7D%5C%29%20on%20the) [Engineering LibreTexts+2Engineering LibreTexts+2](https://eng.libretexts.org/Bookshelves/Introductory_Engineering/Basic_Engineering_Science_-_A_Systems_Accounting_and_Modeling_Approach_%28Richards%29?utm_source=chatgpt.com)
-Umberger, B. R., McLean, S. G., & Tso, M. (2013). Generation, absorption, and transfer of mechanical energy during walking in children. *Medical Engineering & Physics, 35*, 644–651. [https://www.umass.edu/locomotion/pdfs/mep-2013.pdf#:~:text=In%20human%20locomotion%2C%20the%20net,may%20cause%20energy%20to%20be](https://www.umass.edu/locomotion/pdfs/mep-2013.pdf?utm_source=chatgpt.com#:~:text=In%20human%20locomotion%2C%20the%20net,may%20cause%20energy%20to%20be)
-Simonsen, E. B. et al. (2023). Propulsive fractions of joint work during maximal sprint: joint power was obtained by the formula. *[Journal name]*. [https://link.springer.com/article/10.1007/s11332-023-01121-4#:~:text=joint%20power%20was%20obtained%20by,the%20formula](https://link.springer.com/article/10.1007/s11332-023-01121-4?utm_source=chatgpt.com#:~:text=joint%20power%20was%20obtained%20by,the%20formula)
+Richards, D. E. (n.d.). *Basic engineering science: A systems, accounting, and modeling approach*. Engineering LibreTexts. [https://eng.libretexts.org/Bookshelves/Introductory_Engineering/Basic_Engineering_Science_-_A_Systems_Accounting_and_Modeling_Approach_(Richards)](https://eng.libretexts.org/Bookshelves/Introductory_Engineering/Basic_Engineering_Science_-_A_Systems_Accounting_and_Modeling_Approach_(Richards))
+
+Umberger, B. R., Augsburger, S., Resig, J., Oeffinger, D., Shapiro, R., & Tylkowski, C. (2013). Generation, absorption, and transfer of mechanical energy during walking in children. *Medical Engineering & Physics, 35*(5), 644–651. [https://doi.org/10.1016/j.medengphy.2012.07.010](https://doi.org/10.1016/j.medengphy.2012.07.010)
+
+Simonsen, E. B., Stensvig, M., Andersen, T. B., & Andersen, M. S. (2024). Propulsive fractions of joint work during maximal sprint running. *Sport Sciences for Health, 20*(2), 455–464. [https://doi.org/10.1007/s11332-023-01121-4](https://doi.org/10.1007/s11332-023-01121-4)

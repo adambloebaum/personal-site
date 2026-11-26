@@ -24,29 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
-    <script>
-      (function () {
-        var root = document.documentElement;
-        root.classList.add("fonts-loading");
-        var timeout = window.setTimeout(function () {
-          root.classList.remove("fonts-loading");
-        }, 2000);
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready
-            .then(function () {
-              window.clearTimeout(timeout);
-              root.classList.remove("fonts-loading");
-            })
-            .catch(function () {
-              window.clearTimeout(timeout);
-              root.classList.remove("fonts-loading");
-            });
-        } else {
-          window.clearTimeout(timeout);
-          root.classList.remove("fonts-loading");
-        }
-      })();
-    </script>
+    <link rel="alternate" type="application/rss+xml" title="Adam Bloebaum" href="/rss.xml" />
   </head>
 
   <body>

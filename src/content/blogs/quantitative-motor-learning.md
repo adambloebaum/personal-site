@@ -113,7 +113,7 @@ where $w$ represents the synaptic weight, $\eta$ is the learning rate, and $E$ i
 
 If this looks familiar, it should. It is the same update rule used to train artificial neural networks via backpropagation. The biological implementation is much noisier, more local, and modulated by dopaminergic reward signals rather than a clean loss function, but the principle is the same. The system is iteratively descending an error surface, adjusting its parameters to move toward a minimum.
 
-![](/images/quantitative-motor-learning/7.gif)
+<video src="/images/quantitative-motor-learning/7.mp4" autoplay loop muted playsinline></video>
 
 The learning rate $\eta$ matters here conceptually as well as mathematically. Early in learning, the system benefits from a relatively high learning rate, allowing for large updates in response to errors and rapid exploration of the solution space. As learning progresses and the system approaches a good solution, the effective learning rate decreases, allowing finer adjustments without overshooting. This mirrors common practice in machine learning (learning rate schedules, annealing), and there is evidence that the nervous system implements something functionally similar through changes in dopaminergic modulation and synaptic plasticity thresholds.
 
@@ -149,7 +149,7 @@ where $\hat{x}$ is the updated state estimate, $\hat{x}_{\text{predicted}}$ is t
 
 The Kalman gain is the key to understanding this model's relevance to motor learning. When the internal model is poor, the prediction is unreliable, and the Kalman gain is high. The system leans heavily on sensory feedback because it doesn't yet have a good internal model to trust. This is why novice movement is so feedback-dependent and why disrupting sensory feedback (closing the eyes, adding noise) is so impactful on a beginner's performance.
 
-![](/images/quantitative-motor-learning/8.gif)
+<video src="/images/quantitative-motor-learning/8.mp4" autoplay loop muted playsinline></video>
 
 A goalkeeper learning to track ball flight operates in this way. Early on, their attempts are dominated by visual correction through watching the ball, reacting to its position, adjusting in real time. There is no predictive model of ball trajectory yet, so every movement is a response to what the eyes are currently reporting. With experience, the internal model of ball flight improves, the Kalman gain drops, and the goalkeeper begins to move predictively, based on the predicted trajectory rather than the current visual input.
 
@@ -193,7 +193,7 @@ where $\mathbf{x}$ represents the state error — how far the movement deviates 
 
 This is the Linear Quadratic Regulator (LQR) formulation, and its more general cousin, Pontryagin's Minimum Principle, extends the idea to nonlinear systems and more complex constraints. The core insight is the same: "efficient movement" is not a vague qualitative descriptor. It is the solution to a mathematically precise optimization problem with competing objectives.
 
-![](/images/quantitative-motor-learning/9.gif)
+<video src="/images/quantitative-motor-learning/9.mp4" autoplay loop muted playsinline></video>
 
 The $Q$ and $R$ matrices are where task demands enter the model. A surgeon performing a microsurgical procedure needs extremely low state error. $Q$ is large, accuracy is incredibly important, and the system will spend energy freely to achieve precision. A distance runner, by contrast, needs to minimize effort over thousands of strides, so $R$ dominates, and the system tolerates small deviations in form to conserve metabolic resources. The brain adjusts these weightings based on context, and learning to set them appropriately is itself part of skill consolidation. This is why mechanical efficiency improves with skill development. It is not just repetition, but the progressive solution of a constrained optimization problem.
 
@@ -217,7 +217,7 @@ where $\tau$ is torque and $\Delta L$ is the change in angular momentum.
 
 The biomechanical principle here is segmental summation, the proximal-to-distal sequencing of force generation that characterizes skilled, high-velocity movement. Each segment in the chain accelerates, decelerates, and transfers its momentum to the next. The timing of these transfers is what separates effective and ineffective movement.
 
-![](/images/quantitative-motor-learning/11.gif)
+<video src="/images/quantitative-motor-learning/11.mp4" autoplay loop muted playsinline></video>
 
 Skill refinement in the consolidation phase is, in large part, the optimization of this sequential summation. The nervous system is learning when to signal each segment, for how long, and at what intensity, tuning the impulse profile so that momentum transfers are smooth and additive rather than competing or leaking. Much like cracking a whip, energy must move from proximal to distal, with each segment amplifying the velocity of the next, resulting in a speed that far exceeds what any single segment could produce in isolation.
 
@@ -245,7 +245,7 @@ where $\phi$ is the relative phase between the two components, and $a$ and $b$ a
 
 At low movement frequencies, the potential landscape may have multiple minima, where the system can sustain different coordination patterns. But they are weakly stable and easily disrupted. With practice, the $\frac{a}{b}$ ratio changes. The preferred coordination mode deepens, becomes more stable, more resistant to perturbation, and easier to maintain under varying conditions. Phase transitions occur: coordination patterns that were previously available become unstable and the system snaps into the more practiced, more deeply entrenched pattern. The HKB model gives us a precise understanding that stable coordination is a deep potential minimum, and practice reshapes the potential landscape.
 
-![](/images/quantitative-motor-learning/10.gif)
+<video src="/images/quantitative-motor-learning/10.mp4" autoplay loop muted playsinline></video>
 
 When learning how to swim, the timing between arm stroke and leg kick is inconsistent, but the system can support various phase relationships due to the low movement frequency. With increased frequency, a new ideal phase emerges, and the coupling between stroke and kick tightens until it becomes self-sustaining. Even when perturbed due to fatigue or a change in pace, it returns to the deepened attractor state.
 
@@ -281,10 +281,10 @@ The quantitative models in this phase describe the measurable consequences of th
 
 Myelination can increase axon conduction velocity. The proportionalities below are simplified scaling intuitions (not exact biophysical laws), but they capture the core idea: better-insulated fibers can carry signals faster.
 
-In unmyelinated axons, conduction velocity is often approximated as increasing with axon diameter:
+In unmyelinated axons, conduction velocity is often approximated as increasing with the square root of axon diameter:
 
 $$
-v \propto d
+v \propto \sqrt{d}
 $$
 
 where $d$ is the axon diameter. The signal propagates continuously along the membrane, and wider axons generally reduce resistance and speed propagation.
@@ -295,7 +295,7 @@ $$
 D = d + 2t
 $$
 
-and conduction velocity is often described as increasing with $D$:
+and conduction velocity is often described as increasing roughly linearly with $D$:
 
 $$
 v \propto D
@@ -316,7 +316,7 @@ $$
 
 where $\phi(t)$ is the instantaneous phase of a neural oscillation and the angle brackets denote averaging over time. The PLV ranges from 0 (no consistent phase relationship, neurons firing independently) to 1 (perfect phase locking, neurons firing in precise temporal coordination). Well-trained motor networks show higher PLV values than untrained ones, and this increase correlates with improved performance.
 
-![](/images/quantitative-motor-learning/12.gif)
+<video src="/images/quantitative-motor-learning/12.mp4" autoplay loop muted playsinline></video>
 
 The functional result is precise co-activation. A back handspring involves the coordinated activation of over dozens of muscles, many of which must fire within millisecond windows of each other to produce an effective movement. If the neural signals driving these muscles are asynchronous — arriving at slightly different times, slightly different phases — the resulting force production is imprecise and suboptimal. High phase-locking values mean the signals arrive in lockstep, producing sharp, well-timed force summation.
 

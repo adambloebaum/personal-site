@@ -74,6 +74,7 @@ staticPages.forEach((page) => {
 const blogFiles = fs.readdirSync(BLOGS_DIR).filter((f) => f.endsWith('.md'));
 console.log(`Found ${blogFiles.length} blog posts to process...`);
 
+const posts = [];
 blogFiles.forEach((filename) => {
   const id = filename.replace('.md', '');
   const filePath = path.join(BLOGS_DIR, filename);
@@ -82,8 +83,9 @@ blogFiles.forEach((filename) => {
 
   const title = data.title || 'Blog Post';
   const description = data.summary || '';
-  const image = OG_IMAGE;
+  const image = data.ogImage ? `${SITE_URL}/images/${data.ogImage}` : OG_IMAGE;
   const url = `${SITE_URL}/blog/${id}`;
+  posts.push({ title, description, url, date: data.date });
 
   writeOgPage({
     outputDir: path.join(DIST_DIR, 'blog', id),
@@ -97,7 +99,46 @@ blogFiles.forEach((filename) => {
   console.log(`  Generated: /blog/${id}/index.html`);
 });
 
-console.log('\nOG pages generated successfully!');
+// GitHub Pages serves 404.html for unknown paths; the SPA renders its own NotFound.
+fs.copyFileSync(path.join(DIST_DIR, 'index.html'), path.join(DIST_DIR, '404.html'));
+
+posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+fs.writeFileSync(
+  path.join(DIST_DIR, 'rss.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Adam Bloebaum</title>
+    <link>${SITE_URL}/blog</link>
+    <description>Blog posts by Adam Bloebaum.</description>
+${posts
+  .map(
+    (p) => `    <item>
+      <title>${escapeHtml(p.title)}</title>
+      <link>${p.url}</link>
+      <guid>${p.url}</guid>
+      <pubDate>${new Date(p.date).toUTCString()}</pubDate>
+      <description>${escapeHtml(p.description)}</description>
+    </item>`
+  )
+  .join('\n')}
+  </channel>
+</rss>
+`
+);
+
+const sitemapUrls = [...staticPages.map((p) => `${SITE_URL}/${p.path}`), ...posts.map((p) => p.url)];
+fs.writeFileSync(
+  path.join(DIST_DIR, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}
+</urlset>
+`
+);
+
+console.log('\nOG pages, 404.html, rss.xml, and sitemap.xml generated successfully!');
 
 function escapeHtml(text) {
   return String(text || '')
@@ -129,7 +170,7 @@ function applyOgBodyStyle(html) {
 }
 
 function buildOgHtml({ title, ogTitle, description, url, image, type }) {
-  const twitterCard = 'summary';
+  const twitterCard = image === OG_IMAGE ? 'summary' : 'summary_large_image';
   const ogTags = `
     <meta property="og:title" content="${escapeHtml(ogTitle || title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />

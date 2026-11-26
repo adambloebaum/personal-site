@@ -3,17 +3,24 @@ import Base from '../layouts/Base.astro';
 import Plate from '../components/Plate.astro';
 import PostList from '../components/PostList.astro';
 import { getWorks, getPosts } from '../lib/site';
-import hero from '../assets/hero.svg?raw';
+import hero from '../assets/gpu.svg?raw';
 
 const research = (await getWorks()).filter((w) => w.data.type === 'publication').slice(0, 3);
 const posts = await getPosts();
 ---
 <Base>
   <h1 class="sr-only">Adam Bloebaum</h1>
-  <figure class="hero">
+  <figure class="hero" tabindex="0" role="button" aria-pressed="false" aria-label="Graphics card, exploded view. Press to assemble or pull apart.">
     <Fragment set:html={hero} />
-    <figcaption class="label">Power transferred across the elbow, one line per pitcher, slowest to fastest. Data: <a href="https://github.com/drivelineresearch/openbiomechanics">OpenBiomechanics Project</a></figcaption>
+    <figcaption class="label">
+      <span>Fig. 0</span>
+      <span><i class="k-teal"></i>Board</span>
+      <span><i class="k-rust"></i>Heat path</span>
+      <span><i class="k-ochre"></i>Power</span>
+      <span class="note">Hover or tap to assemble</span>
+    </figcaption>
   </figure>
+  <p class="lede">I work on measurement, modeling, and compute for human movement. Most of it happens to be about throwing a baseball.</p>
 
   <dl class="facts">
     <div><dt>Engineer</dt><dd>Driveline Baseball</dd></div>
@@ -27,4 +34,43 @@ const posts = await getPosts();
 
   <div class="section-head"><h2>Writing</h2></div>
   <PostList posts={posts} />
+  <script>
+    // Layers follow one target (1 = apart, 0 = assembled), front layers leading; fans turn faster when the card is closed.
+    const fig = document.querySelector<HTMLElement>('.hero')!;
+    const layers = [...fig.querySelectorAll<SVGGElement>('[data-layer]')].map((el) => ({ el, dx: +el.dataset.dx!, dy: +el.dataset.dy!, v: 1 }));
+    const fans = [...fig.querySelectorAll<SVGGElement>('[data-spin]')].map((el) => ({ el, n: el.dataset.spin!.split(' ').map(Number) }));
+    const still = matchMedia('(prefers-reduced-motion: reduce)');
+    let target = 1, angle = 0, speed = 0.5, last = 0, frame = 0, visible = false, pinned = false;
+    const draw = () => {
+      for (const l of layers) l.el.setAttribute('transform', `translate(${(l.dx * l.v).toFixed(2)} ${(l.dy * l.v).toFixed(2)})`);
+      const c = Math.cos(angle), s = Math.sin(angle);
+      for (const { el, n: [ox, oy, ax, ay, bx, by] } of fans) {
+        // a turn in the fan's own plane, written in screen coordinates: B R B^-1 about the hub
+        const det = ax * by - bx * ay;
+        const m = [(ax * c + bx * s) * by - (bx * c - ax * s) * ay, (ay * c + by * s) * by - (by * c - ay * s) * ay, (bx * c - ax * s) * ax - (ax * c + bx * s) * bx, (by * c - ay * s) * ax - (ay * c + by * s) * bx].map((v) => v / det);
+        el.setAttribute('transform', `matrix(${m.map((v) => v.toFixed(4)).join(' ')} ${(ox - m[0] * ox - m[2] * oy).toFixed(2)} ${(oy - m[1] * ox - m[3] * oy).toFixed(2)})`);
+      }
+    };
+    const tick = (now: number) => {
+      const dt = last ? Math.min((now - last) / 1000, 1 / 30) : 1 / 60;
+      last = now;
+      layers.forEach((l, i) => {
+        // each layer chases the one in front of it when closing, the one behind when opening
+        const lead = target ? layers[i - 1]?.v ?? target : layers[i + 1]?.v ?? target;
+        const goal = target ? Math.min(target, lead + 0.35) : Math.max(target, lead - 0.35);
+        l.v = still.matches ? target : l.v + (goal - l.v) * (1 - Math.exp(-dt / 0.16));
+      });
+      speed += ((target ? 0.5 : 7) - speed) * (1 - Math.exp(-dt / 0.8));
+      if (!still.matches) angle -= speed * dt;
+      draw();
+      frame = visible && !still.matches ? requestAnimationFrame(tick) : 0;
+    };
+    const run = () => { if (!frame && visible) { last = 0; frame = requestAnimationFrame(tick); } };
+    const set = (apart: number) => { target = apart; fig.setAttribute('aria-pressed', String(!apart)); run(); if (still.matches) tick(0); };
+    new IntersectionObserver((e) => { visible = e[e.length - 1].isIntersecting; run(); }).observe(fig);
+    fig.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') set(0); });
+    fig.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse' && !pinned) set(1); });
+    fig.addEventListener('click', () => { pinned = !pinned; set(pinned ? 0 : 1); });
+    fig.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fig.click(); } });
+  </script>
 </Base>

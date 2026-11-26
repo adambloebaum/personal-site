@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 const fullTitle = title ? `${title} | Adam Bloebaum` : 'Adam Bloebaum';
 const url = new URL(Astro.url.pathname, Astro.site);
-const card = new URL(image ?? '/favicon-og-black.png', Astro.site);
+const card = new URL(image ?? '/og-default.png', Astro.site);
 const section = '/' + Astro.url.pathname.split('/')[1];
 const nav = [
   { href: '/works', label: 'Work' },

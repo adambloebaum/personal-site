@@ -4,4 +4,7 @@ summary: "A sleek, distraction-free web browser focused on speed, clarity, and m
 date: "2025-12-28"
 type: "project"
 url: "https://github.com/adambloebaum/slate"
+short: "Slate: an ultra-minimal Chromium-based browser"
+venue: "GitHub"
+sample: []
 ---

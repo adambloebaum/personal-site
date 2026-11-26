@@ -4,4 +4,7 @@ summary: "A public-data NHL expected goals benchmark and rink-first spatial expl
 date: "2026-04-19"
 type: "project"
 url: "https://github.com/adambloebaum/xg-puck-benchmark"
+short: "NHL expected goals benchmark and spatial explorer"
+venue: "GitHub"
+sample: ["Public data"]
 ---

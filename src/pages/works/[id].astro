@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getWorks, kinds, fullDate } from '../../lib/site';
+
+export async function getStaticPaths() {
+  return (await getWorks()).map((work) => ({ params: { id: work.id }, props: { work } }));
+}
+const { work } = Astro.props;
+const d = work.data;
+const kind = kinds[d.type];
+const href = d.url ?? d.pdfUrl;
+const cta = { publication: 'Read the preprint', patent: 'Read the application', project: 'View the code' }[d.type];
+---
+<Base title={d.short} description={d.summary} type="article">
+  <div class={`banner hatch-${d.type}`}>
+    <a class="tag" href="/works">{kind.label} / Plate {work.plate} / {kind.one}</a>
+  </div>
+  <section class="work-top">
+    <div class="words">
+      <h1>{d.short}</h1>
+      {d.short !== d.title && <p class="published">Published as: {d.title}</p>}
+      {href && <a class="button" href={href}>{cta}</a>}
+    </div>
+    <dl class="panel">
+      {d.sample.length > 0 && <div><dt>Sample</dt><dd>{d.sample.join(', ')}</dd></div>}
+      {d.method && <div><dt>Method</dt><dd>{d.method}</dd></div>}
+      <div><dt>Published</dt><dd>{d.venue}, {fullDate(d.date)}</dd></div>
+      {d.role && <div><dt>My role</dt><dd>{d.role}</dd></div>}
+    </dl>
+  </section>
+  {d.figure && (
+    <figure class="fig">
+      <img src={d.figure} alt={d.figureCaption ?? ''} />
+      {d.figureCaption && <figcaption><span class="label">Fig. 1</span>{d.figureCaption}</figcaption>}
+    </figure>
+  )}
+  <section class="two">
+    <div><h2>The finding</h2><p>{d.summary}</p></div>
+    {d.why && <div><h2>Why a club should care</h2><p>{d.why}</p></div>}
+  </section>
+</Base>

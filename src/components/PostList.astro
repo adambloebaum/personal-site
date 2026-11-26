@@ -1,0 +1,13 @@
+---
+import { monthYear } from '../lib/site';
+const { posts } = Astro.props;
+---
+<div class="gazetteer">
+  {posts.map((p: any) => (
+    <a href={`/blog/${p.id}`}>
+      <span class="t">{p.data.title}</span>
+      <span class="dots"></span>
+      <span class="label">{monthYear(p.data.date)} / {p.data.readTime}</span>
+    </a>
+  ))}
+</div>

@@ -1,0 +1,71 @@
+---
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
+import '@fontsource/barlow-condensed/500.css';
+import '@fontsource/barlow-condensed/600.css';
+import '../styles/atlas.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+}
+const {
+  title,
+  description = 'Adam Bloebaum: applied quantitative engineer at Driveline Baseball and minor league pitcher. Research, writing, and software on human movement and baseball.',
+  image,
+  type = 'website',
+} = Astro.props;
+const fullTitle = title ? `${title} | Adam Bloebaum` : 'Adam Bloebaum';
+const url = new URL(Astro.url.pathname, Astro.site);
+const card = new URL(image ?? '/favicon-og-black.png', Astro.site);
+const section = '/' + Astro.url.pathname.split('/')[1];
+const nav = [
+  { href: '/works', label: 'Work' },
+  { href: '/blog', label: 'Writing' },
+  { href: '/about', label: 'About' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Adam Bloebaum" />
+    <link rel="canonical" href={url} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="Adam Bloebaum" href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:title" content={title ?? 'Adam Bloebaum'} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={card} />
+    <meta property="og:site_name" content="Adam Bloebaum" />
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:site" content="@bl0ebaum" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <a class="name" href="/">Adam Bloebaum</a>
+        <nav>
+          {nav.map((n) => <a href={n.href} aria-current={section === n.href ? 'page' : undefined}>{n.label}</a>)}
+        </nav>
+      </header>
+      <main><slot /></main>
+      <footer class="site-footer label">
+        <span>&copy; {new Date().getFullYear()} Adam Bloebaum</span>
+        <nav>
+          <a href="https://x.com/bl0ebaum">X</a>
+          <a href="https://www.linkedin.com/in/adambloebaum/">LinkedIn</a>
+          <a href="https://github.com/adambloebaum">GitHub</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

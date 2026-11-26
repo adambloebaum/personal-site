@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getWorks, kinds, monthYear } from '../../lib/site';
+
+const works = await getWorks();
+const groups = (Object.keys(kinds) as (keyof typeof kinds)[]).map((type) => ({
+  type,
+  label: kinds[type].label,
+  items: works.filter((w) => w.data.type === type),
+}));
+---
+<Base title="Work" description="Research, patents, and software by Adam Bloebaum.">
+  <div class="index-head">
+    <h1 class="page-title">Index of work</h1>
+    <div class="key label">
+      <span class="strong">Key</span>
+      {groups.map((g) => <span><i class={`hatch-${g.type}`}></i>{g.label}</span>)}
+    </div>
+  </div>
+  {groups.map((g) => (
+    <section>
+      <div class="section-head" style="margin-top:56px"><h2>{g.label}</h2></div>
+      <div class="rows">
+        {g.items.map((w) => (
+          <a href={`/works/${w.id}`}>
+            <span class={`no hatch-${g.type}`}><b>{w.plate}</b></span>
+            <span class="main"><strong>{w.data.short}</strong><span>{w.data.summary}</span></span>
+            <span class="meta label">{[...w.data.sample, `${w.data.venue} / ${monthYear(w.data.date)}`].map((line) => <>{line}<br /></>)}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>

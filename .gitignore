@@ -29,3 +29,6 @@ dist-ssr
 # todo
 todo
 .osgrep
+
+# astro
+.astro

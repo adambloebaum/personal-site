@@ -1,0 +1,15 @@
+---
+import { kinds } from '../lib/site';
+const { work } = Astro.props;
+const d = work.data;
+---
+<a class="plate" href={`/works/${work.id}`}>
+  <div class={`swatch hatch-${d.type}`}>
+    <span class="tag">Plate {work.plate} / {kinds[d.type as keyof typeof kinds].one} / {d.date.getUTCFullYear()}</span>
+  </div>
+  <div class="body">
+    <h3>{d.short}</h3>
+    <p>{d.summary}</p>
+    {d.sample.length > 0 && <div class="label">{d.sample.join(' / ')}</div>}
+  </div>
+</a>

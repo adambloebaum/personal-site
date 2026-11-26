@@ -1,5 +1,7 @@
 // Turns a paragraph holding only an image into a numbered <figure>, using the
-// image's alt text as the caption.
+// image's alt text as the caption. SVG diagrams are inlined so their labels use
+// the site's fonts.
+import { readFileSync } from 'node:fs';
 export default function rehypeFigures() {
   return (tree) => {
     let n = 0;
@@ -10,7 +12,8 @@ export default function rehypeFigures() {
         if (child.tagName === 'p' && kids.length === 1 && kids[0].tagName === 'img') {
           const img = kids[0];
           const caption = img.properties.alt;
-          const figure = { type: 'element', tagName: 'figure', properties: {}, children: [img] };
+          const svg = img.properties.src.endsWith('.svg') && readFileSync(`public${img.properties.src}`, 'utf8').replace('<svg ', `<svg role="img" aria-label="${caption}" `);
+          const figure = { type: 'element', tagName: 'figure', properties: {}, children: [svg ? { type: 'raw', value: svg } : img] };
           if (caption) {
             n += 1;
             figure.children.push({

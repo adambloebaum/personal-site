@@ -74,28 +74,21 @@ img, video, svg { max-width: 100%; }
 /* home */
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-.hero { margin: 32px 0 0; cursor: pointer; }
-.hero:focus-visible { outline: 1px solid var(--ink); outline-offset: 8px; }
-.hero svg { display: block; width: 100%; height: auto; overflow: visible; }
-.hero figcaption { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 8px; color: var(--ink-3); }
-.hero figcaption span { display: flex; align-items: center; gap: 8px; }
-.hero figcaption i { width: 12px; height: 12px; border: 1px solid var(--ink); }
-.hero figcaption .note { margin-left: auto; }
-.k-teal { background: var(--teal); } .k-rust { background: var(--rust); } .k-ochre { background: var(--ochre); }
-/* the card is drawn in ink on paper; each material group re-tints the kit's tone ramp */
-.hero svg.gpu { --anatomy-paper: #F7F2E7; --anatomy-face: #F7F2E7; --anatomy-top: #FBF8F0; --anatomy-shade-0: #D9D0BC; --anatomy-shade-1: #E2DAC8; --anatomy-shade-2: #EAE3D3; --anatomy-shade-3: #F1EBDD; --anatomy-hi: #1F2A30; --anatomy-mid: #55605F; --anatomy-lo: #8B9290; --anatomy-faint: #BDB9AA; --anatomy-dot: #1F2A30; --anatomy-weight: 0.7px; }
-.gpu .m-pcb { --anatomy-paper: #2F6F73; --anatomy-top: #4B8B8E; --anatomy-shade-0: #1F5053; --anatomy-shade-1: #255B5F; --anatomy-shade-2: #2B676B; --anatomy-shade-3: #327377; }
-.gpu .m-pcbdark { --anatomy-paper: #1F5053; --anatomy-top: #2B676B; --anatomy-shade-0: #153A3D; --anatomy-shade-1: #194346; --anatomy-shade-2: #1D4B4E; --anatomy-shade-3: #215457; }
-.gpu .m-copper { --anatomy-paper: #A4472B; --anatomy-top: #C26B4C; --anatomy-shade-0: #7C3420; --anatomy-shade-1: #8B3B24; --anatomy-shade-2: #9A4228; --anatomy-shade-3: #AC4E31; }
-.gpu .m-gold { --anatomy-paper: #B8862B; --anatomy-top: #D3A650; --anatomy-shade-0: #8E661F; --anatomy-shade-1: #9C7124; --anatomy-shade-2: #AB7C28; --anatomy-shade-3: #BF8D30; }
-.gpu .m-ink { --anatomy-paper: #1F2A30; --anatomy-top: #3B4649; --anatomy-shade-0: #141C20; --anatomy-shade-1: #1A2328; --anatomy-shade-2: #212C32; --anatomy-shade-3: #2A363C; --anatomy-mid: #8B9290; --anatomy-lo: #55605F; --anatomy-faint: #3B4649; --anatomy-dot: #F1EBDD; }
-.gpu .trace .iso-line { stroke: #7FB0AE; }
-.gpu .f-gold { fill: #D3A650; } .gpu .f-rust { fill: #A4472B; } .gpu .f-well { fill: #141C20; } .gpu .f-ink { fill: #141C20; } .gpu .f-hub { fill: #2A363C; } .gpu .f-blade { fill: #3B4649; stroke: #141C20; stroke-width: 0.6px; }
-.lede { margin: 40px 0 0; max-width: 620px; font-size: 24px; line-height: 1.4; }
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 32px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); margin: 32px 0 0; }
-.facts div { padding: 14px 0; }
-.facts dt { font-family: var(--label); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
-.facts dd { margin: 0; font-family: var(--label); font-weight: 600; font-size: 18px; letter-spacing: 0.1em; text-transform: uppercase; }
+.lead { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start; margin-top: 48px; }
+.status { flex: 4 1 320px; min-width: 0; margin: 0; border-top: 1px solid var(--ink); }
+.status div { display: flex; flex-wrap: wrap; gap: 2px 20px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.status dt { flex: 0 0 96px; padding-top: 5px; font-family: var(--label); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.status dd { flex: 1 1 200px; margin: 0; font-size: 21px; line-height: 1.35; }
+.feature { flex: 5 1 420px; min-width: 0; }
+.feature .figure { padding: 16px 16px 8px; border-bottom: 1px solid var(--ink); }
+.feature .body .label:first-child { margin: 0; border: 0; padding: 0; color: var(--rust); font-weight: 600; }
+.workfig { display: block; width: 100%; height: auto; }
+.workfig .grid { stroke: var(--rule); }
+.workfig .axis { fill: none; stroke: var(--ink); }
+.workfig .event { stroke: var(--ink-3); stroke-dasharray: 3 4; }
+.workfig .tick { font-family: var(--label); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--ink-3); paint-order: stroke; stroke: var(--plate); stroke-width: 4px; }
+.workfig .curve { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.workfig .teal { stroke: var(--teal); } .workfig .ochre { stroke: var(--ochre); } .workfig .rust { stroke: var(--rust); }
 
 .plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; }
 .plate { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--plate); }
@@ -186,7 +179,7 @@ figcaption .label { font-weight: 600; color: var(--ink); margin-right: 8px; }
 .prose figure { width: fit-content; max-width: 100%; margin: 36px auto; border: 1px solid var(--ink); background: var(--plate); }
 .prose figcaption { width: 0; min-width: 100%; box-sizing: border-box; }
 .prose img, .prose video { display: block; margin: 0 auto; max-width: 100%; height: auto; mix-blend-mode: multiply; }
-.prose img[src$='.svg'] { mix-blend-mode: normal; }
+.prose figure > svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
 .prose > video, .prose > p > video { margin: 36px auto; border: 1px solid var(--ink); mix-blend-mode: normal; }
 .prose figcaption { padding: 12px 16px; border-top: 1px solid var(--ink); font-size: 17px; line-height: 1.4; color: var(--ink-2); }
 .prose .katex-display { margin: 0 0 22px; padding: 18px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow-x: auto; overflow-y: hidden; }

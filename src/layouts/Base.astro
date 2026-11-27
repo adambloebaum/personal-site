@@ -3,6 +3,10 @@ import '@fontsource-variable/newsreader/opsz.css';
 import '@fontsource-variable/newsreader/opsz-italic.css';
 import '@fontsource/barlow-condensed/500.css';
 import '@fontsource/barlow-condensed/600.css';
+// preloaded so first paint already has the real fonts instead of swapping from the fallbacks
+import serif from '@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2?url';
+import label500 from '@fontsource/barlow-condensed/files/barlow-condensed-latin-500-normal.woff2?url';
+import label600 from '@fontsource/barlow-condensed/files/barlow-condensed-latin-600-normal.woff2?url';
 import '../styles/atlas.css';
 
 interface Props {
@@ -36,6 +40,7 @@ const nav = [
     <meta name="description" content={description} />
     <meta name="author" content="Adam Bloebaum" />
     {Astro.url.pathname.startsWith('/404') ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={url} />}
+    {[serif, label500, label600].map((href) => <link rel="preload" as="font" type="font/woff2" href={href} crossorigin />)}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />

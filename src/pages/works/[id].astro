@@ -10,12 +10,13 @@ const { work } = Astro.props;
 const d = work.data;
 const kind = kinds[d.type];
 const href = d.url ?? d.pdfUrl;
+const figure = import.meta.glob<string>('../../assets/works/*.svg', { query: '?raw', import: 'default', eager: true })[`../../assets/works/${work.id}.svg`];
 const { Content } = await render(work);
 const cta = { publication: 'Read the preprint', patent: 'Read the application', project: 'View the code' }[d.type];
 ---
 <Base title={d.short} description={d.summary} type="article">
   <div class={`banner hatch-${d.type}`}>
-    <a class="tag" href="/works/">{kind.label} / #{+work.plate} / {kind.one}</a>
+    <a class="tag" href="/works/">{[...new Set([kind.label, `#${+work.plate}`, kind.one])].join(' / ')}</a>
   </div>
   <section class="work-top">
     <div class="words">
@@ -29,9 +30,9 @@ const cta = { publication: 'Read the preprint', patent: 'Read the application', 
       <div><dt>Published</dt><dd>{d.venue}, {fullDate(d.date)}</dd></div>
     </dl>
   </section>
-  {d.figure && (
+  {figure && (
     <figure class="fig">
-      <img src={d.figure} alt={d.figureCaption ?? ''} />
+      <Fragment set:html={figure} />
       {d.figureCaption && <figcaption><span class="label">Fig. 1</span>{d.figureCaption}</figcaption>}
     </figure>
   )}

@@ -24,7 +24,6 @@ const works = defineCollection({
     venue: z.string(),
     sample: z.array(z.string()).default([]),
     method: z.string().optional(),
-    figure: z.string().optional(),
     figureCaption: z.string().optional(),
     url: z.string().optional(),
     pdfUrl: z.string().optional(),

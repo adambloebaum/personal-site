@@ -7,6 +7,7 @@ url: "https://sportrxiv.org/index.php/server/preprint/view/1010"
 short: "Skilled pitching is better-structured variability, not less of it"
 venue: "SportRxiv"
 sample: ["43,650 pitches", "2,052 pitchers"]
+figureCaption: "Synergy index across the delivery, group means for three velocity bands. Higher values mean more of the joint variability falls in directions that leave the release point unchanged."
 method: "Time-resolved uncontrolled-manifold analysis"
 ---
 

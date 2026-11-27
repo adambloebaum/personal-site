@@ -145,7 +145,8 @@ img, video, svg { max-width: 100%; }
 .two p { margin: 0; max-width: 760px; font-size: 21px; line-height: 1.55; }
 
 /* figures, shared by work pages and posts */
-figure.fig { margin: 36px 0; border: 1px solid var(--ink); background: var(--plate); }
+figure.fig { max-width: 820px; margin: 0; border: 1px solid var(--ink); background: var(--plate); }
+figure.fig .workfig { padding: 16px 16px 8px; }
 figure.fig img, figure.fig video { display: block; width: 100%; height: auto; }
 figure.fig figcaption { padding: 12px 16px; border-top: 1px solid var(--ink); font-size: 17px; line-height: 1.4; color: var(--ink-2); }
 figcaption .label { font-weight: 600; color: var(--ink); margin-right: 8px; }

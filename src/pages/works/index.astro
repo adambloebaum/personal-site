@@ -12,10 +12,6 @@ const groups = (Object.keys(kinds) as (keyof typeof kinds)[]).map((type) => ({
 <Base title="Work" description="Research, patents, and software by Adam Bloebaum.">
   <div class="index-head">
     <h1 class="page-title">Index of work</h1>
-    <div class="key label">
-      <span class="strong">Key</span>
-      {groups.map((g) => <span><i class={`hatch-${g.type}`}></i>{g.label}</span>)}
-    </div>
   </div>
   {groups.map((g) => (
     <section>

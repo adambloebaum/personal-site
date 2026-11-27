@@ -9,3 +9,5 @@ venue: "SportRxiv"
 sample: ["23,338 fastballs", "1,318 pitchers"]
 method: "Inverse dynamics and joint power partitioning"
 ---
+
+In 23,338 fastballs from 1,318 pitchers, a model built on the energy transferred through the shoulder and elbow reached a marginal R2 of 0.647 for pitch velocity, and energy generated or absorbed locally at those joints added almost nothing (0.018). Elbow transfer also predicted peak elbow varus moment more strongly than pitch speed did, and that held from pitch to pitch within the same pitcher. The arm passes along energy produced earlier in the chain, which points to a way of lowering elbow load without throwing slower. The directional results reproduced on the public OpenBiomechanics dataset.

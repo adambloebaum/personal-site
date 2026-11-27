@@ -9,3 +9,5 @@ venue: "SportRxiv"
 sample: ["43,650 pitches", "2,052 pitchers"]
 method: "Time-resolved uncontrolled-manifold analysis"
 ---
+
+Across 43,650 pitches from 2,052 pitchers, joint variability between pitches does not shrink steadily toward release, and the proportional depth of that funnel is the same at every skill level. What separates higher-velocity pitchers is a lower absolute variability floor across the whole chain and a stronger release synergy: more of their remaining joint variability falls in directions that leave the release point unchanged. The synergy lives in the arm, on top of a quiet and highly repeatable trunk and pelvis, and it reproduces on the public OpenBiomechanics cohort.

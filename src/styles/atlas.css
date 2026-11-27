@@ -142,6 +142,9 @@ img, video, svg { max-width: 100%; }
 .panel dd { margin: 2px 0 0; }
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px 48px; padding-top: 56px; }
 .two h2 { margin-bottom: 12px; padding-top: 10px; border-top: 2px solid var(--ink); font-family: var(--label); font-weight: 600; font-size: 18px; letter-spacing: 0.16em; text-transform: uppercase; }
+.two p + p { margin-top: 16px; }
+.two a { border-bottom: 1px solid; }
+.two a:hover { color: var(--rust); }
 .two p { margin: 0; max-width: 760px; font-size: 21px; line-height: 1.55; }
 
 /* figures, shared by work pages and posts */

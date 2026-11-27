@@ -26,13 +26,13 @@ const cta = { publication: 'Read the preprint', patent: 'Read the application', 
     </div>
     <dl class="panel">
       {d.sample.length > 0 && <div><dt>Sample</dt><dd>{d.sample.join(', ')}</dd></div>}
-      {d.method && <div><dt>Method</dt><dd>{d.method}</dd></div>}
+      {d.method && <div><dt>{d.type === 'project' ? 'Built with' : 'Method'}</dt><dd>{d.method}</dd></div>}
       <div><dt>Published</dt><dd>{d.venue}, {fullDate(d.date)}</dd></div>
     </dl>
   </section>
-  {figure && (
+  {(figure || d.image) && (
     <figure class="fig">
-      <Fragment set:html={figure} />
+      {figure ? <Fragment set:html={figure} /> : <img src={d.image} alt={d.figureCaption ?? ''} />}
       {d.figureCaption && <figcaption><span class="label">Fig. 1</span>{d.figureCaption}</figcaption>}
     </figure>
   )}

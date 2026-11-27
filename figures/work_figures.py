@@ -55,7 +55,7 @@ def write(work, label, parts):
     print("wrote", work)
 tick = lambda x, y, s, anchor="start": f'<text class="tick" x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}">{s}</text>'
 
-# Energy flow paper: shoulder energy transferred vs absorbed, public OpenBiomechanics pitches.
+# Energy flow paper: shoulder energy transferred vs generated, public OpenBiomechanics pitches.
 obp = pd.read_csv(studies / "pitching-energy-flow/data/.cache/poi_metrics.csv")
 L, R, T, B = 46, 14, 30, 40
 px = lambda mph: L + (mph - 68) / (96 - 68) * (W - L - R)
@@ -65,14 +65,14 @@ for j in [0, 100, 200, 300, 400, 500]:
     parts.append(f'<line class="grid" x1="{L}" y1="{py(j):.1f}" x2="{W - R}" y2="{py(j):.1f}"/>' + tick(L - 8, py(j) + 4, j, "end"))
 for mph in [70, 75, 80, 85, 90, 95]:
     parts.append(tick(px(mph), H - B + 18, mph, "middle"))
-for col, color in [("shoulder_transfer_fp_br", "teal"), ("shoulder_absorption_fp_br", "rust")]:
+for col, color in [("shoulder_transfer_fp_br", "teal"), ("shoulder_generation_fp_br", "rust")]:
     parts += [f'<circle class="dot {color}" cx="{px(x):.1f}" cy="{py(y):.1f}" r="2.2"/>' for x, y in zip(obp.pitch_speed_mph, obp[col])]
 parts.append(f'<path class="axis" d="M{L} {T}V{H - B}H{W - R}"/>')
-for i, (name, color) in enumerate([("Transferred through the shoulder", "teal"), ("Absorbed at the shoulder", "rust")]):
+for i, (name, color) in enumerate([("Transferred through the shoulder", "teal"), ("Generated at the shoulder", "rust")]):
     parts.append(f'<circle class="dot {color}" cx="{L + 20}" cy="{T + 16 + i * 16}" r="3.5" style="opacity:1"/>' + tick(L + 32, T + 20 + i * 16, name))
 parts.append(tick(L, T - 14, "Energy, joules, foot plant to release"))
 parts.append(tick(W - R, H - 6, "Pitch speed, mph", "end"))
-write("energy-flow-throwing-arm", f"Shoulder energy transfer rises with pitch speed while energy absorbed at the shoulder stays low, {len(obp)} public OpenBiomechanics pitches", parts)
+write("energy-flow-throwing-arm", f"Shoulder energy transfer rises with pitch speed while energy generated at the shoulder stays low, {len(obp)} public OpenBiomechanics pitches", parts)
 
 # Complexity paper: mean vs within-session SD of pelvis spectral entropy across velocity bands.
 sd = pd.read_parquet(studies / "pitching-complexity-reproducibility/data/within_athlete_sd.parquet")

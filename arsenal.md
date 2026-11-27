@@ -4,9 +4,24 @@ Working list of things to learn, build, and write. Check items off, add freely.
 Tags: [essay] long-form post, [note] under 500 words, [build] project or
 interactive, [study] learn first, write later.
 
-The test for anything published: could a front-office reader or a technical peer
-learn something from it that they could not get elsewhere? The player-engineer
-overlap is the part nobody else can write.
+The test for anything published: could a strong technical reader in any field
+learn something from it that they could not get elsewhere? Baseball is the home
+domain, not the audience. Other sports, games (chess, poker), and first
+principles from math, physics, chemistry, and biology are all in bounds. Each
+piece should show at least one of: technical depth that travels, a decision or
+product actually shipped, or how to lead and build beyond IC work.
+
+## Start here (set 2026-11-27)
+
+1. State estimation, Kalman to particle filter, interactive (section 3)
+2. Edge inference on a phone, tied to the bat-tracking patent (section 2)
+3. Valuation from first principles, written across sports (section 1)
+4. One systems-and-teams piece: last mile, or build vs. buy (section 5)
+5. One games piece: poker or chess as a decision problem (section 8)
+
+Skip plain-language rewrites of the preprints; the paper pages already carry
+the summary. A companion is worth it only with the player's view or a decision
+attached (section 7).
 
 ## 0. Queue (carried over from blog_queue.txt)
 
@@ -22,10 +37,13 @@ overlap is the part nobody else can write.
 - [ ] Reinforcement learning and training (in-progress/, empty)
 - [ ] Technical, knowledgeable, tasteful (in-progress/, empty)
 
-## 1. Front-office core (biggest gap in the public portfolio)
+## 1. Valuation and decisions (biggest gap in the public portfolio)
 
-Everything published so far is pitching biomechanics. A club R&D lead is judged
-on decisions: who to acquire, what to pay, how sure to be.
+Everything published so far is pitching biomechanics. An R&D lead in any sport
+is judged on decisions: who to acquire, what to pay, how sure to be. Write these
+so the method is the subject and the sport is the example; compare across
+baseball, basketball, soccer, football, and hockey where the structure differs
+(continuous vs. discrete play, credit assignment, sample size per season).
 
 - [ ] Player valuation from first principles: runs, wins, replacement level, surplus value [study] [essay]
 - [ ] Projection systems: regression to the mean, aging curves, minor league translations [study] [build]
@@ -33,12 +51,12 @@ on decisions: who to acquire, what to pay, how sure to be.
 - [ ] Causal inference for player development: did the intervention work, or was it selection? [essay]
 - [ ] Stuff / location / pitch-value models: what they capture, where they fail [essay]
 - [ ] Decision-making under uncertainty: draft, trade, and promotion as portfolio problems [essay]
-- [ ] Roster and contract mechanics: service time, options, arbitration, Rule 5, 40-man [study]
+- [ ] Roster and contract mechanics: service time, options, arbitration, Rule 5, 40-man [study] (private study; club-specific, not site content)
 - [ ] Hitting side: bat-tracking metrics, swing decisions, attack angle (pairs with the queue items above) [essay]
 - [ ] In-game pose data vs. lab motion capture: what transfers, what does not [essay]
 - [ ] Workload, fatigue, and injury modeling: base rates, censoring, why most models overclaim [essay]
 - [ ] Model evaluation that survives contact: calibration, leakage, out-of-time validation [essay]
-- [ ] One public-data baseball project on the level of the NHL xG benchmark [build]
+- [ ] One public-data project in a sport other than baseball or hockey, on the level of the NHL xG benchmark [build]
 
 ## 2. Measurement, hardware, EE/CE
 
@@ -98,7 +116,18 @@ on decisions: who to acquire, what to pay, how sure to be.
 
 Guardrail: nothing proprietary to Driveline or the Nationals, no teammate data.
 
-## 8. Bookshelf (candidates for a reading page; add one line of your own on each)
+## 8. Other sports, games, first principles
+
+- [ ] Poker as decision-making under uncertainty: equity, ranges, variance, bankroll as risk of ruin [essay]
+- [ ] Chess engines and evaluation: what search plus a value function teaches about player evaluation [essay]
+- [ ] Rating systems: Elo, Glicko, and what they assume, across chess and team sports [essay] [build]
+- [ ] Credit assignment across sports: why baseball is easy and soccer is hard [essay]
+- [ ] Expected-value models side by side: xG, expected points, run expectancy as one idea [essay]
+- [ ] Energy systems from the chemistry up: ATP, phosphocreatine, glycolysis, and what a pitch or a sprint actually costs [essay]
+- [ ] Scaling laws: why size and strength do not scale together, from the physics [note]
+- [ ] Biochemistry of caffeine (from the queue) [essay]
+
+## 9. Bookshelf (candidates for a reading page; add one line of your own on each)
 
 Baseball and decisions
 - [ ] The Book -- Tango, Lichtman, Dolphin
@@ -130,7 +159,7 @@ Leading
 - [ ] High Output Management -- Grove
 - [ ] An Elegant Puzzle -- Larson
 
-## 9. Site backlog (from the 2026-11-25 review)
+## 10. Site backlog (from the 2026-11-25 review)
 
 Done 2026-11-25: post citation and math fixes, bold restored, per-post share
 cards, font blanking removed, GIFs converted to MP4, plots and photos resized,

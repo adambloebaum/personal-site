@@ -7,6 +7,7 @@ url: "https://sportrxiv.org/index.php/server/preprint/view/919/version/1136"
 short: "Elite throwers reproduce complexity; they do not have more of it"
 venue: "SportRxiv"
 sample: ["28,307 fastballs", "1,722 pitchers"]
+figureCaption: "Pelvis rotation spectral entropy by velocity band, group means, with the slowest band set to 100. The session mean stays flat; the pitch-to-pitch variation falls by about 70%."
 method: "Nonlinear movement complexity measures"
 ---
 

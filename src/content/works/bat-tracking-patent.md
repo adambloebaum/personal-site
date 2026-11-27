@@ -6,6 +6,7 @@ type: "patent"
 pdfUrl: "/pdfs/20250322660.pdf"
 short: "Mobile camera-based system for real-time baseball swing analysis"
 venue: "US 2025/0322660 A1"
+figureCaption: "The method as published in the application, steps 202 to 220."
 sample: ["Published application"]
 ---
 

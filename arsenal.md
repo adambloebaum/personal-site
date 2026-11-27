@@ -167,7 +167,7 @@ contrast raised, unused scaffold and dependencies removed, lint clean, RSS,
 sitemap, 404.html. No public email on Contact, by choice.
 
 Redesign (Astro, Atlas design) merged and deployed 2026-11-27.
-- [ ] key figures for the other three paper pages: add `src/assets/works/<id>.svg` (see `figures/work_figures.py`) and a `figureCaption` line; only the UCM paper has one
+- [x] every work page has a figure beside its summary (drawn by `figures/work_figures.py`, or a screenshot via `image`)
 - energy-flow plots are recolored copies of the originals and stay that way: the Nov 2025 extract and code are gone and the database has since been backfilled, so the post's 17,942-throw sample cannot be rebuilt
 
 After v1 ships

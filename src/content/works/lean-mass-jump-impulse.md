@@ -7,6 +7,7 @@ url: "https://sportrxiv.org/index.php/server/preprint/view/896"
 short: "Lean mass, not EMG amplitude, tracks jump impulse change"
 venue: "SportRxiv"
 sample: ["26 athletes", "72 test-retest pairs"]
+figureCaption: "The two change coefficients from the primary jump model under four specifications (52 pairs). Lean mass stays positive throughout; EMG amplitude moves and its interval crosses zero in two of four."
 method: "DEXA, force plates, and surface EMG"
 ---
 

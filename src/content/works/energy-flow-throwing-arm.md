@@ -7,6 +7,7 @@ url: "https://sportrxiv.org/index.php/server/preprint/view/871"
 short: "The throwing arm transfers energy; it does not generate it"
 venue: "SportRxiv"
 sample: ["23,338 fastballs", "1,318 pitchers"]
+figureCaption: "Energy transferred through the elbow against energy generated at it, by pitch speed. Each dot is one pitch from the public OpenBiomechanics dataset (411 pitches), not the paper's main sample."
 method: "Inverse dynamics and joint power partitioning"
 ---
 

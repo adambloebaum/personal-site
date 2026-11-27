@@ -55,7 +55,7 @@ img, video, svg { max-width: 100%; }
 .site-header nav a { padding: 6px 0; border-bottom: 2px solid transparent; }
 .site-header nav a[aria-current='page'] { border-bottom-color: var(--rust); }
 .site-footer {
-  margin-top: 96px; padding-top: 14px; border-top: 2px solid var(--ink);
+  margin-top: 56px; padding-top: 14px; border-top: 2px solid var(--ink);
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
 }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 24px; }

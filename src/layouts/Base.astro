@@ -20,11 +20,11 @@ const {
 const fullTitle = title ? `${title} | Adam Bloebaum` : 'Adam Bloebaum';
 const url = new URL(Astro.url.pathname, Astro.site);
 const card = new URL(image ?? '/og-default.png', Astro.site);
-const section = '/' + Astro.url.pathname.split('/')[1];
+const section = `/${Astro.url.pathname.split('/')[1]}/`;
 const nav = [
-  { href: '/works', label: 'Work' },
-  { href: '/blog', label: 'Writing' },
-  { href: '/about', label: 'About' },
+  { href: '/works/', label: 'Work' },
+  { href: '/blog/', label: 'Writing' },
+  { href: '/about/', label: 'About' },
 ];
 ---
 <!doctype html>
@@ -35,7 +35,7 @@ const nav = [
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Adam Bloebaum" />
-    <link rel="canonical" href={url} />
+    {Astro.url.pathname.startsWith('/404') ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={url} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
@@ -47,7 +47,7 @@ const nav = [
     <meta property="og:url" content={url} />
     <meta property="og:image" content={card} />
     <meta property="og:site_name" content="Adam Bloebaum" />
-    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bl0ebaum" />
   </head>
   <body>

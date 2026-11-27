@@ -31,6 +31,7 @@ a:hover { color: var(--rust); }
 h1, h2, h3 { font-weight: 400; margin: 0; text-wrap: balance; }
 img, video, svg { max-width: 100%; }
 
+:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
 .wrap { max-width: 1184px; margin: 0 auto; padding: 0 32px 96px; }
 @media (max-width: 600px) { .wrap { padding: 0 16px 64px; } }
 
@@ -98,7 +99,7 @@ img, video, svg { max-width: 100%; }
 .plate .swatch { height: 132px; border-bottom: 1px solid var(--ink); display: flex; align-items: flex-end; padding: 12px; }
 .tag { background: var(--plate); border: 1px solid var(--ink); padding: 2px 8px; font-family: var(--label); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
 .plate .body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
-.plate h3 { font-weight: 500; font-size: 24px; line-height: 1.18; }
+.plate h3, .feature h2 { font-weight: 500; font-size: 24px; line-height: 1.18; }
 .plate p { margin: 0; font-size: 17px; line-height: 1.45; color: var(--ink-2); }
 .plate .label { margin-top: auto; border-top: 1px solid var(--rule); padding-top: 10px; }
 .hatch-publication { background: var(--hatch-publication); }
@@ -178,6 +179,9 @@ figcaption .label { font-weight: 600; color: var(--ink); margin-right: 8px; }
 .prose figure { width: fit-content; max-width: 100%; margin: 36px auto; border: 1px solid var(--ink); background: var(--plate); }
 .prose figcaption { width: 0; min-width: 100%; box-sizing: border-box; }
 .prose img, .prose video { display: block; margin: 0 auto; max-width: 100%; height: auto; mix-blend-mode: multiply; }
+.prose .row { display: flex; gap: 10px; margin: 36px 0; }
+.prose .row img { flex: 1; min-width: 0; margin: 0; }
+@media (max-width: 600px) { .prose .row { flex-direction: column; } }
 .prose figure > svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
 .prose > video, .prose > p > video { margin: 36px auto; border: 1px solid var(--ink); mix-blend-mode: normal; }
 .prose figcaption { padding: 12px 16px; border-top: 1px solid var(--ink); font-size: 17px; line-height: 1.4; color: var(--ink-2); }

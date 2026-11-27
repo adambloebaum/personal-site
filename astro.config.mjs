@@ -7,7 +7,7 @@ import rehypeFigures from './src/lib/rehype-figures.mjs';
 export default defineConfig({
   site: 'https://www.adambloebaum.com',
   integrations: [sitemap()],
-  redirects: { '/contact': '/about' },
+  redirects: { '/contact': '/about/' },
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex, rehypeFigures],

@@ -22,17 +22,17 @@ const posts = await getPosts();
       <div><dt>Learning about</dt><dd>Network science, reinforcement learning, computer architecture, GPU kernels</dd></div>
       <div><dt>Education</dt><dd>MS Analytics, Georgia Tech<br />BS Physics, University of Washington</dd></div>
     </dl>
-    <a class="plate feature" href={`/works/${lead.id}`}>
+    <a class="plate feature" href={`/works/${lead.id}/`}>
       <div class="figure"><Fragment set:html={figureOf(lead.id)} /></div>
       <div class="body">
         <span class="label">Newest / #{+lead.plate} / {kinds[lead.data.type].one} / {lead.data.date.getUTCFullYear()}</span>
-        <h3>{lead.data.short}</h3>
+        <h2>{lead.data.short}</h2>
         <div class="label">{lead.data.sample.join(' / ')}</div>
       </div>
     </a>
   </section>
 
-  <div class="section-head"><h2>More research</h2><a class="label" href="/works">All work</a></div>
+  <div class="section-head"><h2>More research</h2><a class="label" href="/works/">All work</a></div>
   <div class="plates">{research.map((w) => <Plate work={w} />)}</div>
 
   <div class="section-head"><h2>Writing</h2></div>

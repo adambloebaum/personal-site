@@ -345,27 +345,27 @@ Pitch velocity is strongly associated with the **magnitude** of energy transfer 
 
 Shoulder and elbow peak and total transfer metrics explain ~0.59–0.62 of variance in pitch speed. PC1 (dominated by transfer metrics) explains ~46% of variance and correlates positively with pitch speed.
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/2.png" alt="Shoulder total transfer vs. pitch speed" style="width: 50%;" />
-  <img src="/images/energy-flow/3.png" alt="Elbow total transfer vs. pitch speed" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/2.png" alt="Shoulder total transfer vs. pitch speed" />
+  <img src="/images/energy-flow/3.png" alt="Elbow total transfer vs. pitch speed" />
 </div>
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/4.png" alt="Shoulder peak transfer vs. pitch speed" style="width: 33%;" />
-  <img src="/images/energy-flow/5.png" alt="Elbow peak transfer vs. pitch speed" style="width: 33%;" />
-  <img src="/images/energy-flow/6.png" alt="PCA of energy metrics, colored by pitch speed" style="width: 33%;" />
+<div class="row">
+  <img src="/images/energy-flow/4.png" alt="Shoulder peak transfer vs. pitch speed" />
+  <img src="/images/energy-flow/5.png" alt="Elbow peak transfer vs. pitch speed" />
+  <img src="/images/energy-flow/6.png" alt="PCA of energy metrics, colored by pitch speed" />
 </div>
 
 Measures of generation and absorption within joints (shoulder/elbow generation or absorption), net transfer, timing, and efficiency ratios explain negligible variance in pitch speed (r² of most ~0.00–0.07).
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/7.png" alt="Shoulder total generation vs. pitch speed" style="width: 50%;" />
-  <img src="/images/energy-flow/8.png" alt="Elbow total generation vs. pitch speed" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/7.png" alt="Shoulder total generation vs. pitch speed" />
+  <img src="/images/energy-flow/8.png" alt="Elbow total generation vs. pitch speed" />
 </div>
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/9.png" alt="Time between peak transfers vs. pitch speed" style="width: 50%;" />
-  <img src="/images/energy-flow/10.png" alt="Net total transfer vs. pitch speed" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/9.png" alt="Time between peak transfers vs. pitch speed" />
+  <img src="/images/energy-flow/10.png" alt="Net total transfer vs. pitch speed" />
 </div>
 
 **Conclusion**: transfering more total energy through the throwing arm is the primary mechanical correlator of throwing velocity. There is no evidence that more generation, better absorption/generation balance, or precise joint peak power timing is a driver of velocity.
@@ -374,15 +374,15 @@ Measures of generation and absorption within joints (shoulder/elbow generation o
 
 Shoulder total transfer → elbow total transfer: r² = **0.956**. Shoulder peak transfer also strongly predicts elbow transfer (r² = **0.787**).
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/11.png" alt="Shoulder total transfer vs. elbow total transfer" style="width: 50%;" />
-  <img src="/images/energy-flow/12.png" alt="Shoulder peak transfer vs. elbow peak transfer" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/11.png" alt="Shoulder total transfer vs. elbow total transfer" />
+  <img src="/images/energy-flow/12.png" alt="Shoulder peak transfer vs. elbow peak transfer" />
 </div>
 
 Partial r² shows elbow total transfer still links to shoulder peak transfer after controlling for shoulder generation (partial r² = 0.751).
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/13.png" alt="Elbow transfer vs. shoulder transfer, controlling for shoulder generation" style="width: 100%;" />
+<div class="row">
+  <img src="/images/energy-flow/13.png" alt="Elbow transfer vs. shoulder transfer, controlling for shoulder generation" />
 </div>
 
 **Conclusion**: the shoulder and elbow are effectively mechanically-coupled, and what the shoulder transfers will be transferred by the elbow.
@@ -391,16 +391,16 @@ Partial r² shows elbow total transfer still links to shoulder peak transfer aft
 
 Peak valgus torque correlates strongly with elbow peak transfer (r² = **0.732**) and elbow total transfer (r² = **0.660**). Total valgus (AUC) correlates with elbow total transfer (r² = **0.589**).
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/14.png" alt="Peak valgus torque vs. elbow peak transfer" style="width: 50%;" />
-  <img src="/images/energy-flow/15.png" alt="Valgus torque AUC vs. elbow total transfer" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/14.png" alt="Peak valgus torque vs. elbow peak transfer" />
+  <img src="/images/energy-flow/15.png" alt="Valgus torque AUC vs. elbow total transfer" />
 </div>
 
 Pitch speed explains some torque variance (r² = **0.503**), but transfer magnitude is a stronger direct correlate of torque than speed alone. Residual analyses (removing speed) show residual torque still relates to residual elbow transfer (r² = **0.338**; stronger for peak transfer residual: r² = **0.470**).
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/16.png" alt="Residual valgus torque vs. residual elbow total transfer, controlling for pitch speed" style="width: 50%;" />
-  <img src="/images/energy-flow/17.png" alt="Residual valgus torque vs. residual elbow peak transfer, controlling for pitch speed" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/16.png" alt="Residual valgus torque vs. residual elbow total transfer, controlling for pitch speed" />
+  <img src="/images/energy-flow/17.png" alt="Residual valgus torque vs. residual elbow peak transfer, controlling for pitch speed" />
 </div>
 
 **Conclusion**: more energy transferred through the elbow reliably increases joint loading. Thus elbow injury risk (if driven by valgus torque) is mechanistically tied to energy throughput.
@@ -412,9 +412,9 @@ Normalizing torque and energy transfer by forearm length produces a small but st
 - Peak valgus torque vs elbow total transfer / forearm length: r² = **0.570**
 Both remain close to the raw relationship (r² = 0.660), reflecting only a modest change in explained variance (-0.09)
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/18.png" alt="Peak valgus torque per forearm length vs. elbow total transfer" style="width: 50%;" />
-  <img src="/images/energy-flow/20.png" alt="Peak valgus torque vs. elbow total transfer per forearm length" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/18.png" alt="Peak valgus torque per forearm length vs. elbow total transfer" />
+  <img src="/images/energy-flow/20.png" alt="Peak valgus torque vs. elbow total transfer per forearm length" />
 </div>
 
 **Conclusion**: forearm length influences valgus torque by manipulating the lever length, but total energy transfer is still the primary driver
@@ -423,9 +423,9 @@ Both remain close to the raw relationship (r² = 0.660), reflecting only a modes
 
 Timing metrics have very small r²s across the board. Efficiency ratios (transfer/transfer or absorption/generation) are effectively uncorrelated with pitch speed and poorly correlated with torque. Residual timing analyses show negligible relationships with residual velocity or torque.
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/energy-flow/21.png" alt="Residual shoulder-elbow timing vs. residual torque, controlling for pitch speed" style="width: 50%;" />
-  <img src="/images/energy-flow/22.png" alt="Residual elbow total transfer vs. pitch speed, controlling for shoulder transfer" style="width: 50%;" />
+<div class="row">
+  <img src="/images/energy-flow/21.png" alt="Residual shoulder-elbow timing vs. residual torque, controlling for pitch speed" />
+  <img src="/images/energy-flow/22.png" alt="Residual elbow total transfer vs. pitch speed, controlling for shoulder transfer" />
 </div>
 
 **Conclusion**: Sequencing precision and simple efficiency percentages do not explain which pitchers throw harder or suffer more torque.

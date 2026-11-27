@@ -5,7 +5,7 @@ root = Path(__file__).parent.parent
 INK, TEAL, RUST, OCHRE = "#1F2A30", "#2F6F73", "#A4472B", "#B8862B"
 INK3, PLATE = "#55605F", "#F7F2E7"
 LAB = "font-family='Barlow Condensed, sans-serif'"
-SER = "font-family='Newsreader, Georgia, serif'"
+SER = "font-family='Newsreader Variable, Georgia, serif'"
 
 def save(name, w, h, body):
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" '

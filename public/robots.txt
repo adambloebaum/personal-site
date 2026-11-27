@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.adambloebaum.com/sitemap.xml
+Sitemap: https://www.adambloebaum.com/sitemap-index.xml

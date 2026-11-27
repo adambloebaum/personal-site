@@ -12,8 +12,8 @@ export default function rehypeFigures() {
         if (child.tagName === 'p' && kids.length === 1 && kids[0].tagName === 'img') {
           const img = kids[0];
           const caption = img.properties.alt;
-          const svg = img.properties.src.endsWith('.svg') && readFileSync(`public${img.properties.src}`, 'utf8').replace('<svg ', `<svg role="img" aria-label="${caption}" `);
-          const figure = { type: 'element', tagName: 'figure', properties: {}, children: [svg ? { type: 'raw', value: svg } : img] };
+          const svg = img.properties.src.endsWith('.svg') && readFileSync(`public${img.properties.src}`, 'utf8');
+          const figure = { type: 'element', tagName: 'figure', properties: {}, children: [svg ? { type: 'raw', value: caption ? svg.replace('<svg ', `<svg role="img" aria-label="${caption.replaceAll('"', '&quot;')}" `) : svg } : img] };
           if (caption) {
             n += 1;
             figure.children.push({

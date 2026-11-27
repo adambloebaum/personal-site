@@ -29,7 +29,8 @@ const d = post.data;
     const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
     const heads = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))!);
     const mark = () => {
-      const at = heads.findLastIndex((h) => h.getBoundingClientRect().top < 120);
+      const atEnd = scrollY + innerHeight >= document.documentElement.scrollHeight - 2;
+      const at = atEnd ? heads.length - 1 : heads.findLastIndex((h) => h.getBoundingClientRect().top < 120);
       links.forEach((a, i) => a.classList.toggle('on', i === at));
     };
     addEventListener('scroll', mark, { passive: true });

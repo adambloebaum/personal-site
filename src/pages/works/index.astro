@@ -18,7 +18,7 @@ const groups = (Object.keys(kinds) as (keyof typeof kinds)[]).map((type) => ({
       <div class="section-head" style="margin-top:56px"><h2>{g.label}</h2></div>
       <div class="rows">
         {g.items.map((w) => (
-          <a href={`/works/${w.id}`}>
+          <a href={`/works/${w.id}/`}>
             <span class={`no hatch-${g.type}`}><b>{w.plate}</b></span>
             <span class="main"><strong>{w.data.short}</strong><span>{w.data.summary}</span></span>
             <span class="meta label">{[...w.data.sample, `${w.data.venue} / ${monthYear(w.data.date)}`].map((line) => <>{line}<br /></>)}</span>

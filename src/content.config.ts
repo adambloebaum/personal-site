@@ -28,6 +28,7 @@ const works = defineCollection({
     figureCaption: z.string().optional(),
     url: z.string().optional(),
     pdfUrl: z.string().optional(),
+    more: z.object({ label: z.string(), url: z.string() }).optional(),
   }),
 });
 

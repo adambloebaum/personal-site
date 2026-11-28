@@ -135,8 +135,11 @@ img, video, svg { max-width: 100%; }
 .work-top .words { flex: 999 1 560px; min-width: 0; }
 .work-top h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.06; letter-spacing: -0.015em; }
 .work-top .published { margin: 20px 0 0; font-style: italic; color: var(--ink-2); line-height: 1.45; }
-.button { display: inline-block; margin-top: 28px; padding: 13px 22px; background: var(--ink); color: var(--plate); font-family: var(--label); font-weight: 600; font-size: 17px; letter-spacing: 0.14em; text-transform: uppercase; }
-.button:hover { background: var(--rust); color: var(--plate); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button { display: inline-block; padding: 12px 22px; border: 1px solid var(--ink); background: var(--ink); color: var(--plate); font-family: var(--label); font-weight: 600; font-size: 17px; letter-spacing: 0.14em; text-transform: uppercase; }
+.button:hover { background: var(--rust); border-color: var(--rust); color: var(--plate); }
+.button.alt { background: none; color: var(--ink); }
+.button.alt:hover { background: none; color: var(--rust); }
 .panel { flex: 1 1 300px; min-width: 0; margin: 0; align-self: flex-start; border: 1px solid var(--ink); background: var(--plate); font-size: 18px; line-height: 1.35; }
 .panel div { padding: 12px 16px; border-bottom: 1px solid var(--rule); }
 .panel div:last-child { border-bottom: 0; }

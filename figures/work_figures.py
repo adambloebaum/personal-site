@@ -135,3 +135,23 @@ for i, s in enumerate(steps):
         xs = x + bw if row == 0 else x
         parts.append(f'<path class="arrow" marker-end="url(#arrowhead)" d="M{xs} {y + bh / 2}h{d * gap}"/>')
 write("bat-tracking-patent", "Flowchart of the method: start session, position and calibrate camera, capture video, detect swing, estimate pose, process keypoints, predict swing metrics, display feedback, upload and sync, analysis and reporting", parts)
+
+# Laya Blackjack: the four predeclared paired return contrasts with familywise 95% intervals.
+# The repo sits beside the research-studies folder.
+import json
+comp = json.loads((studies.parent / "laya-blackjack/docs/results/final-release-completed.json").read_text())["summary"]["comparisons"]
+rows = [("fresh:candidate-minus-basic", "Fresh shoe|vs. basic strategy"), ("fresh:candidate-minus-baseline", "Fresh shoe|vs. broad baseline"),
+        ("continuous:candidate-minus-basic", "Continuous|vs. basic strategy"), ("continuous:candidate-minus-baseline", "Continuous|vs. broad baseline")]
+x0, x1 = 170, W - 24
+px = lambda v: x0 + (v + 0.2) / 0.9 * (x1 - x0)
+parts = [f'<line class="axis" x1="{x0}" y1="{H - B}" x2="{x1}" y2="{H - B}"/><line class="event" x1="{px(0):.1f}" y1="{T}" x2="{px(0):.1f}" y2="{H - B}"/>']
+parts += [tick(px(v), H - B + 18, f"{v:+.1f}" if v else "0", "middle") for v in [-0.2, 0, 0.2, 0.4, 0.6]]
+for i, (key, name) in enumerate(rows):
+    y = T + 36 + i * 60
+    lo, hi = comp[key]["familywise_ci95"]
+    a, b = name.split("|")
+    parts.append(tick(x0 - 16, y - 3, a, "end") + tick(x0 - 16, y + 12, b, "end")
+                 + f'<line class="curve teal" x1="{px(lo):.1f}" y1="{y}" x2="{px(hi):.1f}" y2="{y}"/>'
+                 f'<circle class="dot teal" cx="{px(comp[key]["units_per_100_rounds"]):.1f}" cy="{y}" r="4.5" style="opacity:1"/>')
+parts.append(tick(x1, H - 6, "Advantage, betting units per 100 rounds", "end"))
+write("laya-blackjack", "Paired return advantage of the fine-tuned model: near zero with intervals spanning zero on fresh shoes, about plus 0.3 units per 100 rounds with intervals above zero in continuous play", parts)
